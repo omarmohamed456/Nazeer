@@ -1,4 +1,4 @@
-# ---------- Secrets / env ----------
+# Secrets / env
 .env
 .env.*
 !.env.example
@@ -8,7 +8,7 @@ secrets.yml
 *.secret
 .credentials
 
-# ---------- Logs / temp ----------
+# Logs / temp
 logs/
 *.log
 npm-debug.log*
@@ -21,13 +21,13 @@ temp/
 *.bak
 *.orig
 
-# ---------- Python ----------
+# Python
 __pycache__/
 *.py[cod]
 *$py.class
 *.so
 .Python
-.venv/
+backend/.venv/
 venv/
 env/
 .pytest_cache/
@@ -38,30 +38,31 @@ env/
 htmlcov/
 *.egg-info/
 .eggs/
-build/
+backend/build/
+backend/dist/
+
+# Node
+frontend/node_modules/
+frontend/dist/
 dist/
+dist-ssr/
+*.local
 
-
-# ---------- Editors / IDEs ----------
-.idea/
-.vscode/
-*.swp
-*.swo
-*~
-.project
-.classpath
-.settings/
-*.iml
-*.code-workspace
-
-# ---------- Data files ----------
+# Data files (JSON configs and lockfiles are tracked)
 *.csv
 *.tsv
 *.parquet
 *.feather
 *.avro
 *.orc
-*.json
 *.geojson
 *.ndjson
 *.jsonl
+
+# Editors / OS
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.DS_Store
