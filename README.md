@@ -1,230 +1,127 @@
-# Planet Explorer
+# Nazeer
 
-A small full-stack app for exploring NASA imagery of the Moon and Mars. Pick a body, click a map tile or enter a coordinate, and get a real matching Earth geology tile from a supplied 10° dataset.
+**Find the Earth place that looks most like a spot on the Moon or Mars.**
 
-The app is intentionally simple: no database, no auth, no API keys, and no tile proxy. Map imagery is loaded directly from NASA.
+Nazeer (نظير, "counterpart") is a web app built for the **NASA Space Apps Challenge 2026** by team **0xcs**, for the challenge [Permanent Moon Base Locations and Mars](https://www.spaceappschallenge.org/2026/challenges/permanent-moon-base-locations-and-mars/).
+
+Team page: <https://www.spaceappschallenge.org/2026/find-a-team/0xcs/?tab=details>
+
+Pick the Moon or Mars, click a map tile or type a coordinate, and Nazeer shows the geology of that spot and the closest matching places on Earth. Each Earth match comes with a confidence score and a NASA satellite preview. When no reliable Earth match exists, the app says so.
+
+No database, no login, no API keys. Map imagery loads straight from NASA.
 
 ## Features
 
-- **Moon and Mars basemaps** from NASA Trek, on the same 2:1 equirectangular tile grid.
-- **Two ways to choose a target**:
-  - click a map tile for an area-weighted match; or
-  - enter decimal-degree latitude/longitude for the 10° cell containing the point.
-- **Real geology data** from the supplied `tiles_wide.csv`: Moon/Mars surface classes, mapped fraction, and age bins.
-- **Earth analog matching** against Earth land tiles, with a confidence score, top three candidates, and an explicit “no reliable analog” state.
-- **NASA GIBS preview** for each Earth candidate, with the matched 10° cell outlined.
-- Zoom limits are enforced per body: Moon z0–8, Mars z0–7. Geology matching requires z2 or deeper.
-- Responsive layout for desktop and mobile.
+- Moon and Mars basemaps from NASA Trek (Moon zoom 0-8, Mars zoom 0-7).
+- Two ways to choose a target: click a map tile (area-weighted match), or enter latitude/longitude (matches the 10° cell containing the point).
+- Real geology for the target: surface classes, mapped fraction and age bins.
+- Top 3 Earth analogs with confidence (high / medium / low / **No reliable analog**), similarity, coverage, and the class mix of each.
+- NASA GIBS satellite preview of every Earth candidate, with the matched cell outlined.
+- Matching needs zoom 2 or deeper. Layout works on desktop and mobile.
 
 ## Stack
 
-| Layer    | Technology |
-| -------- | ---------- |
+| Layer | Technology |
+|---|---|
 | Frontend | React 19, TypeScript, Vite, Leaflet / react-leaflet, plain CSS |
-| Backend  | Python 3.12+, FastAPI, Pydantic |
-| Tooling  | `uv` (Python), `pnpm` (Node), pytest, Vitest |
+| Backend | Python 3.12+, FastAPI, Pydantic |
+| Tooling | `uv`, `pnpm`, pytest, Vitest, oxlint |
+| Hosting | Vercel (frontend proxies `/api` to the deployed backend) |
 
 ## Quick start
 
-### 1. Backend
-
 ```bash
+# 1. Backend
 cd backend
 uv sync
-uv run uvicorn app.main:app --reload --port 8000
-```
+uv run uvicorn app.main:app --reload --port 8000     # docs at /docs
 
-The API is available at <http://127.0.0.1:8000>, with interactive docs at <http://127.0.0.1:8000/docs>.
-
-### 2. Frontend (development)
-
-In a second terminal:
-
-```bash
+# 2. Frontend (second terminal)
 cd frontend
 pnpm install
-pnpm dev
+pnpm dev                                              # http://localhost:5173
 ```
 
-Open <http://localhost:5173>. Vite proxies `/api` requests to the backend on port 8000.
+Production-style: run `pnpm build` in `frontend/`, then start the backend. FastAPI serves `frontend/dist` at `/`.
 
-### 3. Production-style build
+### Build the Earth candidate grid
 
-Build the frontend, then start the backend. FastAPI serves the generated `frontend/dist` directory at the root URL.
+The Earth table (`earth_tiles_5deg.csv`) is generated from the GLiM raster and is not committed (CSV files are git-ignored). Generate it once:
 
 ```bash
-cd frontend
-pnpm build
-
-cd ../backend
-uv run uvicorn app.main:app --port 8000
+python backend/scripts/build_earth_grid.py
 ```
 
-Open <http://127.0.0.1:8000>.
+`targets_10deg.csv` (Moon and Mars geology) must be in `backend/data/geology/`.
 
-## Using the app
+## How to use
 
-1. Choose **Moon** or **Mars** in the header.
-2. Either click a tile on the map, or type a latitude and longitude in the bar above the map and press **Go**.
-   - Coordinates are decimal degrees.
-   - Longitude is east-positive: `-180..180`.
-   - Latitude is `-90..90`.
-   - The map centers on the point at zoom 4 and shows the 10° geology cell.
-3. The panel at the top shows the Earth match: confidence, shared-class mass, analog similarity, Earth tile coverage, and the comparable compositions.
-4. The tile section below shows the selected map tile and the raw Moon/Mars geology classes and age bins.
-
-Clicking a map tile fills the coordinate bar with the clicked point. Pressing **Go** then refines the match to that single 10° cell.
+1. Choose **Moon** or **Mars**.
+2. Click a tile, or type decimal-degree coordinates (lat -90..90, lon -180..180, east-positive) and press **Go**.
+3. Read the Earth match panel (confidence, similarity, coverage, class mix), then the tile panel (raw Moon/Mars classes and age bins).
 
 ## API
 
 | Method | Endpoint | Description |
-| ------ | -------- | ----------- |
+|---|---|---|
 | GET | `/api/health` | Health check |
 | GET | `/api/bodies` | Moon and Mars layer configuration |
-| GET | `/api/tiles/{body}/{z}/{x}/{y}` | Tile metadata, bounds, approximate size, and aggregated geology |
-| GET | `/api/matches/{body}/{z}/{x}/{y}` | Earth match for a map tile (z2 or deeper) |
-| GET | `/api/matches/{body}/point?lat=...&lon=...` | Earth match for the 10° cell containing a coordinate |
+| GET | `/api/tiles/{body}/{z}/{x}/{y}` | Tile bounds, size and aggregated geology |
+| GET | `/api/matches/{body}/{z}/{x}/{y}` | Earth match for a map tile (z2+) |
+| GET | `/api/matches/{body}/point?lat=..&lon=..` | Earth match for the 10° cell at a coordinate |
 
-Examples:
+Unknown body → `404`. Bad zoom, tile index or coordinate (or zoom below 2 for matching) → `422`.
 
-```bash
-curl http://127.0.0.1:8000/api/tiles/moon/4/3/2
-curl http://127.0.0.1:8000/api/matches/moon/4/3/2
-curl "http://127.0.0.1:8000/api/matches/moon/point?lat=0&lon=0"
-curl "http://127.0.0.1:8000/api/matches/mars/point?lat=-85&lon=-175"
-```
+## How matching works
 
-Unknown bodies return `404`; invalid zoom levels, tile indexes, or coordinates return `422`. Tile matches below zoom 2 return `422` with a “too coarse” message.
+1. **Common grid.** Moon and Mars geology are summarized on a 10° grid (18 × 36 = 648 cells). Earth is summarized on a finer 5° grid (36 × 72) built from the GLiM 0.5° raster with cosine-latitude area weights.
+2. **Harmonized classes.** volcanic → volcanic, ice → ice, Mars surficial → Earth surficial, Moon highlands → Earth plutonic + metamorphic ("crystalline"), Moon plains → Earth sedimentary. Impact and Mars undivided terrain have no Earth equivalent: they are not forced onto a class and instead lower the confidence.
+3. **Candidates.** Earth cells need at least 60% mapped land coverage and enough comparable mass. They are ranked by the **Bhattacharyya coefficient** on the class mix, then thinned so alternatives are at least 20° apart.
+4. **Featured analog.** Among candidates at least 65% as similar as the best one, the app prefers the same class family, then the one nearest the target. This is a presentation choice, not a geologic claim.
+5. **Confidence** combines similarity, shared (comparable) area, candidate coverage and the margin over the next candidate.
 
-## Matching method
+## Data
 
-The matcher is deliberately transparent and heuristic. It is a composition comparison, not a geologic provenance model.
+| Data | Source |
+|---|---|
+| Moon imagery | NASA Trek, LRO WAC Global Mosaic |
+| Mars imagery | NASA Trek, Viking Global Color Mosaic |
+| Earth preview | NASA GIBS, Blue Marble Shaded Relief + Bathymetry |
+| Earth geology | GLiM v1.0 (Hartmann & Moosdorf 2012), CC BY 3.0 |
+| Moon geology | USGS Unified Geologic Map of the Moon, 1:5M, GIS v2 |
+| Mars geology | USGS Geologic Map of Mars, SIM 3292 |
 
-### Data grid
+Full details: [DOCUMENTATION.md](DOCUMENTATION.md). Imagery © NASA/JPL/USGS, with attribution shown on the map.
 
-The supplied table has 648 cells on an 18 × 36 grid. Each cell is 10° × 10°. Dataset rows run **south-to-north** (`r00` is the south pole), while NASA Trek map tile rows run north-to-south; the backend keeps those conventions separate.
+## Limitations
 
-A clicked map tile is matched by area-weighting every 10° cell that overlaps it. A coordinate is matched against its single containing 10° cell.
-
-### Class crosswalk
-
-Direct classes:
-
-- volcanic → volcanic
-- ice → ice
-- Mars surficial_unconsolidated → Earth surficial_unconsolidated
-
-Heuristic classes:
-
-- Moon highlands → Earth plutonic + metamorphic (“crystalline”)
-- Moon plains → Earth sedimentary
-
-No Earth equivalent:
-
-- impact
-- Mars undivided_terrain
-
-Unmatched classes are not forced onto an Earth class. They reduce the shared-area mass and therefore the confidence score.
-
-### Earth candidates
-
-Only Earth land tiles with at least 50% mapped coverage are considered. Ocean, blank, and no-data tiles are excluded. The Earth match vector is normalized over comparable classes, so water/no-data do not dominate the composition score.
-
-Candidates are ranked with the **Bhattacharyya coefficient**, a bounded composition overlap. Unlike a dot product, it rewards a candidate whose whole class mix resembles the target instead of always choosing the purest global end-member. This is what keeps different Moon and Mars locations from collapsing onto the same one or two Earth tiles.
-
-The candidate list is then thinned geographically: up to five candidates must be at least 20° apart on the Earth grid, so the alternatives are different regions rather than adjacent copies of the same cell. The API returns up to three distinct candidates.
-
-### Featured analog
-
-The first candidate is the **featured analog**. When several Earth tiles have comparable composition, the app prefers a candidate in the same broad class family (for example, volcanic for a volcanic target) and then the one geographically nearest the target center. A candidate must be at least 65% as similar as the best composition score to be eligible for this tie-break. This is a presentation choice, not a geologic claim: it keeps the visual comparison varied and relevant. The highest-scoring composition tile is always kept in the returned list and is marked in the UI when it differs from the featured tile.
-
-### Confidence
-
-The confidence score combines:
-
-- Bhattacharyya similarity between the target and candidate comparable compositions;
-- the share of the target area that has a comparable Earth class;
-- the candidate’s mapped coverage;
-- the similarity margin over the next returned candidate.
-
-Scores map to high / medium / low / insufficient confidence. High or medium confidence produces a `match`; low confidence produces a `weak` match; everything else is `insufficient` and is labeled **No reliable analog**. Candidates are still returned for weak or insufficient matches when they exist, but they are clearly marked as reference-only.
-
-## Data sources
-
-- **Moon imagery**: [LRO WAC Global Mosaic](https://trek.nasa.gov/moon/) (`LRO_WAC_Mosaic_Global_303ppd_v02`) from NASA Trek.
-- **Mars imagery**: [Viking Global Color Mosaic](https://trek.nasa.gov/mars/) (`Mars_Viking_MDIM21_ClrMosaic_global_232m`) from NASA Trek.
-- **Earth preview**: [NASA GIBS Blue Marble Shaded Relief + Bathymetry](https://gibs.earthdata.nasa.gov/), requested as a WMS image around each candidate.
-- **Geology table**: `backend/data/geology/tiles_wide.csv`, generated by the project owner for this app. The source rasters/vectors used to derive it are not included. See [`backend/data/geology/README.md`](backend/data/geology/README.md) for provenance, columns, and limitations.
-
-Imagery is © NASA/JPL/USGS and is loaded directly in the browser from NASA servers. Attribution is displayed on the map.
-
-## Known limitations
-
-- **Earth coverage is land-only.** 238 of 648 cells have zero mapped area; 201 have at least 50% coverage and 156 have at least 80%. Ocean matches are impossible by design.
-- **Taxonomy mismatch.** Earth has no impact, highlands, plains, or undivided-terrain classes in this table, and no Earth age data. Large parts of Mars are mapped as undivided terrain, so many Mars targets legitimately return “no reliable analog.”
-- **Coarse cells.** 10° cells are much larger than NASA Trek imagery tiles. At the equator an Earth cell is about 13.4× the area of a Moon cell and 3.5× a Mars cell. A map tile can overlap several dataset cells.
-- **Heuristic crosswalk.** Highlands → crystalline and plains → sedimentary are reasonable but simplified assumptions.
-- **Mixed Earth tiles.** The source `earth_dominant_class` label can differ from the comparable class mix after the crosswalk (for example, a coarse cell labeled volcanic may have more mapped sedimentary area). The UI shows both when they differ, such as “Volcanic / Sedimentary”.
-- **No Earth age comparison.** Age bins are shown for Moon/Mars context only.
-- **Not a science product.** Similarity is a transparent composition heuristic, not a trained terrain or spectral embedding model.
-
-## Tile grid notes
-
-NASA Trek uses a 2:1 equirectangular grid, matching Leaflet's `L.CRS.EPSG4326`:
-
-- `cols = 2^(z + 1)`, `rows = 2^z`
-- Tile URL order is `{z}/{y}/{x}` (row before column)
-- `west = -180 + (x / cols) * 360`, `north = 90 - (y / rows) * 180`
-
-Trek does not expose a per-tile metadata endpoint, so bounds, center, and approximate size are computed by the backend from the tile index.
+- Earth coverage is land-only, so ocean matches are impossible by design.
+- Class systems differ between bodies; the crosswalk is a heuristic.
+- Cells are regional (5° and 10°), far coarser than rover scale.
+- Mars is mapped at 1:20M and much of it is "undivided terrain", so many Mars targets correctly return "No reliable analog".
+- No Earth age comparison; ages are shown for Moon and Mars only.
+- Geological similarity is **not** landing-site or base suitability. Slope, boulders, regolith, radiation, thermal and illumination conditions are not assessed.
 
 ## Tests
 
 ```bash
-# From the project root
-
-# Backend
 (cd backend && uv run pytest)
-
-# Frontend unit tests
-(cd frontend && pnpm test)
-
-# Type-check + production build
-(cd frontend && pnpm build)
-
-# Lint
-(cd frontend && pnpm lint)
+(cd frontend && pnpm test && pnpm build && pnpm lint)
 ```
 
 ## Project layout
 
 ```text
-planet-explorer/
+Nazeer/
 ├── backend/
-│   ├── app/
-│   │   ├── main.py          # FastAPI app and routes
-│   │   ├── config.py        # Moon/Mars layer configuration
-│   │   ├── tiles.py         # tile math and response building
-│   │   ├── geology.py       # CSV loading, aggregation, matching
-│   │   └── models.py        # Pydantic response models
-│   ├── data/geology/        # supplied 10° table + data notes
+│   ├── app/            main.py, config.py, tiles.py, geology.py, models.py
+│   ├── scripts/        build_earth_grid.py
+│   ├── data/geology/   targets_10deg.csv, glim/ (raster + class names)
 │   └── tests/
-├── frontend/
-│   ├── src/
-│   │   ├── App.tsx
-│   │   ├── components/      # map, coordinate bar, match card, panel
-│   │   ├── lib/             # tile math, coordinates, geology helpers
-│   │   └── api/client.ts
-│   └── vite.config.ts       # /api dev proxy
+├── frontend/src/       App.tsx, components/, lib/, api/client.ts
 └── README.md
 ```
 
-## Possible next steps
+## Team
 
-- Replace the heuristic crosswalk with a trained terrain or spectral embedding model.
-- Add more NASA layers (e.g., Mars MOLA/HRSC shaded relief, lunar mineralogy).
-- Serve a dynamic WMTS capabilities document instead of hardcoded layer templates.
-- Add shareable URLs for selected body/tile/point and Earth result.
-- Add a small cache for precomputed tile geology summaries.
-
-Not affiliated with NASA.
+Team **0xcs**, NASA Space Apps Challenge 2026. Not affiliated with NASA.
