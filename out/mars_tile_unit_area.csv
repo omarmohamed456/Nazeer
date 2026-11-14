@@ -1,0 +1,2690 @@
+tile_id,unit,name,area_km2
+r00c00,Apu,Amazonian polar undivided unit,30580.791252229392
+r00c01,Apu,Amazonian polar undivided unit,30583.229072637725
+r00c02,Apu,Amazonian polar undivided unit,30583.229072637627
+r00c03,Apu,Amazonian polar undivided unit,30583.229072637725
+r00c04,Apu,Amazonian polar undivided unit,30583.22907263763
+r00c05,Apu,Amazonian polar undivided unit,29984.26047502221
+r00c05,lApc,Late Amazonian polar cap unit,598.968597615521
+r00c06,Apu,Amazonian polar undivided unit,29130.444176912017
+r00c06,lApc,Late Amazonian polar cap unit,1452.7848957256604
+r00c07,Ap,Amazonian polar unit,935.3031723484416
+r00c07,Apu,Amazonian polar undivided unit,25097.02946058679
+r00c07,lApc,Late Amazonian polar cap unit,4550.896439702446
+r00c08,Ap,Amazonian polar unit,4531.558533300287
+r00c08,Apu,Amazonian polar undivided unit,20525.067550717515
+r00c08,lApc,Late Amazonian polar cap unit,5526.60298861988
+r00c09,Ap,Amazonian polar unit,10203.908684271219
+r00c09,Apu,Amazonian polar undivided unit,13151.405309422931
+r00c09,lApc,Late Amazonian polar cap unit,7227.915078943526
+r00c10,Ap,Amazonian polar unit,12221.3918345643
+r00c10,Apu,Amazonian polar undivided unit,9681.955437728533
+r00c10,lApc,Late Amazonian polar cap unit,8679.881800344847
+r00c11,Ap,Amazonian polar unit,6321.9284025248335
+r00c11,Apu,Amazonian polar undivided unit,11738.654699316843
+r00c11,Hp,Hesperian polar unit,1673.699623183746
+r00c11,lApc,Late Amazonian polar cap unit,10848.946347612253
+r00c12,Ap,Amazonian polar unit,2970.802142645335
+r00c12,Apu,Amazonian polar undivided unit,7235.1182692545835
+r00c12,Hp,Hesperian polar unit,10802.127366443856
+r00c12,lApc,Late Amazonian polar cap unit,9575.181294293912
+r00c13,Ap,Amazonian polar unit,892.3935828742723
+r00c13,Apu,Amazonian polar undivided unit,12094.359682128692
+r00c13,Hp,Hesperian polar unit,8413.585411842516
+r00c13,lApc,Late Amazonian polar cap unit,9182.890395792207
+r00c14,Apu,Amazonian polar undivided unit,10422.357934735199
+r00c14,Hp,Hesperian polar unit,11859.61817580284
+r00c14,lApc,Late Amazonian polar cap unit,8301.252962099645
+r00c15,Apu,Amazonian polar undivided unit,21619.872870929998
+r00c15,Hp,Hesperian polar unit,475.5585820165803
+r00c15,lApc,Late Amazonian polar cap unit,8487.797619691102
+r00c16,Apu,Amazonian polar undivided unit,23502.15229322336
+r00c16,lApc,Late Amazonian polar cap unit,7081.07677941432
+r00c17,Apu,Amazonian polar undivided unit,24528.953101426334
+r00c17,Hp,Hesperian polar unit,314.4665422584993
+r00c17,lApc,Late Amazonian polar cap unit,5739.809428952846
+r00c18,Apu,Amazonian polar undivided unit,15507.809635894248
+r00c18,Hp,Hesperian polar unit,6751.382762093693
+r00c18,Hpe,Hesperian polar edifice unit,2502.6041643996996
+r00c18,lApc,Late Amazonian polar cap unit,5821.432510250048
+r00c19,Apu,Amazonian polar undivided unit,11837.641970921424
+r00c19,Hp,Hesperian polar unit,3868.286118503736
+r00c19,Hpe,Hesperian polar edifice unit,10235.775983812026
+r00c19,lApc,Late Amazonian polar cap unit,4641.524999400497
+r00c20,Apu,Amazonian polar undivided unit,24022.590220019218
+r00c20,Hp,Hesperian polar unit,591.4608881289462
+r00c20,Hpe,Hesperian polar edifice unit,2608.817873532053
+r00c20,lApc,Late Amazonian polar cap unit,3360.36009095746
+r00c21,Apu,Amazonian polar undivided unit,22013.04270972394
+r00c21,Hp,Hesperian polar unit,4874.31562856121
+r00c21,eNh,Early Noachian highland unit,996.6743621937226
+r00c21,lApc,Late Amazonian polar cap unit,2699.1963721588
+r00c22,Apu,Amazonian polar undivided unit,26140.54924330223
+r00c22,Hp,Hesperian polar unit,23.14634874677252
+r00c22,eNh,Early Noachian highland unit,3579.9436177226644
+r00c22,lApc,Late Amazonian polar cap unit,839.5898628660119
+r00c23,Apu,Amazonian polar undivided unit,30286.476301615472
+r00c23,Hp,Hesperian polar unit,177.87504784582362
+r00c23,lApc,Late Amazonian polar cap unit,118.8777231763821
+r00c24,Apu,Amazonian polar undivided unit,26561.567214866118
+r00c24,Hp,Hesperian polar unit,4021.6618577715567
+r00c25,Apu,Amazonian polar undivided unit,28711.732682344435
+r00c25,Hp,Hesperian polar unit,1871.4963902932582
+r00c26,Apu,Amazonian polar undivided unit,24301.848722295163
+r00c26,Hp,Hesperian polar unit,6281.380350342538
+r00c27,Apu,Amazonian polar undivided unit,17992.7506200078
+r00c27,Hp,Hesperian polar unit,12590.478452629872
+r00c28,Apu,Amazonian polar undivided unit,29072.155492681108
+r00c28,Hp,Hesperian polar unit,1511.0735799565684
+r00c29,Apu,Amazonian polar undivided unit,30583.22907263768
+r00c30,Apu,Amazonian polar undivided unit,30279.417747807216
+r00c30,lNh,Late Noachian highland unit,303.8113248305113
+r00c31,Apu,Amazonian polar undivided unit,29173.753762509754
+r00c31,lNh,Late Noachian highland unit,1409.4753101278666
+r00c32,Apu,Amazonian polar undivided unit,30583.229072637725
+r00c33,Apu,Amazonian polar undivided unit,30583.22907263763
+r00c34,Apu,Amazonian polar undivided unit,30583.229072637725
+r00c35,Apu,Amazonian polar undivided unit,30580.88718072408
+r01c00,Apu,Amazonian polar undivided unit,69020.51462671196
+r01c00,eNh,Early Noachian highland unit,9364.087819189484
+r01c00,lNh,Late Noachian highland unit,12432.06863267607
+r01c01,Apu,Amazonian polar undivided unit,38962.12907364896
+r01c01,eNh,Early Noachian highland unit,32224.293204121474
+r01c01,lNh,Late Noachian highland unit,13584.44493528066
+r01c01,mNh,Middle Noachian highland unit,6049.564066230616
+r01c02,Apu,Amazonian polar undivided unit,44278.03238526889
+r01c02,eNh,Early Noachian highland unit,27201.388456293687
+r01c02,lNh,Late Noachian highland unit,1101.9208324690535
+r01c02,mNh,Middle Noachian highland unit,18239.089605249887
+r01c03,Apu,Amazonian polar undivided unit,29139.118481702215
+r01c03,eNh,Early Noachian highland unit,18368.406058554065
+r01c03,lNh,Late Noachian highland unit,444.6110413668626
+r01c03,mNh,Middle Noachian highland unit,42868.29569765858
+r01c04,Apu,Amazonian polar undivided unit,15653.028549084647
+r01c04,eNh,Early Noachian highland unit,7317.961248561778
+r01c04,lNh,Late Noachian highland unit,8603.71107815706
+r01c04,mNh,Middle Noachian highland unit,59245.73040347798
+r01c05,AHi,Amazonian and Hesperian impact unit,1291.2923873763784
+r01c05,Apu,Amazonian polar undivided unit,7566.974394579321
+r01c05,Hp,Hesperian polar unit,10940.726629713603
+r01c05,lNh,Late Noachian highland unit,33931.110108659326
+r01c05,mNh,Middle Noachian highland unit,37090.32775895314
+r01c06,AHi,Amazonian and Hesperian impact unit,391.1544161996184
+r01c06,Apu,Amazonian polar undivided unit,20719.119785948813
+r01c06,Hp,Hesperian polar unit,21252.271681949056
+r01c06,lNh,Late Noachian highland unit,6549.436306733126
+r01c06,mNh,Middle Noachian highland unit,41908.449088451045
+r01c07,Ap,Amazonian polar unit,3841.9129961581066
+r01c07,Apu,Amazonian polar undivided unit,10114.099014294241
+r01c07,Hp,Hesperian polar unit,39819.39496946284
+r01c07,lNh,Late Noachian highland unit,720.2738824443165
+r01c07,mNh,Middle Noachian highland unit,36324.75041692215
+r01c08,Ap,Amazonian polar unit,28168.081500522196
+r01c08,Apu,Amazonian polar undivided unit,1851.8658454247081
+r01c08,Hp,Hesperian polar unit,39522.2294943409
+r01c08,mNh,Middle Noachian highland unit,21278.254438993827
+r01c09,Ap,Amazonian polar unit,47872.8813050576
+r01c09,Hp,Hesperian polar unit,8353.518005714348
+r01c09,eNh,Early Noachian highland unit,26857.45344343441
+r01c09,mNh,Middle Noachian highland unit,7736.578525075258
+r01c10,Ap,Amazonian polar unit,49484.025534180844
+r01c10,Hp,Hesperian polar unit,8360.462562879708
+r01c10,eNh,Early Noachian highland unit,32975.943182221105
+r01c11,Ap,Amazonian polar unit,38309.92033091348
+r01c11,Apu,Amazonian polar undivided unit,135.0853069931236
+r01c11,Hp,Hesperian polar unit,48262.418249754635
+r01c11,eNh,Early Noachian highland unit,278.0406368679823
+r01c11,mNh,Middle Noachian highland unit,3834.966754752393
+r01c12,Ap,Amazonian polar unit,13137.340253102027
+r01c12,Hp,Hesperian polar unit,61847.01328383245
+r01c12,mNh,Middle Noachian highland unit,15836.077742347077
+r01c13,Ap,Amazonian polar unit,2209.2415132151623
+r01c13,Apu,Amazonian polar undivided unit,5651.343915916322
+r01c13,Hp,Hesperian polar unit,63102.775935680285
+r01c13,mNh,Middle Noachian highland unit,19857.06991447001
+r01c14,Apu,Amazonian polar undivided unit,10855.461776381777
+r01c14,Hp,Hesperian polar unit,14914.392408035032
+r01c14,mNh,Middle Noachian highland unit,65050.57709486486
+r01c15,Apu,Amazonian polar undivided unit,6560.476553252911
+r01c15,Hp,Hesperian polar unit,37163.46216745193
+r01c15,Hpe,Hesperian polar edifice unit,5491.628607107925
+r01c15,mNh,Middle Noachian highland unit,41604.86395146887
+r01c16,AHi,Amazonian and Hesperian impact unit,17042.94933349911
+r01c16,Apu,Amazonian polar undivided unit,5927.390836524708
+r01c16,Hp,Hesperian polar unit,40247.06504949474
+r01c16,Hpe,Hesperian polar edifice unit,17554.42843912927
+r01c16,mNh,Middle Noachian highland unit,10048.597620633827
+r01c17,Apu,Amazonian polar undivided unit,5637.16384712433
+r01c17,Hp,Hesperian polar unit,85068.11783117098
+r01c17,Hpe,Hesperian polar edifice unit,115.14960098634972
+r01c18,Apu,Amazonian polar undivided unit,108.5879705902549
+r01c18,Hp,Hesperian polar unit,72504.53795383085
+r01c18,Hpe,Hesperian polar edifice unit,15825.780465033145
+r01c18,mNh,Middle Noachian highland unit,2381.5248898274576
+r01c19,AHi,Amazonian and Hesperian impact unit,32268.29309716047
+r01c19,Hp,Hesperian polar unit,36959.138227313226
+r01c19,Hpe,Hesperian polar edifice unit,21592.9999548079
+r01c20,AHi,Amazonian and Hesperian impact unit,63475.71122704118
+r01c20,Apu,Amazonian polar undivided unit,39.290689401446166
+r01c20,Hp,Hesperian polar unit,26656.011348969292
+r01c20,lNv,Late Noachian volcanic unit,649.4180138696685
+r01c21,AHi,Amazonian and Hesperian impact unit,13578.128510564773
+r01c21,Apu,Amazonian polar undivided unit,425.2807649497638
+r01c21,Hp,Hesperian polar unit,22614.844383183055
+r01c21,eNh,Early Noachian highland unit,7224.458020906708
+r01c21,lNv,Late Noachian volcanic unit,46977.71959967735
+r01c22,Apu,Amazonian polar undivided unit,314.2196888677364
+r01c22,Hp,Hesperian polar unit,54.52996885508416
+r01c22,eNh,Early Noachian highland unit,65031.69782315563
+r01c22,lNv,Late Noachian volcanic unit,25419.983798403147
+r01c23,Apu,Amazonian polar undivided unit,5101.93806263946
+r01c23,Hp,Hesperian polar unit,2729.085033138561
+r01c23,eNh,Early Noachian highland unit,53109.93478357473
+r01c23,lNv,Late Noachian volcanic unit,29879.47339992886
+r01c24,AHi,Amazonian and Hesperian impact unit,9523.062532271177
+r01c24,Apu,Amazonian polar undivided unit,8.569608730662823
+r01c24,Hp,Hesperian polar unit,10394.046281748457
+r01c24,eNh,Early Noachian highland unit,62102.976615272164
+r01c24,lNh,Late Noachian highland unit,7027.422063194881
+r01c24,lNv,Late Noachian volcanic unit,1764.3541780642295
+r01c25,Apu,Amazonian polar undivided unit,66.21276138691282
+r01c25,Hp,Hesperian polar unit,10232.862114676456
+r01c25,eNh,Early Noachian highland unit,66831.18348246785
+r01c25,lNh,Late Noachian highland unit,11585.073702739492
+r01c25,mNh,Middle Noachian highland unit,2105.0992180109247
+r01c26,AHi,Amazonian and Hesperian impact unit,7396.650188086334
+r01c26,Hp,Hesperian polar unit,12945.824587243871
+r01c26,eNh,Early Noachian highland unit,43554.45129814036
+r01c26,lNh,Late Noachian highland unit,396.41812244936955
+r01c26,mNh,Middle Noachian highland unit,26527.087083361617
+r01c27,AHi,Amazonian and Hesperian impact unit,6563.888217500993
+r01c27,Apu,Amazonian polar undivided unit,3565.3779105051794
+r01c27,Hp,Hesperian polar unit,15177.67366288181
+r01c27,eNh,Early Noachian highland unit,25592.140383168702
+r01c27,lNh,Late Noachian highland unit,3204.438140513218
+r01c27,mNh,Middle Noachian highland unit,36716.91296471175
+r01c28,Apu,Amazonian polar undivided unit,6893.013054558629
+r01c28,Hp,Hesperian polar unit,5429.724461012894
+r01c28,eNh,Early Noachian highland unit,47970.57105243502
+r01c28,lNh,Late Noachian highland unit,6340.490902373659
+r01c28,mNh,Middle Noachian highland unit,24186.63180890143
+r01c29,AHi,Amazonian and Hesperian impact unit,27820.21259148115
+r01c29,Apu,Amazonian polar undivided unit,10964.34375006624
+r01c29,eNh,Early Noachian highland unit,22389.702449180135
+r01c29,lNh,Late Noachian highland unit,13149.198904061846
+r01c29,mNh,Middle Noachian highland unit,16496.973584492313
+r01c30,AHi,Amazonian and Hesperian impact unit,2390.6617548682852
+r01c30,Apu,Amazonian polar undivided unit,17902.940253763358
+r01c30,eNh,Early Noachian highland unit,21973.694515247418
+r01c30,lNh,Late Noachian highland unit,12997.91787449036
+r01c30,mNh,Middle Noachian highland unit,35555.21688091243
+r01c31,Apu,Amazonian polar undivided unit,55917.766560226366
+r01c31,eNh,Early Noachian highland unit,5646.304967169823
+r01c31,lNh,Late Noachian highland unit,16024.046987457084
+r01c31,mNh,Middle Noachian highland unit,13232.312764428269
+r01c32,Apu,Amazonian polar undivided unit,71130.05778154131
+r01c32,lNh,Late Noachian highland unit,3028.388560738426
+r01c32,mNh,Middle Noachian highland unit,16661.984937002057
+r01c33,Apu,Amazonian polar undivided unit,71955.25363252075
+r01c33,eNh,Early Noachian highland unit,7735.570200033815
+r01c33,mNh,Middle Noachian highland unit,11129.607446726935
+r01c34,Apu,Amazonian polar undivided unit,70627.95482487994
+r01c34,eNh,Early Noachian highland unit,749.2959360431399
+r01c34,lNh,Late Noachian highland unit,13347.672189127738
+r01c34,mNh,Middle Noachian highland unit,6095.508329230959
+r01c35,Apu,Amazonian polar undivided unit,57034.8121651228
+r01c35,eNh,Early Noachian highland unit,16598.793951113563
+r01c35,mNh,Middle Noachian highland unit,17182.95209113033
+r02c00,eNh,Early Noachian highland unit,94760.11027483245
+r02c00,lNh,Late Noachian highland unit,15775.975598867344
+r02c00,mNh,Middle Noachian highland unit,37758.59477905815
+r02c01,eNh,Early Noachian highland unit,57699.155825734284
+r02c01,lNh,Late Noachian highland unit,34757.617736913235
+r02c01,mNh,Middle Noachian highland unit,55841.32707591627
+r02c02,AHi,Amazonian and Hesperian impact unit,24306.65799470861
+r02c02,eNh,Early Noachian highland unit,28955.80574503699
+r02c02,lNh,Late Noachian highland unit,56814.460516090905
+r02c02,mNh,Middle Noachian highland unit,38221.17638272693
+r02c03,AHi,Amazonian and Hesperian impact unit,19447.226555294084
+r02c03,eNh,Early Noachian highland unit,53265.7088792721
+r02c03,lNh,Late Noachian highland unit,7750.834205779891
+r02c03,mNh,Middle Noachian highland unit,67834.33099821785
+r02c04,eNh,Early Noachian highland unit,37503.70840092197
+r02c04,lNh,Late Noachian highland unit,17615.208528042414
+r02c04,mNh,Middle Noachian highland unit,93179.18370959908
+r02c05,AHi,Amazonian and Hesperian impact unit,24171.864284562384
+r02c05,eNh,Early Noachian highland unit,33044.01063177024
+r02c05,lNh,Late Noachian highland unit,29941.70682233784
+r02c05,mNh,Middle Noachian highland unit,61140.518899893446
+r02c06,AHi,Amazonian and Hesperian impact unit,36095.51325145444
+r02c06,eNh,Early Noachian highland unit,19542.72298036437
+r02c06,mNh,Middle Noachian highland unit,92659.86440674477
+r02c07,AHi,Amazonian and Hesperian impact unit,9981.684344899706
+r02c07,Hp,Hesperian polar unit,3933.3354149421702
+r02c07,eNh,Early Noachian highland unit,24173.41465831649
+r02c07,lNh,Late Noachian highland unit,18147.19566886339
+r02c07,mNh,Middle Noachian highland unit,92062.47055154179
+r02c08,Hp,Hesperian polar unit,54880.381438810495
+r02c08,eNh,Early Noachian highland unit,1963.8924480581913
+r02c08,lNh,Late Noachian highland unit,11795.891909936745
+r02c08,mNh,Middle Noachian highland unit,79657.93484175841
+r02c09,AHi,Amazonian and Hesperian impact unit,10498.997145646566
+r02c09,Hp,Hesperian polar unit,37874.31094888694
+r02c09,eNh,Early Noachian highland unit,11725.22688983311
+r02c09,lNh,Late Noachian highland unit,11231.695375313604
+r02c09,mNh,Middle Noachian highland unit,76967.87027888364
+r02c10,AHi,Amazonian and Hesperian impact unit,11693.30532052177
+r02c10,Hp,Hesperian polar unit,54730.726521879005
+r02c10,eNh,Early Noachian highland unit,4744.661827992043
+r02c10,lNh,Late Noachian highland unit,659.4637216916491
+r02c10,mNh,Middle Noachian highland unit,76469.94324647925
+r02c11,Hp,Hesperian polar unit,52366.02034585779
+r02c11,mNh,Middle Noachian highland unit,95932.08029270601
+r02c12,Hp,Hesperian polar unit,20554.37835878173
+r02c12,lNh,Late Noachian highland unit,2273.54888026908
+r02c12,mNh,Middle Noachian highland unit,111592.64407440418
+r02c12,mNhm,Middle Noachian highland massif unit,13877.52932510878
+r02c13,AHi,Amazonian and Hesperian impact unit,25.695173929712052
+r02c13,Hp,Hesperian polar unit,2911.482605805677
+r02c13,lNh,Late Noachian highland unit,12654.067247418952
+r02c13,mNh,Middle Noachian highland unit,114243.67480377048
+r02c13,mNhm,Middle Noachian highland massif unit,18463.180807638968
+r02c14,AHi,Amazonian and Hesperian impact unit,26765.36770420165
+r02c14,lNh,Late Noachian highland unit,37828.52155104442
+r02c14,mNh,Middle Noachian highland unit,82675.0944628907
+r02c14,mNhm,Middle Noachian highland massif unit,1029.1169204270252
+r02c15,lNh,Late Noachian highland unit,15674.868763214998
+r02c15,mNh,Middle Noachian highland unit,132623.23187534872
+r02c16,AHi,Amazonian and Hesperian impact unit,34204.43260042828
+r02c16,Hp,Hesperian polar unit,19137.69264275983
+r02c16,mNh,Middle Noachian highland unit,94955.97539537547
+r02c17,AHi,Amazonian and Hesperian impact unit,30425.65362119364
+r02c17,Hp,Hesperian polar unit,32402.50019834142
+r02c17,lNh,Late Noachian highland unit,10297.065298395086
+r02c17,mNh,Middle Noachian highland unit,75172.88152063347
+r02c18,AHi,Amazonian and Hesperian impact unit,88.30759414662703
+r02c18,Hp,Hesperian polar unit,31581.505710479534
+r02c18,lNh,Late Noachian highland unit,48007.677117801984
+r02c18,mNh,Middle Noachian highland unit,68620.61021613554
+r02c19,AHi,Amazonian and Hesperian impact unit,3374.5385662804047
+r02c19,Hp,Hesperian polar unit,35906.149260351915
+r02c19,eNh,Early Noachian highland unit,152.988412737137
+r02c19,lNh,Late Noachian highland unit,16660.873514295105
+r02c19,lNv,Late Noachian volcanic unit,29209.54578323118
+r02c19,mNh,Middle Noachian highland unit,62994.005101667906
+r02c20,AHi,Amazonian and Hesperian impact unit,13686.145945226646
+r02c20,Hp,Hesperian polar unit,30184.353562646484
+r02c20,lNv,Late Noachian volcanic unit,96992.17514570207
+r02c20,mNh,Middle Noachian highland unit,7435.425984988519
+r02c21,AHi,Amazonian and Hesperian impact unit,16285.328117327212
+r02c21,Hp,Hesperian polar unit,9523.398187574714
+r02c21,Nhu,Noachian highland undivided unit,4902.055848478243
+r02c21,lNv,Late Noachian volcanic unit,117587.31848518355
+r02c22,AHi,Amazonian and Hesperian impact unit,39887.078160530706
+r02c22,Nhu,Noachian highland undivided unit,261.7456602152672
+r02c22,eHh,Early Hesperian highland unit,4845.7688154933285
+r02c22,eNh,Early Noachian highland unit,1091.2449716817396
+r02c22,lNv,Late Noachian volcanic unit,102212.26303064251
+r02c23,AHi,Amazonian and Hesperian impact unit,6519.791114396159
+r02c23,eHh,Early Hesperian highland unit,23236.986406759264
+r02c23,eNh,Early Noachian highland unit,11263.722672516738
+r02c23,lNv,Late Noachian volcanic unit,107277.6004448915
+r02c24,AHi,Amazonian and Hesperian impact unit,28944.10394444078
+r02c24,Nve,Noachian volcanic edifice unit,3.312414011289593
+r02c24,eNh,Early Noachian highland unit,3211.3897427878405
+r02c24,lNv,Late Noachian volcanic unit,116139.2945373238
+r02c25,eNh,Early Noachian highland unit,37284.27971151805
+r02c25,eNhm,Early Noachian highland massif unit,15978.265891379993
+r02c25,lNh,Late Noachian highland unit,1962.242285431326
+r02c25,lNv,Late Noachian volcanic unit,93073.31275023431
+r02c26,AHi,Amazonian and Hesperian impact unit,7376.168922947704
+r02c26,eNh,Early Noachian highland unit,102438.05405332458
+r02c26,eNhm,Early Noachian highland massif unit,34645.51883147774
+r02c26,lNh,Late Noachian highland unit,3838.3588308136473
+r02c27,AHi,Amazonian and Hesperian impact unit,28536.34703166092
+r02c27,eNh,Early Noachian highland unit,111759.65093012044
+r02c27,eNhm,Early Noachian highland massif unit,2969.042364354696
+r02c27,lNh,Late Noachian highland unit,3621.7838177221365
+r02c27,mNh,Middle Noachian highland unit,1411.2764947055118
+r02c28,AHi,Amazonian and Hesperian impact unit,1472.0116028877078
+r02c28,eNh,Early Noachian highland unit,95934.34437631935
+r02c28,lNh,Late Noachian highland unit,29601.65536872333
+r02c28,mNh,Middle Noachian highland unit,21290.08929063347
+r02c29,Nhe,Noachian highland edifice unit,2741.4580546393
+r02c29,eNh,Early Noachian highland unit,70986.12080430097
+r02c29,lNh,Late Noachian highland unit,28398.384812212975
+r02c29,mNh,Middle Noachian highland unit,46172.13696741052
+r02c30,AHi,Amazonian and Hesperian impact unit,11309.080160945396
+r02c30,Apu,Amazonian polar undivided unit,796.9561499892746
+r02c30,Nhe,Noachian highland edifice unit,10368.205865740674
+r02c30,eNh,Early Noachian highland unit,83298.74666074457
+r02c30,lNh,Late Noachian highland unit,104.27477769868418
+r02c30,mNh,Middle Noachian highland unit,42420.83702344525
+r02c31,eNh,Early Noachian highland unit,83042.6523859149
+r02c31,lNh,Late Noachian highland unit,20395.396289457105
+r02c31,mNh,Middle Noachian highland unit,44860.051963191276
+r02c32,eNh,Early Noachian highland unit,66111.0837441027
+r02c32,lNh,Late Noachian highland unit,23226.525646561953
+r02c32,mNh,Middle Noachian highland unit,58960.49124789919
+r02c33,eNh,Early Noachian highland unit,80021.79250187236
+r02c33,lNh,Late Noachian highland unit,24791.680660570793
+r02c33,mNh,Middle Noachian highland unit,43484.62747612043
+r02c34,AHi,Amazonian and Hesperian impact unit,1819.873492657286
+r02c34,eNh,Early Noachian highland unit,88099.65589777255
+r02c34,lNh,Late Noachian highland unit,46113.69829905297
+r02c34,mNh,Middle Noachian highland unit,12264.872949081126
+r02c35,AHi,Amazonian and Hesperian impact unit,217.51103234926185
+r02c35,eNh,Early Noachian highland unit,63118.80135197632
+r02c35,lNh,Late Noachian highland unit,7528.928509874883
+r02c35,mNh,Middle Noachian highland unit,77429.43973522043
+r03c00,AHi,Amazonian and Hesperian impact unit,62857.06151703849
+r03c00,eNh,Early Noachian highland unit,37516.129679474536
+r03c00,lNh,Late Noachian highland unit,35537.16650126336
+r03c00,mNh,Middle Noachian highland unit,65354.33264482756
+r03c01,AHi,Amazonian and Hesperian impact unit,27067.196083126473
+r03c01,eNh,Early Noachian highland unit,100374.02997506915
+r03c01,lNh,Late Noachian highland unit,40192.346697901485
+r03c01,mNh,Middle Noachian highland unit,33636.234496306395
+r03c02,AHi,Amazonian and Hesperian impact unit,6986.101320132717
+r03c02,eNh,Early Noachian highland unit,52715.122396134524
+r03c02,lNh,Late Noachian highland unit,26457.509092419084
+r03c02,mNh,Middle Noachian highland unit,115111.0744437167
+r03c03,AHi,Amazonian and Hesperian impact unit,7389.188717633543
+r03c03,eNh,Early Noachian highland unit,20482.52057565506
+r03c03,lNh,Late Noachian highland unit,29525.84786773461
+r03c03,mNh,Middle Noachian highland unit,143872.2500913805
+r03c04,eNh,Early Noachian highland unit,93235.86584065022
+r03c04,lNh,Late Noachian highland unit,18733.059876203755
+r03c04,mNh,Middle Noachian highland unit,89300.8815355489
+r03c05,AHi,Amazonian and Hesperian impact unit,67.56265134411106
+r03c05,eNh,Early Noachian highland unit,54342.32639321775
+r03c05,lNh,Late Noachian highland unit,66039.85957668319
+r03c05,lNv,Late Noachian volcanic unit,423.411898953035
+r03c05,mNh,Middle Noachian highland unit,80396.64673220544
+r03c06,AHi,Amazonian and Hesperian impact unit,64718.19826668508
+r03c06,eNh,Early Noachian highland unit,29723.3891107294
+r03c06,lNh,Late Noachian highland unit,32943.66797629217
+r03c06,mNh,Middle Noachian highland unit,73884.55189869653
+r03c07,AHi,Amazonian and Hesperian impact unit,36137.93432129685
+r03c07,eNh,Early Noachian highland unit,8762.02545289856
+r03c07,lNh,Late Noachian highland unit,17606.187490449352
+r03c07,mNh,Middle Noachian highland unit,138763.65998775852
+r03c08,eHh,Early Hesperian highland unit,3476.7720504110403
+r03c08,eNh,Early Noachian highland unit,1393.7750173839981
+r03c08,lNh,Late Noachian highland unit,41109.363505247886
+r03c08,mNh,Middle Noachian highland unit,155289.8966793603
+r03c09,AHi,Amazonian and Hesperian impact unit,84699.09108410218
+r03c09,Hp,Hesperian polar unit,12629.922000197308
+r03c09,eHh,Early Hesperian highland unit,2367.567096810469
+r03c09,eNh,Early Noachian highland unit,4271.553682912801
+r03c09,lNh,Late Noachian highland unit,41624.86027185349
+r03c09,mNh,Middle Noachian highland unit,55676.81311652705
+r03c10,AHi,Amazonian and Hesperian impact unit,33392.660659694164
+r03c10,Hp,Hesperian polar unit,51370.5128358817
+r03c10,lNh,Late Noachian highland unit,25290.02482014956
+r03c10,mNh,Middle Noachian highland unit,91216.60893667793
+r03c11,Hp,Hesperian polar unit,920.0491225249066
+r03c11,mNh,Middle Noachian highland unit,163438.5858512268
+r03c11,mNhm,Middle Noachian highland massif unit,36911.172278651546
+r03c12,HNb,Hesperian and Noachian basin unit,25515.51755841764
+r03c12,lNh,Late Noachian highland unit,13310.759613766772
+r03c12,mNh,Middle Noachian highland unit,20157.987405164116
+r03c12,mNhm,Middle Noachian highland massif unit,142285.54267505452
+r03c13,HNb,Hesperian and Noachian basin unit,124361.34341680711
+r03c13,lNh,Late Noachian highland unit,6641.137246773982
+r03c13,mNhm,Middle Noachian highland massif unit,70267.3265888221
+r03c14,AHi,Amazonian and Hesperian impact unit,66189.60381177942
+r03c14,HNb,Hesperian and Noachian basin unit,31338.449997981654
+r03c14,lNh,Late Noachian highland unit,12542.28259444068
+r03c14,mNh,Middle Noachian highland unit,23313.156030110425
+r03c14,mNhm,Middle Noachian highland massif unit,67886.31481809106
+r03c15,AHi,Amazonian and Hesperian impact unit,21868.91703387249
+r03c15,eHh,Early Hesperian highland unit,7324.024898313668
+r03c15,eNh,Early Noachian highland unit,16846.801675489383
+r03c15,lNh,Late Noachian highland unit,386.0784250803942
+r03c15,mNh,Middle Noachian highland unit,74637.87873118758
+r03c15,mNhm,Middle Noachian highland massif unit,80206.10648845953
+r03c16,AHi,Amazonian and Hesperian impact unit,295.466787077927
+r03c16,eNh,Early Noachian highland unit,29027.92714041071
+r03c16,lNh,Late Noachian highland unit,31511.883642159664
+r03c16,mNh,Middle Noachian highland unit,140434.52968275466
+r03c17,AHi,Amazonian and Hesperian impact unit,12240.259915155217
+r03c17,lNh,Late Noachian highland unit,40822.95193496175
+r03c17,mNh,Middle Noachian highland unit,148206.59540228604
+r03c18,AHi,Amazonian and Hesperian impact unit,25251.105259113894
+r03c18,eNh,Early Noachian highland unit,30382.64092420235
+r03c18,lNh,Late Noachian highland unit,32562.030979952615
+r03c18,mNh,Middle Noachian highland unit,113074.03008913441
+r03c19,AHi,Amazonian and Hesperian impact unit,12471.530250156353
+r03c19,eNh,Early Noachian highland unit,111691.08704401732
+r03c19,lNh,Late Noachian highland unit,59969.97102335588
+r03c19,lNv,Late Noachian volcanic unit,1412.3526922746655
+r03c19,mNh,Middle Noachian highland unit,15724.86624259896
+r03c20,AHi,Amazonian and Hesperian impact unit,6018.14291060706
+r03c20,eNh,Early Noachian highland unit,130153.6589062398
+r03c20,lNh,Late Noachian highland unit,33351.35968271215
+r03c20,lNv,Late Noachian volcanic unit,30445.26639877712
+r03c20,mNh,Middle Noachian highland unit,1301.3793540673664
+r03c21,AHi,Amazonian and Hesperian impact unit,30005.13451953498
+r03c21,eNh,Early Noachian highland unit,46565.12407840626
+r03c21,lNv,Late Noachian volcanic unit,90866.80717904287
+r03c21,mNh,Middle Noachian highland unit,33832.74147541921
+r03c22,Nve,Noachian volcanic edifice unit,62.61467450349685
+r03c22,eNh,Early Noachian highland unit,4069.737708447146
+r03c22,eNhm,Early Noachian highland massif unit,655.3527671154382
+r03c22,lNv,Late Noachian volcanic unit,190357.26738215942
+r03c22,mNh,Middle Noachian highland unit,6124.83472017773
+r03c23,Nve,Noachian volcanic edifice unit,42063.63578887396
+r03c23,lNv,Late Noachian volcanic unit,159206.17146352932
+r03c24,AHi,Amazonian and Hesperian impact unit,11332.454251993893
+r03c24,Nve,Noachian volcanic edifice unit,34676.83325895937
+r03c24,eHb,Early Hesperian basin unit,3726.982996829673
+r03c24,lHb,Late Hesperian basin unit,95.67261456769386
+r03c24,lNv,Late Noachian volcanic unit,151437.8641300527
+r03c25,eHb,Early Hesperian basin unit,19781.95466082025
+r03c25,eNhm,Early Noachian highland massif unit,31457.570305762656
+r03c25,lHb,Late Hesperian basin unit,3257.940895600782
+r03c25,lNh,Late Noachian highland unit,2105.463381236156
+r03c25,lNv,Late Noachian volcanic unit,140113.064766755
+r03c25,mNh,Middle Noachian highland unit,4553.813242228538
+r03c26,eHb,Early Hesperian basin unit,891.5251999334072
+r03c26,eNhm,Early Noachian highland massif unit,157657.51815037176
+r03c26,lHb,Late Hesperian basin unit,5819.065446734291
+r03c26,lNh,Late Noachian highland unit,8603.400648914047
+r03c26,lNv,Late Noachian volcanic unit,35.7380846840028
+r03c26,mNh,Middle Noachian highland unit,28262.559721765723
+r03c27,eNh,Early Noachian highland unit,27670.154792903784
+r03c27,eNhm,Early Noachian highland massif unit,134940.81669267098
+r03c27,lNh,Late Noachian highland unit,17855.81269727056
+r03c27,mNh,Middle Noachian highland unit,20803.02306955805
+r03c28,eNh,Early Noachian highland unit,13574.397982654333
+r03c28,eNhm,Early Noachian highland massif unit,110814.86618855847
+r03c28,lNh,Late Noachian highland unit,22821.762197392276
+r03c28,mNh,Middle Noachian highland unit,54058.78088379803
+r03c29,AHi,Amazonian and Hesperian impact unit,8871.461039216038
+r03c29,eNh,Early Noachian highland unit,33500.972782225006
+r03c29,eNhm,Early Noachian highland massif unit,140137.09025238635
+r03c29,lNh,Late Noachian highland unit,13345.749905537677
+r03c29,mNh,Middle Noachian highland unit,5414.533273038185
+r03c30,eNh,Early Noachian highland unit,69620.39318255862
+r03c30,eNhm,Early Noachian highland massif unit,29359.48415361013
+r03c30,lNh,Late Noachian highland unit,16503.606523353956
+r03c30,mNh,Middle Noachian highland unit,85786.32339288093
+r03c31,AHi,Amazonian and Hesperian impact unit,4135.0340837509175
+r03c31,eNh,Early Noachian highland unit,84108.95441050355
+r03c31,lNh,Late Noachian highland unit,13531.411760544192
+r03c31,mNh,Middle Noachian highland unit,99494.4069976043
+r03c32,AHi,Amazonian and Hesperian impact unit,4874.644269740134
+r03c32,eNh,Early Noachian highland unit,64843.791199900974
+r03c32,lNh,Late Noachian highland unit,25998.636053065682
+r03c32,mNh,Middle Noachian highland unit,105552.73572969658
+r03c33,AHi,Amazonian and Hesperian impact unit,5205.5751913971435
+r03c33,eNh,Early Noachian highland unit,95287.20827521809
+r03c33,lNh,Late Noachian highland unit,9005.090196961335
+r03c33,mNh,Middle Noachian highland unit,91771.93358882677
+r03c34,AHi,Amazonian and Hesperian impact unit,25814.600035386506
+r03c34,eNh,Early Noachian highland unit,130719.7844154553
+r03c34,lNh,Late Noachian highland unit,21826.02772475187
+r03c34,mNh,Middle Noachian highland unit,22909.395076809764
+r03c35,AHi,Amazonian and Hesperian impact unit,14244.94261434314
+r03c35,eNh,Early Noachian highland unit,42408.79320498581
+r03c35,lNh,Late Noachian highland unit,17959.122321515624
+r03c35,mNh,Middle Noachian highland unit,126651.83215921141
+r04c00,AHi,Amazonian and Hesperian impact unit,18803.724581302427
+r04c00,Nhe,Noachian highland edifice unit,13594.393491656056
+r04c00,eNh,Early Noachian highland unit,94814.8447496969
+r04c00,lNh,Late Noachian highland unit,93868.13588588541
+r04c00,mNh,Middle Noachian highland unit,27040.046538333314
+r04c01,AHi,Amazonian and Hesperian impact unit,24209.170108424278
+r04c01,eNh,Early Noachian highland unit,59594.53174753321
+r04c01,lNh,Late Noachian highland unit,95272.44675341099
+r04c01,mNh,Middle Noachian highland unit,69049.88401094693
+r04c02,AHi,Amazonian and Hesperian impact unit,22566.184960325867
+r04c02,eNh,Early Noachian highland unit,116716.87414803
+r04c02,lNh,Late Noachian highland unit,42456.28605963388
+r04c02,mNh,Middle Noachian highland unit,66386.68745232487
+r04c03,AHi,Amazonian and Hesperian impact unit,13598.062205376677
+r04c03,eNh,Early Noachian highland unit,88446.71545952246
+r04c03,lNh,Late Noachian highland unit,35891.492967168
+r04c03,mNh,Middle Noachian highland unit,110189.76198824825
+r04c04,AHi,Amazonian and Hesperian impact unit,42174.253187146365
+r04c04,eNh,Early Noachian highland unit,46659.353098846426
+r04c04,lNh,Late Noachian highland unit,103.69613952239725
+r04c04,mNh,Middle Noachian highland unit,159188.7301947999
+r04c05,AHi,Amazonian and Hesperian impact unit,12094.094908322813
+r04c05,AHv,Amazonian and Hesperian volcanic,13247.82452715471
+r04c05,eHv,Early Hesperian volcanic unit,9630.697713858865
+r04c05,eNh,Early Noachian highland unit,75701.70195931374
+r04c05,lNh,Late Noachian highland unit,14559.90626002769
+r04c05,lNv,Late Noachian volcanic unit,55821.541403848314
+r04c05,mNh,Middle Noachian highland unit,67070.26584778931
+r04c06,AHi,Amazonian and Hesperian impact unit,51435.5990321244
+r04c06,AHv,Amazonian and Hesperian volcanic,244.5188460524471
+r04c06,Nhe,Noachian highland edifice unit,8129.842844439266
+r04c06,eHv,Early Hesperian volcanic unit,13056.147127625556
+r04c06,eNh,Early Noachian highland unit,88736.05319966841
+r04c06,lNh,Late Noachian highland unit,2768.9155415564383
+r04c06,lNv,Late Noachian volcanic unit,44079.326108040106
+r04c06,mNh,Middle Noachian highland unit,39675.62992080845
+r04c07,AHi,Amazonian and Hesperian impact unit,645.7896015481167
+r04c07,Nhe,Noachian highland edifice unit,4484.120572748023
+r04c07,eHv,Early Hesperian volcanic unit,142963.60818015816
+r04c07,eNh,Early Noachian highland unit,24143.455822657794
+r04c07,lNh,Late Noachian highland unit,15128.393837871095
+r04c07,mNh,Middle Noachian highland unit,60760.66460533194
+r04c08,AHi,Amazonian and Hesperian impact unit,14417.865997086572
+r04c08,Nhe,Noachian highland edifice unit,1898.2621246180267
+r04c08,eNh,Early Noachian highland unit,27356.722989059177
+r04c08,lNh,Late Noachian highland unit,41702.7367121661
+r04c08,mNh,Middle Noachian highland unit,162750.44479738534
+r04c09,AHi,Amazonian and Hesperian impact unit,29951.295870341582
+r04c09,Nhu,Noachian highland undivided unit,16351.111717987349
+r04c09,eNh,Early Noachian highland unit,500.96061602596416
+r04c09,lNh,Late Noachian highland unit,130722.95519650326
+r04c09,mNh,Middle Noachian highland unit,70599.70921945684
+r04c10,AHi,Amazonian and Hesperian impact unit,8615.758024590563
+r04c10,lNh,Late Noachian highland unit,53912.73953191882
+r04c10,mNh,Middle Noachian highland unit,185597.53506380552
+r04c11,lNh,Late Noachian highland unit,24461.158564212124
+r04c11,mNh,Middle Noachian highland unit,214122.24122199393
+r04c11,mNhm,Middle Noachian highland massif unit,9542.632834108877
+r04c12,HNb,Hesperian and Noachian basin unit,8167.155076529172
+r04c12,mNh,Middle Noachian highland unit,63552.83894408737
+r04c12,mNhm,Middle Noachian highland massif unit,176406.03859969843
+r04c13,HNb,Hesperian and Noachian basin unit,113983.89437103501
+r04c13,lNh,Late Noachian highland unit,1807.9473190557171
+r04c13,mNhm,Middle Noachian highland massif unit,132334.19093022431
+r04c14,AHi,Amazonian and Hesperian impact unit,52869.007690864
+r04c14,HNb,Hesperian and Noachian basin unit,43099.21390997102
+r04c14,eHh,Early Hesperian highland unit,7925.532107140388
+r04c14,mNhm,Middle Noachian highland massif unit,144232.27891233962
+r04c15,AHi,Amazonian and Hesperian impact unit,22482.027752929916
+r04c15,eHh,Early Hesperian highland unit,11791.55977047202
+r04c15,lNh,Late Noachian highland unit,24437.184632422897
+r04c15,mNh,Middle Noachian highland unit,55907.505706000324
+r04c15,mNhm,Middle Noachian highland massif unit,133507.75475848958
+r04c16,eNh,Early Noachian highland unit,338.7164213875723
+r04c16,lNh,Late Noachian highland unit,18203.83563495048
+r04c16,mNh,Middle Noachian highland unit,225352.39454372606
+r04c16,mNhm,Middle Noachian highland massif unit,4231.086020250758
+r04c17,AHi,Amazonian and Hesperian impact unit,29420.87231070594
+r04c17,eNh,Early Noachian highland unit,7712.985187790607
+r04c17,lNh,Late Noachian highland unit,19675.856721231965
+r04c17,mNh,Middle Noachian highland unit,191316.31840058637
+r04c18,AHi,Amazonian and Hesperian impact unit,54156.38754250168
+r04c18,eNh,Early Noachian highland unit,24770.696448954994
+r04c18,lNh,Late Noachian highland unit,13647.571415363382
+r04c18,mNh,Middle Noachian highland unit,155551.37721349526
+r04c19,AHi,Amazonian and Hesperian impact unit,48568.66412916859
+r04c19,eNh,Early Noachian highland unit,92657.8793779029
+r04c19,lNh,Late Noachian highland unit,31934.4177164925
+r04c19,mNh,Middle Noachian highland unit,74965.07139675094
+r04c20,AHi,Amazonian and Hesperian impact unit,11712.24590167698
+r04c20,HNhu,Hesperian and Noachian highland undivided unit,10318.331813428555
+r04c20,eNh,Early Noachian highland unit,128661.79436273519
+r04c20,lNh,Late Noachian highland unit,42915.86855376733
+r04c20,mNh,Middle Noachian highland unit,54517.79198870686
+r04c21,AHi,Amazonian and Hesperian impact unit,13316.035233531567
+r04c21,HNhu,Hesperian and Noachian highland undivided unit,7071.441655856421
+r04c21,eNh,Early Noachian highland unit,70055.16207806923
+r04c21,lNh,Late Noachian highland unit,1297.2375215756276
+r04c21,mNh,Middle Noachian highland unit,156386.1561312824
+r04c22,AHi,Amazonian and Hesperian impact unit,1410.258423446175
+r04c22,HNb,Hesperian and Noachian basin unit,6594.8978161496725
+r04c22,eNh,Early Noachian highland unit,4704.62856320728
+r04c22,eNhm,Early Noachian highland massif unit,129869.5164348983
+r04c22,lNv,Late Noachian volcanic unit,21354.449102999573
+r04c22,mNh,Middle Noachian highland unit,84192.28227961384
+r04c23,AHi,Amazonian and Hesperian impact unit,2520.6813975285636
+r04c23,HNb,Hesperian and Noachian basin unit,76636.13164050081
+r04c23,eAb,Early Amazonian basin unit,501.64615645200814
+r04c23,eNhm,Early Noachian highland massif unit,397.16280245576246
+r04c23,lHb,Late Hesperian basin unit,114191.02204156248
+r04c23,lNv,Late Noachian volcanic unit,53879.38858181547
+r04c24,AHi,Amazonian and Hesperian impact unit,23.163561163309204
+r04c24,HNb,Hesperian and Noachian basin unit,1620.4983799064948
+r04c24,eHb,Early Hesperian basin unit,2551.153870099314
+r04c24,lHb,Late Hesperian basin unit,221492.742583667
+r04c24,lNv,Late Noachian volcanic unit,22438.47422547884
+r04c25,eHb,Early Hesperian basin unit,17813.571914488995
+r04c25,lHb,Late Hesperian basin unit,230312.4607058261
+r04c26,AHi,Amazonian and Hesperian impact unit,18728.45324487384
+r04c26,HNhu,Hesperian and Noachian highland undivided unit,4604.961222044596
+r04c26,eHb,Early Hesperian basin unit,131468.57699123686
+r04c26,eHv,Early Hesperian volcanic unit,2.797207961670253
+r04c26,lHb,Late Hesperian basin unit,32411.204403013024
+r04c26,lNh,Late Noachian highland unit,47638.552149629366
+r04c26,mNh,Middle Noachian highland unit,13271.487401555445
+r04c27,HNhu,Hesperian and Noachian highland undivided unit,173858.0408450598
+r04c27,eHb,Early Hesperian basin unit,106.8440220267902
+r04c27,eHv,Early Hesperian volcanic unit,6096.95576753896
+r04c27,eNhm,Early Noachian highland massif unit,46931.18105141148
+r04c27,lNh,Late Noachian highland unit,4183.473950763142
+r04c27,mNh,Middle Noachian highland unit,16949.53698351461
+r04c28,ANa,Amazonian and Noachian apron unit,19506.32697069916
+r04c28,HNhu,Hesperian and Noachian highland undivided unit,136750.11078847203
+r04c28,eNhm,Early Noachian highland massif unit,79883.17558301082
+r04c28,lNh,Late Noachian highland unit,8597.150440579626
+r04c28,mNh,Middle Noachian highland unit,3389.268837553488
+r04c29,AHi,Amazonian and Hesperian impact unit,4477.151397525978
+r04c29,eHh,Early Hesperian highland unit,8828.827209298996
+r04c29,eHv,Early Hesperian volcanic unit,25548.306123608978
+r04c29,eNhm,Early Noachian highland massif unit,121345.80974750625
+r04c29,lNh,Late Noachian highland unit,42838.896901980734
+r04c29,mNh,Middle Noachian highland unit,45087.04124039419
+r04c30,AHi,Amazonian and Hesperian impact unit,26022.6745475064
+r04c30,eHh,Early Hesperian highland unit,19190.07657761676
+r04c30,eNh,Early Noachian highland unit,42653.39112679355
+r04c30,eNhm,Early Noachian highland massif unit,76709.7872200644
+r04c30,lNh,Late Noachian highland unit,16565.19495261026
+r04c30,mNh,Middle Noachian highland unit,66984.90819572403
+r04c31,AHi,Amazonian and Hesperian impact unit,19965.363535541397
+r04c31,eNh,Early Noachian highland unit,130713.94922516341
+r04c31,lNh,Late Noachian highland unit,16723.732898062146
+r04c31,mNh,Middle Noachian highland unit,80722.98696154759
+r04c32,AHi,Amazonian and Hesperian impact unit,42867.28043576242
+r04c32,eNh,Early Noachian highland unit,111277.46551415169
+r04c32,lNh,Late Noachian highland unit,33328.842813413095
+r04c32,mNh,Middle Noachian highland unit,60652.44385698852
+r04c33,AHi,Amazonian and Hesperian impact unit,14963.715743064684
+r04c33,Nhe,Noachian highland edifice unit,9507.866708845488
+r04c33,eNh,Early Noachian highland unit,15109.437739548755
+r04c33,lNh,Late Noachian highland unit,33676.91361918996
+r04c33,mNh,Middle Noachian highland unit,174868.098809665
+r04c34,AHi,Amazonian and Hesperian impact unit,219.2530590129158
+r04c34,eNh,Early Noachian highland unit,110463.73183484991
+r04c34,lNh,Late Noachian highland unit,33223.86504978714
+r04c34,mNh,Middle Noachian highland unit,104219.18267666506
+r04c35,AHi,Amazonian and Hesperian impact unit,9918.322194354318
+r04c35,eNh,Early Noachian highland unit,83899.84300519366
+r04c35,lNh,Late Noachian highland unit,36605.735653897646
+r04c35,mNh,Middle Noachian highland unit,117697.24435834623
+r05c00,AHi,Amazonian and Hesperian impact unit,18314.51784770992
+r05c00,HNt,Hesperian and Noachian transition unit,32706.587997515977
+r05c00,Nhe,Noachian highland edifice unit,9217.966470072091
+r05c00,eNh,Early Noachian highland unit,118838.92035727965
+r05c00,lNh,Late Noachian highland unit,72707.91265200854
+r05c00,mNh,Middle Noachian highland unit,35652.072326666785
+r05c01,AHi,Amazonian and Hesperian impact unit,15441.905678272307
+r05c01,HNt,Hesperian and Noachian transition unit,850.1816254443231
+r05c01,eNh,Early Noachian highland unit,107314.68965571871
+r05c01,lNh,Late Noachian highland unit,70199.3390256148
+r05c01,mNh,Middle Noachian highland unit,93636.9580598395
+r05c02,AHi,Amazonian and Hesperian impact unit,9293.834682945328
+r05c02,eHv,Early Hesperian volcanic unit,21990.242774595252
+r05c02,eNh,Early Noachian highland unit,115945.61159200226
+r05c02,lNh,Late Noachian highland unit,13034.027474361395
+r05c02,mNh,Middle Noachian highland unit,127179.35752098425
+r05c03,Nhe,Noachian highland edifice unit,31108.296074541784
+r05c03,eHv,Early Hesperian volcanic unit,117002.48470124272
+r05c03,eNh,Early Noachian highland unit,41102.62370803047
+r05c03,lNh,Late Noachian highland unit,14320.797356810175
+r05c03,mNh,Middle Noachian highland unit,83908.87220426441
+r05c04,AHv,Amazonian and Hesperian volcanic,115531.38333697976
+r05c04,Nhe,Noachian highland edifice unit,8579.822315372621
+r05c04,eHv,Early Hesperian volcanic unit,8768.98908765454
+r05c04,eNh,Early Noachian highland unit,107652.33883627965
+r05c04,lHv,Late Hesperian volcanic unit,5741.447373051236
+r05c04,lNh,Late Noachian highland unit,28856.403224406185
+r05c04,mNh,Middle Noachian highland unit,12312.689871145121
+r05c05,AHi,Amazonian and Hesperian impact unit,8603.285061958519
+r05c05,AHv,Amazonian and Hesperian volcanic,176223.28052768233
+r05c05,Nhe,Noachian highland edifice unit,551.9036443746758
+r05c05,eHv,Early Hesperian volcanic unit,8021.2133531700165
+r05c05,eNh,Early Noachian highland unit,78184.89680890774
+r05c05,lNh,Late Noachian highland unit,4663.240246457426
+r05c05,mNh,Middle Noachian highland unit,11195.254402338745
+r05c06,AHi,Amazonian and Hesperian impact unit,4450.350101291789
+r05c06,AHv,Amazonian and Hesperian volcanic,81059.05744550834
+r05c06,Nhe,Noachian highland edifice unit,43594.2602361159
+r05c06,eHv,Early Hesperian volcanic unit,31211.725738669324
+r05c06,eNh,Early Noachian highland unit,32750.939789627293
+r05c06,lNh,Late Noachian highland unit,28243.55277634563
+r05c06,lNv,Late Noachian volcanic unit,2054.632923867188
+r05c06,mNh,Middle Noachian highland unit,64078.555033463665
+r05c07,AHi,Amazonian and Hesperian impact unit,17916.558812938172
+r05c07,eHv,Early Hesperian volcanic unit,27775.233072110113
+r05c07,eNh,Early Noachian highland unit,32545.06788727655
+r05c07,lNh,Late Noachian highland unit,20378.197396270112
+r05c07,mNh,Middle Noachian highland unit,188828.0168762941
+r05c08,AHi,Amazonian and Hesperian impact unit,19699.307033848796
+r05c08,Nhe,Noachian highland edifice unit,16682.62740160947
+r05c08,eHv,Early Hesperian volcanic unit,3394.848737489566
+r05c08,eNh,Early Noachian highland unit,38065.0098591962
+r05c08,lHv,Late Hesperian volcanic unit,53494.883005148404
+r05c08,lNh,Late Noachian highland unit,50162.7123780486
+r05c08,mNh,Middle Noachian highland unit,105943.68562954807
+r05c09,AHi,Amazonian and Hesperian impact unit,4906.445344281954
+r05c09,Nhe,Noachian highland edifice unit,23918.90281362035
+r05c09,Nhu,Noachian highland undivided unit,25771.076275071144
+r05c09,eHv,Early Hesperian volcanic unit,44811.29895681878
+r05c09,eNh,Early Noachian highland unit,244.91978302513473
+r05c09,lHv,Late Hesperian volcanic unit,32007.390316431163
+r05c09,lNh,Late Noachian highland unit,894.713430150854
+r05c09,mNh,Middle Noachian highland unit,154888.32712549038
+r05c10,AHi,Amazonian and Hesperian impact unit,26144.507354657988
+r05c10,Nhu,Noachian highland undivided unit,3649.794500237901
+r05c10,eHv,Early Hesperian volcanic unit,960.4940822259948
+r05c10,lNh,Late Noachian highland unit,84792.16749013578
+r05c10,mNh,Middle Noachian highland unit,171896.1106176311
+r05c11,AHi,Amazonian and Hesperian impact unit,7039.936678651075
+r05c11,Nhu,Noachian highland undivided unit,13051.310854449517
+r05c11,lNh,Late Noachian highland unit,176481.43032222852
+r05c11,mNh,Middle Noachian highland unit,90870.39618956027
+r05c12,AHi,Amazonian and Hesperian impact unit,717.2382544582832
+r05c12,Nhu,Noachian highland undivided unit,3083.4375510897685
+r05c12,lNh,Late Noachian highland unit,100917.66194124003
+r05c12,mNh,Middle Noachian highland unit,165588.95134188162
+r05c12,mNhm,Middle Noachian highland massif unit,17135.78495621961
+r05c13,AHi,Amazonian and Hesperian impact unit,164.8866644362394
+r05c13,lNh,Late Noachian highland unit,48024.81792142701
+r05c13,mNh,Middle Noachian highland unit,120135.1512140939
+r05c13,mNhm,Middle Noachian highland massif unit,119118.21824493234
+r05c14,lNh,Late Noachian highland unit,7726.281789541456
+r05c14,mNh,Middle Noachian highland unit,159217.44392636593
+r05c14,mNhm,Middle Noachian highland massif unit,120499.34832898171
+r05c15,AHi,Amazonian and Hesperian impact unit,8679.115433711415
+r05c15,eHh,Early Hesperian highland unit,6082.163263125937
+r05c15,lNh,Late Noachian highland unit,44698.05508061008
+r05c15,mNh,Middle Noachian highland unit,225307.90041236498
+r05c15,mNhm,Middle Noachian highland massif unit,2675.8398550767547
+r05c16,eNh,Early Noachian highland unit,158323.44551773963
+r05c16,lNh,Late Noachian highland unit,38275.79156785096
+r05c16,mNh,Middle Noachian highland unit,90843.83695929835
+r05c17,AHi,Amazonian and Hesperian impact unit,184.72257734180545
+r05c17,eNh,Early Noachian highland unit,160623.32939910697
+r05c17,lNh,Late Noachian highland unit,79865.17574417207
+r05c17,mNh,Middle Noachian highland unit,46769.84632426851
+r05c18,AHi,Amazonian and Hesperian impact unit,10267.168385871355
+r05c18,eNh,Early Noachian highland unit,104236.4707315392
+r05c18,lNh,Late Noachian highland unit,74748.7770492903
+r05c18,mNh,Middle Noachian highland unit,98190.6578781883
+r05c19,AHi,Amazonian and Hesperian impact unit,14813.91462073766
+r05c19,eNh,Early Noachian highland unit,96636.413607806
+r05c19,lNh,Late Noachian highland unit,47557.91182803098
+r05c19,mNh,Middle Noachian highland unit,128434.83398831477
+r05c20,eNh,Early Noachian highland unit,158269.47274943697
+r05c20,lNh,Late Noachian highland unit,44753.91306383463
+r05c20,mNh,Middle Noachian highland unit,84419.68823161736
+r05c21,HNhu,Hesperian and Noachian highland undivided unit,6448.152062477809
+r05c21,eNh,Early Noachian highland unit,122794.95219728567
+r05c21,lNh,Late Noachian highland unit,27760.16372949549
+r05c21,mNh,Middle Noachian highland unit,130439.80605563015
+r05c22,HNb,Hesperian and Noachian basin unit,428.78206055484156
+r05c22,eNh,Early Noachian highland unit,151855.47327425558
+r05c22,eNhm,Early Noachian highland massif unit,70274.94593147929
+r05c22,lNh,Late Noachian highland unit,11960.645537142833
+r05c22,mNh,Middle Noachian highland unit,52923.22724145678
+r05c23,AHi,Amazonian and Hesperian impact unit,8314.201273226958
+r05c23,HNb,Hesperian and Noachian basin unit,121817.3570261013
+r05c23,eAb,Early Amazonian basin unit,18685.051497088858
+r05c23,eNh,Early Noachian highland unit,2936.6249097599143
+r05c23,eNhm,Early Noachian highland massif unit,49499.25339686646
+r05c23,lHb,Late Hesperian basin unit,36939.713283486446
+r05c23,mNh,Middle Noachian highland unit,49250.872658359425
+r05c24,HNb,Hesperian and Noachian basin unit,42642.06596677453
+r05c24,eHb,Early Hesperian basin unit,39970.14532059995
+r05c24,lHb,Late Hesperian basin unit,195836.08858794437
+r05c24,mNh,Middle Noachian highland unit,8994.774169569786
+r05c25,AHi,Amazonian and Hesperian impact unit,8785.613214217346
+r05c25,eHb,Early Hesperian basin unit,146241.5455407961
+r05c25,eNhm,Early Noachian highland massif unit,22807.039826843018
+r05c25,lHb,Late Hesperian basin unit,71841.85995067985
+r05c25,lNh,Late Noachian highland unit,31725.383250449868
+r05c25,mNh,Middle Noachian highland unit,6041.632261903476
+r05c26,AHi,Amazonian and Hesperian impact unit,10686.225568174468
+r05c26,Hve,Hesperian volcanic edifice unit,15577.150782031888
+r05c26,eHb,Early Hesperian basin unit,25166.61831098535
+r05c26,eHv,Early Hesperian volcanic unit,70480.96129827188
+r05c26,eNhm,Early Noachian highland massif unit,60054.62542165622
+r05c26,lNh,Late Noachian highland unit,98011.40023784306
+r05c26,mNh,Middle Noachian highland unit,7466.092425925865
+r05c27,AHi,Amazonian and Hesperian impact unit,15217.194076394808
+r05c27,ANa,Amazonian and Noachian apron unit,18770.199107155484
+r05c27,HNhu,Hesperian and Noachian highland undivided unit,5384.448114950808
+r05c27,Hve,Hesperian volcanic edifice unit,57505.76786252613
+r05c27,eHv,Early Hesperian volcanic unit,105409.86257155643
+r05c27,eNhm,Early Noachian highland massif unit,23646.789178496438
+r05c27,lHv,Late Hesperian volcanic unit,61508.8131338092
+r05c28,AHi,Amazonian and Hesperian impact unit,32664.84717419521
+r05c28,HNhu,Hesperian and Noachian highland undivided unit,8567.083140555877
+r05c28,eHv,Early Hesperian volcanic unit,129141.21870652343
+r05c28,eNhm,Early Noachian highland massif unit,101262.89739614227
+r05c28,lHv,Late Hesperian volcanic unit,15807.027627472768
+r05c29,AHi,Amazonian and Hesperian impact unit,55408.83106265861
+r05c29,eHv,Early Hesperian volcanic unit,220570.70218266107
+r05c29,eNhm,Early Noachian highland massif unit,10901.682765500298
+r05c29,mNh,Middle Noachian highland unit,561.8580340690604
+r05c30,AHi,Amazonian and Hesperian impact unit,16778.568777093707
+r05c30,eHv,Early Hesperian volcanic unit,107670.47941678854
+r05c30,eNh,Early Noachian highland unit,104078.49561239533
+r05c30,lNh,Late Noachian highland unit,3461.007330118901
+r05c30,lNv,Late Noachian volcanic unit,210.87529012508423
+r05c30,mNh,Middle Noachian highland unit,55243.647618368006
+r05c31,AHi,Amazonian and Hesperian impact unit,20802.626800667993
+r05c31,Nhe,Noachian highland edifice unit,9273.665145114499
+r05c31,eNh,Early Noachian highland unit,93783.80290872233
+r05c31,lNh,Late Noachian highland unit,20748.069064103234
+r05c31,lNv,Late Noachian volcanic unit,21471.56237565052
+r05c31,mNh,Middle Noachian highland unit,121363.34775063016
+r05c32,AHi,Amazonian and Hesperian impact unit,82135.01765001914
+r05c32,eNh,Early Noachian highland unit,68292.85079728485
+r05c32,lNh,Late Noachian highland unit,28016.823262496822
+r05c32,mNh,Middle Noachian highland unit,108998.38233508897
+r05c33,AHi,Amazonian and Hesperian impact unit,17171.324829927173
+r05c33,eNh,Early Noachian highland unit,64549.67987790092
+r05c33,lNh,Late Noachian highland unit,33151.09373959201
+r05c33,mNh,Middle Noachian highland unit,172570.97559746908
+r05c34,AHi,Amazonian and Hesperian impact unit,29975.44319035767
+r05c34,eNh,Early Noachian highland unit,18514.020128780674
+r05c34,lNh,Late Noachian highland unit,111285.14672143229
+r05c34,mNh,Middle Noachian highland unit,127668.4640043192
+r05c35,AHi,Amazonian and Hesperian impact unit,17756.98290743297
+r05c35,HNt,Hesperian and Noachian transition unit,24340.514791613245
+r05c35,eNh,Early Noachian highland unit,60322.713678253094
+r05c35,lNh,Late Noachian highland unit,68720.70520925274
+r05c35,mNh,Middle Noachian highland unit,116297.06107584052
+r06c00,AHi,Amazonian and Hesperian impact unit,7433.487581637384
+r06c00,eNh,Early Noachian highland unit,152219.31986845858
+r06c00,lNh,Late Noachian highland unit,17619.53516560248
+r06c00,mNh,Middle Noachian highland unit,140750.56626094854
+r06c01,AHi,Amazonian and Hesperian impact unit,55889.275520463976
+r06c01,eNh,Early Noachian highland unit,122770.21908164992
+r06c01,lNh,Late Noachian highland unit,23591.461817798197
+r06c01,mNh,Middle Noachian highland unit,115775.34669791166
+r06c02,AHi,Amazonian and Hesperian impact unit,11268.561294609102
+r06c02,eHv,Early Hesperian volcanic unit,34829.039062870026
+r06c02,eNh,Early Noachian highland unit,151449.2408111844
+r06c02,lNh,Late Noachian highland unit,53985.42740224355
+r06c02,mNh,Middle Noachian highland unit,66494.03454691546
+r06c03,AHv,Amazonian and Hesperian volcanic,58721.94165210144
+r06c03,Nhe,Noachian highland edifice unit,265.0808021635496
+r06c03,Nve,Noachian volcanic edifice unit,8476.370734771077
+r06c03,eHv,Early Hesperian volcanic unit,26690.463537847587
+r06c03,eNh,Early Noachian highland unit,102832.90433244726
+r06c03,lNh,Late Noachian highland unit,47914.63811075467
+r06c03,mNh,Middle Noachian highland unit,73124.90394773819
+r06c04,AHv,Amazonian and Hesperian volcanic,295173.6683103653
+r06c04,Nhe,Noachian highland edifice unit,193.64833858393652
+r06c04,Nve,Noachian volcanic edifice unit,4556.497729983258
+r06c04,eNh,Early Noachian highland unit,13298.41674747767
+r06c04,lNh,Late Noachian highland unit,4804.07199141247
+r06c05,AHi,Amazonian and Hesperian impact unit,495.99556756455365
+r06c05,AHv,Amazonian and Hesperian volcanic,312798.6615694427
+r06c05,mNh,Middle Noachian highland unit,4731.645980815792
+r06c06,AHi,Amazonian and Hesperian impact unit,8408.537735424206
+r06c06,AHv,Amazonian and Hesperian volcanic,265178.39812964294
+r06c06,Nhe,Noachian highland edifice unit,8745.228586190728
+r06c06,eHv,Early Hesperian volcanic unit,561.2961606794402
+r06c06,eNh,Early Noachian highland unit,537.5042280040658
+r06c06,lHv,Late Hesperian volcanic unit,33460.63536543246
+r06c06,lNh,Late Noachian highland unit,1134.7029124492635
+r06c07,Nhe,Noachian highland edifice unit,4630.056826903899
+r06c07,Nve,Noachian volcanic edifice unit,3507.817495046835
+r06c07,eHv,Early Hesperian volcanic unit,10316.86378009383
+r06c07,eNh,Early Noachian highland unit,35485.772376754896
+r06c07,lHv,Late Hesperian volcanic unit,145208.52323212754
+r06c07,lNh,Late Noachian highland unit,11985.135362117986
+r06c07,mNh,Middle Noachian highland unit,106892.13404477826
+r06c08,eNh,Early Noachian highland unit,9308.968374544462
+r06c08,lHv,Late Hesperian volcanic unit,300515.32366312057
+r06c08,lNh,Late Noachian highland unit,2007.1549408219407
+r06c08,mNh,Middle Noachian highland unit,6194.856139336136
+r06c09,Nhu,Noachian highland undivided unit,2023.2773890700641
+r06c09,eHv,Early Hesperian volcanic unit,190246.8288605681
+r06c09,lHv,Late Hesperian volcanic unit,125756.19686818459
+r06c10,AHi,Amazonian and Hesperian impact unit,18394.64344457673
+r06c10,Nhu,Noachian highland undivided unit,106664.36879570899
+r06c10,eHv,Early Hesperian volcanic unit,126552.56523537486
+r06c10,lNv,Late Noachian volcanic unit,56940.52724655534
+r06c10,mNh,Middle Noachian highland unit,9474.198395607506
+r06c11,AHi,Amazonian and Hesperian impact unit,49473.988977582296
+r06c11,Nhu,Noachian highland undivided unit,58626.614454907656
+r06c11,lNv,Late Noachian volcanic unit,170699.9566402027
+r06c11,mNh,Middle Noachian highland unit,39225.74304513119
+r06c12,AHi,Amazonian and Hesperian impact unit,28419.825289511115
+r06c12,Nhu,Noachian highland undivided unit,50629.47857601838
+r06c12,lNh,Late Noachian highland unit,170085.89367052133
+r06c12,lNv,Late Noachian volcanic unit,12800.444132292136
+r06c12,mNh,Middle Noachian highland unit,56090.66144948014
+r06c13,AHi,Amazonian and Hesperian impact unit,18650.59218329629
+r06c13,eNh,Early Noachian highland unit,746.8297867769006
+r06c13,lNh,Late Noachian highland unit,146277.30435498356
+r06c13,mNh,Middle Noachian highland unit,152351.57679276666
+r06c14,AHi,Amazonian and Hesperian impact unit,78858.10161776528
+r06c14,eNh,Early Noachian highland unit,13184.526006465549
+r06c14,lNh,Late Noachian highland unit,102896.71764916209
+r06c14,mNh,Middle Noachian highland unit,123086.95784443051
+r06c15,AHi,Amazonian and Hesperian impact unit,2375.2451337887564
+r06c15,eNh,Early Noachian highland unit,37534.52035094947
+r06c15,lNh,Late Noachian highland unit,16320.278422435313
+r06c15,mNh,Middle Noachian highland unit,261796.25921065005
+r06c16,AHi,Amazonian and Hesperian impact unit,10762.843222249714
+r06c16,eNh,Early Noachian highland unit,112110.56012954445
+r06c16,lNh,Late Noachian highland unit,38579.15039487518
+r06c16,mNh,Middle Noachian highland unit,156573.74937115383
+r06c17,AHi,Amazonian and Hesperian impact unit,5977.490338995382
+r06c17,eNh,Early Noachian highland unit,109992.94893476451
+r06c17,lNh,Late Noachian highland unit,60674.69381351597
+r06c17,mNh,Middle Noachian highland unit,141381.17003054734
+r06c18,AHi,Amazonian and Hesperian impact unit,7123.895413659931
+r06c18,eNh,Early Noachian highland unit,135108.8926949047
+r06c18,lNh,Late Noachian highland unit,101639.23480698331
+r06c18,mNh,Middle Noachian highland unit,74154.28020227527
+r06c19,AHi,Amazonian and Hesperian impact unit,123288.09020068173
+r06c19,eHh,Early Hesperian highland unit,9479.076234386122
+r06c19,eNh,Early Noachian highland unit,63006.83769076053
+r06c19,lNh,Late Noachian highland unit,59089.79118742261
+r06c19,mNh,Middle Noachian highland unit,63162.50780457208
+r06c20,AHi,Amazonian and Hesperian impact unit,69453.16841383363
+r06c20,eNh,Early Noachian highland unit,40126.98189230491
+r06c20,lNh,Late Noachian highland unit,93427.34781848162
+r06c20,mNh,Middle Noachian highland unit,115018.80499320285
+r06c21,AHi,Amazonian and Hesperian impact unit,5363.12266799174
+r06c21,eNh,Early Noachian highland unit,210476.32522823746
+r06c21,lNh,Late Noachian highland unit,55431.05248205666
+r06c21,mNh,Middle Noachian highland unit,46755.802739536884
+r06c22,AHi,Amazonian and Hesperian impact unit,10111.386664795453
+r06c22,HNhu,Hesperian and Noachian highland undivided unit,5158.142063686307
+r06c22,eNh,Early Noachian highland unit,165329.97969145392
+r06c22,lNh,Late Noachian highland unit,37265.87837762531
+r06c22,mNh,Middle Noachian highland unit,100160.91632026192
+r06c23,HNhu,Hesperian and Noachian highland undivided unit,7088.763983876415
+r06c23,eNh,Early Noachian highland unit,36052.11335340632
+r06c23,eNhm,Early Noachian highland massif unit,131498.74184846604
+r06c23,mNh,Middle Noachian highland unit,143386.6839320747
+r06c24,AHi,Amazonian and Hesperian impact unit,21667.762826825252
+r06c24,HNhu,Hesperian and Noachian highland undivided unit,6444.748946700483
+r06c24,eHb,Early Hesperian basin unit,5674.0115867420145
+r06c24,eNhm,Early Noachian highland massif unit,183858.17214591635
+r06c24,lNh,Late Noachian highland unit,42581.06372505562
+r06c24,mNh,Middle Noachian highland unit,57800.543886583284
+r06c25,AHi,Amazonian and Hesperian impact unit,47602.31933706967
+r06c25,HNhu,Hesperian and Noachian highland undivided unit,15303.337759389195
+r06c25,eHb,Early Hesperian basin unit,2014.099807035433
+r06c25,eNh,Early Noachian highland unit,74606.34280887576
+r06c25,eNhm,Early Noachian highland massif unit,85918.41996393682
+r06c25,lNh,Late Noachian highland unit,5309.609209150507
+r06c25,mNh,Middle Noachian highland unit,87272.17423236593
+r06c26,AHi,Amazonian and Hesperian impact unit,30395.624430493608
+r06c26,HNhu,Hesperian and Noachian highland undivided unit,6989.002419310973
+r06c26,Hve,Hesperian volcanic edifice unit,0.0695771958947784
+r06c26,eHv,Early Hesperian volcanic unit,9805.79233028751
+r06c26,eNh,Early Noachian highland unit,142773.48452530766
+r06c26,eNhm,Early Noachian highland massif unit,42730.37220654994
+r06c26,lNh,Late Noachian highland unit,7257.243763891878
+r06c26,mNh,Middle Noachian highland unit,78074.71386478574
+r06c27,AHi,Amazonian and Hesperian impact unit,11739.451401171737
+r06c27,Hve,Hesperian volcanic edifice unit,23728.638221925146
+r06c27,eHv,Early Hesperian volcanic unit,95690.56388016813
+r06c27,eNh,Early Noachian highland unit,100435.21324508722
+r06c27,eNhm,Early Noachian highland massif unit,32797.40628074176
+r06c27,lHv,Late Hesperian volcanic unit,9503.647999711391
+r06c27,mNh,Middle Noachian highland unit,44131.38208901767
+r06c28,AHi,Amazonian and Hesperian impact unit,21450.99527328827
+r06c28,Nve,Noachian volcanic edifice unit,57569.78375894706
+r06c28,eHv,Early Hesperian volcanic unit,147644.61236183948
+r06c28,eNh,Early Noachian highland unit,2925.8054779694994
+r06c28,eNhm,Early Noachian highland massif unit,63.139354924508545
+r06c28,lHv,Late Hesperian volcanic unit,88371.96689085454
+r06c29,AHi,Amazonian and Hesperian impact unit,43923.90615947742
+r06c29,eHv,Early Hesperian volcanic unit,274102.3969583457
+r06c30,AHi,Amazonian and Hesperian impact unit,41746.77876333894
+r06c30,eHv,Early Hesperian volcanic unit,52397.262785781706
+r06c30,eNh,Early Noachian highland unit,80426.27068484301
+r06c30,lNh,Late Noachian highland unit,33106.47203129715
+r06c30,mNh,Middle Noachian highland unit,110349.51885256283
+r06c31,AHi,Amazonian and Hesperian impact unit,23779.653243614834
+r06c31,eNh,Early Noachian highland unit,86062.12264707945
+r06c31,lNh,Late Noachian highland unit,14841.43674742734
+r06c31,mNh,Middle Noachian highland unit,193343.09047970097
+r06c32,AHi,Amazonian and Hesperian impact unit,20197.031136253452
+r06c32,Nhe,Noachian highland edifice unit,1008.9007074673311
+r06c32,eNh,Early Noachian highland unit,75824.62173008316
+r06c32,lNh,Late Noachian highland unit,65380.45420543422
+r06c32,mNh,Middle Noachian highland unit,155615.29533858545
+r06c33,AHi,Amazonian and Hesperian impact unit,11034.359796515766
+r06c33,eNh,Early Noachian highland unit,127240.74380862495
+r06c33,lNh,Late Noachian highland unit,60793.745973117635
+r06c33,mNh,Middle Noachian highland unit,118957.45353956423
+r06c34,AHi,Amazonian and Hesperian impact unit,52780.11903301968
+r06c34,eNh,Early Noachian highland unit,87460.36752703098
+r06c34,lNh,Late Noachian highland unit,41526.967158186904
+r06c34,mNh,Middle Noachian highland unit,136258.84939958583
+r06c35,AHi,Amazonian and Hesperian impact unit,34363.80862863097
+r06c35,eNh,Early Noachian highland unit,83197.84353192992
+r06c35,lNh,Late Noachian highland unit,3955.8277263487084
+r06c35,mNh,Middle Noachian highland unit,196505.4289892975
+r07c00,AHi,Amazonian and Hesperian impact unit,18747.869163250856
+r07c00,AHtu,Amazonian and Hesperian transition undivided unit,15742.382224668027
+r07c00,eHt,Early Hesperian transition unit,3664.5485237419966
+r07c00,eNh,Early Noachian highland unit,203984.7928174102
+r07c00,lNh,Late Noachian highland unit,8811.055803484023
+r07c00,mNh,Middle Noachian highland unit,87992.96935530848
+r07c01,AHi,Amazonian and Hesperian impact unit,45459.35210987104
+r07c01,eNh,Early Noachian highland unit,13225.725267957558
+r07c01,lNh,Late Noachian highland unit,26307.745714344288
+r07c01,mNh,Middle Noachian highland unit,253953.64080742415
+r07c02,AHi,Amazonian and Hesperian impact unit,68014.43309317724
+r07c02,AHv,Amazonian and Hesperian volcanic,19428.277175362375
+r07c02,eHv,Early Hesperian volcanic unit,9171.339487982093
+r07c02,eNh,Early Noachian highland unit,17744.69199862031
+r07c02,lNh,Late Noachian highland unit,6755.26426077133
+r07c02,mNh,Middle Noachian highland unit,217832.4578836827
+r07c03,AHi,Amazonian and Hesperian impact unit,43.73082791745957
+r07c03,AHv,Amazonian and Hesperian volcanic,254274.23735343292
+r07c03,eHv,Early Hesperian volcanic unit,8645.496915353526
+r07c03,eNh,Early Noachian highland unit,29118.702142160288
+r07c03,mNh,Middle Noachian highland unit,46864.29666073289
+r07c04,AHv,Amazonian and Hesperian volcanic,338946.46389959595
+r07c05,AHv,Amazonian and Hesperian volcanic,317185.7392662852
+r07c05,Ave,Amazonian volcanic edifice,12196.584700869858
+r07c05,lAa,Late Amazonian apron unit,9098.90104194439
+r07c05,lAvf,Late Amazonian volcanic field unit,465.23889049754297
+r07c06,AHv,Amazonian and Hesperian volcanic,264116.55349425576
+r07c06,Ave,Amazonian volcanic edifice,13023.373738931525
+r07c06,lAvf,Late Amazonian volcanic field unit,37.362659261010585
+r07c06,lHv,Late Hesperian volcanic unit,40974.332508795414
+r07c06,lNh,Late Noachian highland unit,20794.841498352493
+r07c07,lHv,Late Hesperian volcanic unit,220753.14237098055
+r07c07,lHvf,Late Hesperian volcanic field unit,80245.56467856081
+r07c07,lNh,Late Noachian highland unit,37772.43317785704
+r07c07,mNh,Middle Noachian highland unit,175.32367219824548
+r07c08,AHi,Amazonian and Hesperian impact unit,29126.825291215588
+r07c08,lHt,Late Hesperian transition unit,2522.7704852529137
+r07c08,lHv,Late Hesperian volcanic unit,281398.8772796311
+r07c08,lHvf,Late Hesperian volcanic field unit,25897.99084349711
+r07c09,AHi,Amazonian and Hesperian impact unit,20205.20338738844
+r07c09,eHv,Early Hesperian volcanic unit,160387.94689109942
+r07c09,lHv,Late Hesperian volcanic unit,139684.63473668956
+r07c09,lNh,Late Noachian highland unit,14431.75275956485
+r07c09,lNv,Late Noachian volcanic unit,4236.926124854441
+r07c10,AHi,Amazonian and Hesperian impact unit,23332.881104554875
+r07c10,Htu,Hesperian transition undivided unit,31345.387562109223
+r07c10,Nhu,Noachian highland undivided unit,14889.228548218436
+r07c10,eHv,Early Hesperian volcanic unit,129518.04958248619
+r07c10,lHt,Late Hesperian transition unit,14926.026849033562
+r07c10,lNh,Late Noachian highland unit,48526.310151666956
+r07c10,lNv,Late Noachian volcanic unit,76408.58010152768
+r07c11,AHi,Amazonian and Hesperian impact unit,33882.006754262344
+r07c11,Aa,Amazonian apron unit,12370.23491191175
+r07c11,Htu,Hesperian transition undivided unit,854.1960167625011
+r07c11,Nhu,Noachian highland undivided unit,49817.47311600273
+r07c11,Nve,Noachian volcanic edifice unit,849.374486443058
+r07c11,eHh,Early Hesperian highland unit,15582.967913057117
+r07c11,eHv,Early Hesperian volcanic unit,11339.185363815575
+r07c11,eNh,Early Noachian highland unit,14665.41528122866
+r07c11,lHt,Late Hesperian transition unit,28922.888773241088
+r07c11,lNh,Late Noachian highland unit,6791.570838970765
+r07c11,lNv,Late Noachian volcanic unit,151397.76430395918
+r07c11,mNh,Middle Noachian highland unit,12473.386139941826
+r07c12,Aa,Amazonian apron unit,2306.102059524169
+r07c12,Ht,Hesperian transition unit,38421.372081978625
+r07c12,Htu,Hesperian transition undivided unit,229.7889163149161
+r07c12,Nhu,Noachian highland undivided unit,70181.57625207443
+r07c12,Nve,Noachian volcanic edifice unit,4868.496792366022
+r07c12,eHh,Early Hesperian highland unit,338.34741410835016
+r07c12,eHv,Early Hesperian volcanic unit,12260.606997095543
+r07c12,lNh,Late Noachian highland unit,151350.62929356762
+r07c12,lNv,Late Noachian volcanic unit,1075.2431112099796
+r07c12,mNh,Middle Noachian highland unit,57914.30098135715
+r07c13,AHi,Amazonian and Hesperian impact unit,10454.306430045235
+r07c13,Ht,Hesperian transition unit,111363.03009506522
+r07c13,Hto,Hesperian transition outflow unit,15958.32585580127
+r07c13,Htu,Hesperian transition undivided unit,48451.02567489571
+r07c13,Nhu,Noachian highland undivided unit,20984.76332904929
+r07c13,eNh,Early Noachian highland unit,2578.7977452285145
+r07c13,lNh,Late Noachian highland unit,54319.220370488765
+r07c13,mNh,Middle Noachian highland unit,74836.9943990226
+r07c14,AHi,Amazonian and Hesperian impact unit,9907.14841822783
+r07c14,Ht,Hesperian transition unit,21310.103959096377
+r07c14,Hto,Hesperian transition outflow unit,15389.903310693895
+r07c14,Nhu,Noachian highland undivided unit,10330.514904908316
+r07c14,eNh,Early Noachian highland unit,50006.85409756883
+r07c14,lNh,Late Noachian highland unit,36275.26908449473
+r07c14,mNh,Middle Noachian highland unit,195726.6701246064
+r07c15,AHi,Amazonian and Hesperian impact unit,39103.64173195935
+r07c15,Ht,Hesperian transition unit,36333.89603359393
+r07c15,Nhu,Noachian highland undivided unit,35343.401605806706
+r07c15,eNh,Early Noachian highland unit,43794.71397781011
+r07c15,lNh,Late Noachian highland unit,37779.623384226776
+r07c15,mNh,Middle Noachian highland unit,146591.18716619944
+r07c16,AHi,Amazonian and Hesperian impact unit,33223.3092683336
+r07c16,Ht,Hesperian transition unit,1660.5871656114118
+r07c16,lNh,Late Noachian highland unit,71614.96341784207
+r07c16,mNh,Middle Noachian highland unit,232447.60404780827
+r07c17,AHi,Amazonian and Hesperian impact unit,42619.773297977226
+r07c17,eNh,Early Noachian highland unit,39873.4707974846
+r07c17,lNh,Late Noachian highland unit,17453.29113355855
+r07c17,mNh,Middle Noachian highland unit,238999.92867057605
+r07c18,AHi,Amazonian and Hesperian impact unit,10540.699209254175
+r07c18,eNh,Early Noachian highland unit,45941.37987914249
+r07c18,lNh,Late Noachian highland unit,31679.05329818379
+r07c18,mNh,Middle Noachian highland unit,250785.33151301593
+r07c19,AHi,Amazonian and Hesperian impact unit,57.81177579883209
+r07c19,eNh,Early Noachian highland unit,68765.63154545377
+r07c19,lNh,Late Noachian highland unit,31430.794808167288
+r07c19,mNh,Middle Noachian highland unit,238692.22577017668
+r07c20,AHi,Amazonian and Hesperian impact unit,3086.524626217235
+r07c20,eNh,Early Noachian highland unit,26999.285908470374
+r07c20,lNh,Late Noachian highland unit,58875.96294375893
+r07c20,mNh,Middle Noachian highland unit,249984.6904211495
+r07c21,AHi,Amazonian and Hesperian impact unit,53507.54214835621
+r07c21,eNh,Early Noachian highland unit,93587.49720753246
+r07c21,lNh,Late Noachian highland unit,103181.06560476728
+r07c21,mNh,Middle Noachian highland unit,88670.35893894041
+r07c22,eNh,Early Noachian highland unit,274761.81932056404
+r07c22,lNh,Late Noachian highland unit,518.6086011084037
+r07c22,mNh,Middle Noachian highland unit,63666.03597792388
+r07c23,eNh,Early Noachian highland unit,133334.51490955523
+r07c23,eNhm,Early Noachian highland massif unit,1824.4205018324117
+r07c23,lNh,Late Noachian highland unit,100273.29340462868
+r07c23,mNh,Middle Noachian highland unit,103514.23508357964
+r07c24,AHi,Amazonian and Hesperian impact unit,37771.63379767759
+r07c24,eNh,Early Noachian highland unit,65751.8478416327
+r07c24,eNhm,Early Noachian highland massif unit,10480.343903830599
+r07c24,lNh,Late Noachian highland unit,57833.27203763991
+r07c24,mNh,Middle Noachian highland unit,167109.36631881617
+r07c25,AHi,Amazonian and Hesperian impact unit,15.835186014129768
+r07c25,eNh,Early Noachian highland unit,182335.01676336778
+r07c25,eNhm,Early Noachian highland massif unit,3082.217054197855
+r07c25,lNh,Late Noachian highland unit,76840.52333080514
+r07c25,mNh,Middle Noachian highland unit,76672.87156521203
+r07c26,eNh,Early Noachian highland unit,238048.8428772403
+r07c26,lNh,Late Noachian highland unit,5460.2296334092825
+r07c26,mNh,Middle Noachian highland unit,95437.39138894656
+r07c27,AHi,Amazonian and Hesperian impact unit,9337.36304066086
+r07c27,eHv,Early Hesperian volcanic unit,36142.73805433429
+r07c27,eNh,Early Noachian highland unit,163351.4020042051
+r07c27,lNh,Late Noachian highland unit,10791.009057972806
+r07c27,mNh,Middle Noachian highland unit,119323.95174242358
+r07c28,AHi,Amazonian and Hesperian impact unit,31455.490143451898
+r07c28,Nve,Noachian volcanic edifice unit,23306.858545368534
+r07c28,eHv,Early Hesperian volcanic unit,268797.2214305721
+r07c28,eNh,Early Noachian highland unit,1516.3347187782272
+r07c28,mNh,Middle Noachian highland unit,13870.559061425512
+r07c29,AHi,Amazonian and Hesperian impact unit,35412.59269528003
+r07c29,eHv,Early Hesperian volcanic unit,178705.962948488
+r07c29,lNh,Late Noachian highland unit,844.4143682030596
+r07c29,mNh,Middle Noachian highland unit,123983.49388762546
+r07c30,AHi,Amazonian and Hesperian impact unit,82993.06626141565
+r07c30,eHv,Early Hesperian volcanic unit,47.356932126651174
+r07c30,eNh,Early Noachian highland unit,31112.672530152326
+r07c30,lNh,Late Noachian highland unit,42208.173358971646
+r07c30,mNh,Middle Noachian highland unit,182585.19481693115
+r07c31,AHi,Amazonian and Hesperian impact unit,16031.445292122442
+r07c31,eNh,Early Noachian highland unit,4674.950338056885
+r07c31,lNh,Late Noachian highland unit,48883.7535859341
+r07c31,mNh,Middle Noachian highland unit,269356.31468348275
+r07c32,AHi,Amazonian and Hesperian impact unit,17629.470767345367
+r07c32,Nhe,Noachian highland edifice unit,5918.568171507415
+r07c32,eNh,Early Noachian highland unit,84957.45932985286
+r07c32,lNh,Late Noachian highland unit,27004.15741296877
+r07c32,mNh,Middle Noachian highland unit,203436.80821792243
+r07c33,eNh,Early Noachian highland unit,72713.4897468065
+r07c33,lNh,Late Noachian highland unit,15666.251644478525
+r07c33,mNh,Middle Noachian highland unit,250566.72250831092
+r07c34,AHi,Amazonian and Hesperian impact unit,34930.541412027495
+r07c34,HNt,Hesperian and Noachian transition unit,42391.6932849071
+r07c34,mNh,Middle Noachian highland unit,261624.22920266242
+r07c35,AHtu,Amazonian and Hesperian transition undivided unit,29742.919385791007
+r07c35,HNt,Hesperian and Noachian transition unit,71974.8673613471
+r07c35,Htu,Hesperian transition undivided unit,860.7047232742736
+r07c35,Hve,Hesperian volcanic edifice unit,14152.971044283144
+r07c35,Nve,Noachian volcanic edifice unit,963.2926613174631
+r07c35,eHv,Early Hesperian volcanic unit,13030.472662859629
+r07c35,eNh,Early Noachian highland unit,67342.9042660737
+r07c35,mNh,Middle Noachian highland unit,140875.41313022442
+r08c00,AHi,Amazonian and Hesperian impact unit,120.17521150444514
+r08c00,AHtu,Amazonian and Hesperian transition undivided unit,222979.47834215235
+r08c00,HNt,Hesperian and Noachian transition unit,6396.974962715142
+r08c00,Htu,Hesperian transition undivided unit,89153.22709068439
+r08c00,eHt,Early Hesperian transition unit,21717.446472325348
+r08c00,mNh,Middle Noachian highland unit,9197.857763084696
+r08c01,AHi,Amazonian and Hesperian impact unit,35086.19107154518
+r08c01,AHtu,Amazonian and Hesperian transition undivided unit,80855.60155572463
+r08c01,HNt,Hesperian and Noachian transition unit,84119.00343804188
+r08c01,eHt,Early Hesperian transition unit,52127.83891108169
+r08c01,mNh,Middle Noachian highland unit,97379.27291457418
+r08c02,AHtu,Amazonian and Hesperian transition undivided unit,154584.20710699956
+r08c02,AHv,Amazonian and Hesperian volcanic,8637.207300110245
+r08c02,Nhu,Noachian highland undivided unit,20811.767211162296
+r08c02,lHt,Late Hesperian transition unit,23065.68390437103
+r08c02,mNh,Middle Noachian highland unit,142469.04236832302
+r08c03,AHtu,Amazonian and Hesperian transition undivided unit,110733.98965959388
+r08c03,AHv,Amazonian and Hesperian volcanic,136522.5338519559
+r08c03,Nhu,Noachian highland undivided unit,2218.26666268887
+r08c03,lHt,Late Hesperian transition unit,22512.92196902569
+r08c03,mNh,Middle Noachian highland unit,77580.19574770302
+r08c04,AHtu,Amazonian and Hesperian transition undivided unit,35458.04781024919
+r08c04,AHv,Amazonian and Hesperian volcanic,309303.2501917314
+r08c04,lAa,Late Amazonian apron unit,4806.609888985857
+r08c05,AHtu,Amazonian and Hesperian transition undivided unit,5257.915863310236
+r08c05,AHv,Amazonian and Hesperian volcanic,135237.0386440962
+r08c05,Ave,Amazonian volcanic edifice,39701.003134832616
+r08c05,lAa,Late Amazonian apron unit,162782.10454179122
+r08c05,lAvf,Late Amazonian volcanic field unit,6589.845706937196
+r08c06,AHv,Amazonian and Hesperian volcanic,252251.91988823036
+r08c06,Ave,Amazonian volcanic edifice,52582.936232556334
+r08c06,lAvf,Late Amazonian volcanic field unit,38787.63970550593
+r08c06,lHv,Late Hesperian volcanic unit,5945.412064674633
+r08c07,AHv,Amazonian and Hesperian volcanic,39070.431527160195
+r08c07,lAvf,Late Amazonian volcanic field unit,53901.532433457556
+r08c07,lHv,Late Hesperian volcanic unit,246592.55928882098
+r08c07,lHvf,Late Hesperian volcanic field unit,10003.38464152806
+r08c08,AHi,Amazonian and Hesperian impact unit,12983.431050929472
+r08c08,AHv,Amazonian and Hesperian volcanic,21682.428572384404
+r08c08,Htu,Hesperian transition undivided unit,173.49272198894312
+r08c08,Nhu,Noachian highland undivided unit,77173.28356922235
+r08c08,lHt,Late Hesperian transition unit,16859.25315469501
+r08c08,lHv,Late Hesperian volcanic unit,220486.4632290804
+r08c08,lHvf,Late Hesperian volcanic field unit,209.55559266624775
+r08c09,AHi,Amazonian and Hesperian impact unit,22256.535586934602
+r08c09,AHv,Amazonian and Hesperian volcanic,32027.869665515125
+r08c09,Aa,Amazonian apron unit,7304.555407899816
+r08c09,Htu,Hesperian transition undivided unit,8956.439357391264
+r08c09,Nhu,Noachian highland undivided unit,87528.96310414883
+r08c09,eHh,Early Hesperian highland unit,91889.14451407075
+r08c09,eHv,Early Hesperian volcanic unit,32774.13737445382
+r08c09,lHt,Late Hesperian transition unit,12925.274182835483
+r08c09,lHv,Late Hesperian volcanic unit,53851.050146512134
+r08c09,lNh,Late Noachian highland unit,53.938551204667505
+r08c10,AHi,Amazonian and Hesperian impact unit,30535.24623775376
+r08c10,AHv,Amazonian and Hesperian volcanic,1813.166992291847
+r08c10,Aa,Amazonian apron unit,30850.477740309252
+r08c10,Htu,Hesperian transition undivided unit,80737.46852874657
+r08c10,Nhu,Noachian highland undivided unit,81923.94421760965
+r08c10,eHh,Early Hesperian highland unit,53917.46135281125
+r08c10,eHv,Early Hesperian volcanic unit,49540.92845119119
+r08c10,lHt,Late Hesperian transition unit,20214.196984020153
+r08c10,lNh,Late Noachian highland unit,35.01738623307669
+r08c11,AHi,Amazonian and Hesperian impact unit,13876.509696501736
+r08c11,Ht,Hesperian transition unit,24442.25119289645
+r08c11,Htu,Hesperian transition undivided unit,26165.18758655467
+r08c11,Nhu,Noachian highland undivided unit,17582.255973607553
+r08c11,eHh,Early Hesperian highland unit,24919.604769353762
+r08c11,eHv,Early Hesperian volcanic unit,217117.21166341714
+r08c11,eNh,Early Noachian highland unit,15693.461126873803
+r08c11,mNh,Middle Noachian highland unit,9771.425881761676
+r08c12,AHi,Amazonian and Hesperian impact unit,64650.550866749494
+r08c12,Hto,Hesperian transition outflow unit,8739.544834718154
+r08c12,Nhe,Noachian highland edifice unit,6191.4650893443595
+r08c12,Nhu,Noachian highland undivided unit,6496.145785441312
+r08c12,eHv,Early Hesperian volcanic unit,103315.09730211284
+r08c12,eNh,Early Noachian highland unit,11411.54537480395
+r08c12,lNh,Late Noachian highland unit,39875.53851622629
+r08c12,mNh,Middle Noachian highland unit,108888.02012157092
+r08c13,AHi,Amazonian and Hesperian impact unit,18998.10004236964
+r08c13,Ht,Hesperian transition unit,10116.277788031126
+r08c13,Hto,Hesperian transition outflow unit,35492.44104282345
+r08c13,Htu,Hesperian transition undivided unit,6647.613775707314
+r08c13,Nhu,Noachian highland undivided unit,25279.946287797033
+r08c13,lNh,Late Noachian highland unit,38940.35357943627
+r08c13,mNh,Middle Noachian highland unit,214093.17537480232
+r08c14,AHi,Amazonian and Hesperian impact unit,30018.233540159297
+r08c14,Ht,Hesperian transition unit,125483.48714875746
+r08c14,Hto,Hesperian transition outflow unit,33384.72715769253
+r08c14,Htu,Hesperian transition undivided unit,4759.661527352065
+r08c14,Nhu,Noachian highland undivided unit,69.38387891823314
+r08c14,mNh,Middle Noachian highland unit,155852.41463808768
+r08c15,Ht,Hesperian transition unit,131305.51970066846
+r08c15,mNh,Middle Noachian highland unit,218262.3881902981
+r08c16,AHi,Amazonian and Hesperian impact unit,3644.419149292478
+r08c16,Ht,Hesperian transition unit,125594.18187646364
+r08c16,Nhu,Noachian highland undivided unit,7396.726728846005
+r08c16,mNh,Middle Noachian highland unit,212932.58013636468
+r08c17,HNhu,Hesperian and Noachian highland undivided unit,85467.72564013686
+r08c17,lNh,Late Noachian highland unit,13318.802023985447
+r08c17,mNh,Middle Noachian highland unit,250781.38022684449
+r08c18,HNhu,Hesperian and Noachian highland undivided unit,20399.608603192075
+r08c18,lNh,Late Noachian highland unit,15851.485353103952
+r08c18,mNh,Middle Noachian highland unit,313316.8139346701
+r08c19,HNhu,Hesperian and Noachian highland undivided unit,24148.779347960128
+r08c19,eHh,Early Hesperian highland unit,76576.5567763553
+r08c19,eNh,Early Noachian highland unit,31534.440475934443
+r08c19,lNh,Late Noachian highland unit,81304.0940153559
+r08c19,mNh,Middle Noachian highland unit,136004.03727536087
+r08c20,AHi,Amazonian and Hesperian impact unit,11953.214799317142
+r08c20,eHh,Early Hesperian highland unit,4932.221034827409
+r08c20,eNh,Early Noachian highland unit,150465.94916296404
+r08c20,lNh,Late Noachian highland unit,47859.12614083224
+r08c20,mNh,Middle Noachian highland unit,134357.39675302577
+r08c21,AHi,Amazonian and Hesperian impact unit,12288.74553262981
+r08c21,eNh,Early Noachian highland unit,97119.56233249059
+r08c21,lNh,Late Noachian highland unit,64596.09778358413
+r08c21,mNh,Middle Noachian highland unit,175563.50224226253
+r08c22,eNh,Early Noachian highland unit,187648.9458956003
+r08c22,lNh,Late Noachian highland unit,43740.80518780983
+r08c22,mNh,Middle Noachian highland unit,118178.15680755596
+r08c23,AHi,Amazonian and Hesperian impact unit,52386.83784614994
+r08c23,eHv,Early Hesperian volcanic unit,1760.467112120401
+r08c23,eNh,Early Noachian highland unit,88892.9960975308
+r08c23,lNh,Late Noachian highland unit,90787.18132820446
+r08c23,mNh,Middle Noachian highland unit,115740.4255069615
+r08c24,eHv,Early Hesperian volcanic unit,22427.539903549958
+r08c24,eNh,Early Noachian highland unit,259336.34468350728
+r08c24,lNh,Late Noachian highland unit,49702.48394410648
+r08c24,mNh,Middle Noachian highland unit,18101.539359803133
+r08c25,eHv,Early Hesperian volcanic unit,26349.87469233514
+r08c25,eNh,Early Noachian highland unit,243768.97293266965
+r08c25,lNh,Late Noachian highland unit,52476.33973506711
+r08c25,mNh,Middle Noachian highland unit,9838.398426255551
+r08c25,mNhm,Middle Noachian highland massif unit,17134.322104639912
+r08c26,eNh,Early Noachian highland unit,151381.3836767855
+r08c26,lNh,Late Noachian highland unit,42520.78166540006
+r08c26,mNh,Middle Noachian highland unit,15216.571640064913
+r08c26,mNhm,Middle Noachian highland massif unit,140449.1709087163
+r08c27,eNh,Early Noachian highland unit,66442.4181662653
+r08c27,lNh,Late Noachian highland unit,14925.230931945933
+r08c27,mNh,Middle Noachian highland unit,205469.43454027578
+r08c27,mNhm,Middle Noachian highland massif unit,62730.82425248024
+r08c28,AHi,Amazonian and Hesperian impact unit,18557.294495270246
+r08c28,eHv,Early Hesperian volcanic unit,116599.60200204002
+r08c28,eNh,Early Noachian highland unit,58572.162737289975
+r08c28,mNh,Middle Noachian highland unit,133736.70169202817
+r08c28,mNhm,Middle Noachian highland massif unit,22102.14696433862
+r08c29,AHi,Amazonian and Hesperian impact unit,28368.290233936837
+r08c29,eHv,Early Hesperian volcanic unit,5118.777941509151
+r08c29,eNh,Early Noachian highland unit,76423.80818090195
+r08c29,lNh,Late Noachian highland unit,20819.37758182105
+r08c29,mNh,Middle Noachian highland unit,218837.65395279796
+r08c30,HNt,Hesperian and Noachian transition unit,5949.115829256549
+r08c30,mNh,Middle Noachian highland unit,343618.79206171096
+r08c31,AHi,Amazonian and Hesperian impact unit,82585.09845249755
+r08c31,HNt,Hesperian and Noachian transition unit,89698.89338843897
+r08c31,Htu,Hesperian transition undivided unit,4454.944827585564
+r08c31,eHt,Early Hesperian transition unit,25707.9312351102
+r08c31,lNh,Late Noachian highland unit,7496.556341383365
+r08c31,mNh,Middle Noachian highland unit,139624.48364595076
+r08c32,AHi,Amazonian and Hesperian impact unit,19392.44172179039
+r08c32,AHtu,Amazonian and Hesperian transition undivided unit,91742.35342723348
+r08c32,HNt,Hesperian and Noachian transition unit,123376.10795277427
+r08c32,Htu,Hesperian transition undivided unit,26174.461580354284
+r08c32,eHt,Early Hesperian transition unit,21938.971444507275
+r08c32,mNh,Middle Noachian highland unit,66943.5717643072
+r08c33,AHi,Amazonian and Hesperian impact unit,11254.03194452708
+r08c33,AHtu,Amazonian and Hesperian transition undivided unit,74886.70066809053
+r08c33,HNt,Hesperian and Noachian transition unit,69908.1222064976
+r08c33,Htu,Hesperian transition undivided unit,102542.062060262
+r08c33,eHt,Early Hesperian transition unit,18678.81562821236
+r08c33,lAv,Late Amazonian volcanic unit,14781.46613731465
+r08c33,lHt,Late Hesperian transition unit,13152.499132114872
+r08c33,mNh,Middle Noachian highland unit,44364.210113947345
+r08c34,AHi,Amazonian and Hesperian impact unit,37953.30034597382
+r08c34,HNt,Hesperian and Noachian transition unit,144650.3204453134
+r08c34,Htu,Hesperian transition undivided unit,13406.680111162004
+r08c34,eHt,Early Hesperian transition unit,40478.99370579169
+r08c34,lAv,Late Amazonian volcanic unit,111181.61125942753
+r08c34,mNh,Middle Noachian highland unit,1897.0020232989427
+r08c35,AHtu,Amazonian and Hesperian transition undivided unit,93190.8931102003
+r08c35,HNt,Hesperian and Noachian transition unit,27003.03495892718
+r08c35,Htu,Hesperian transition undivided unit,164856.25151303405
+r08c35,Hve,Hesperian volcanic edifice unit,5944.72096601871
+r08c35,Nve,Noachian volcanic edifice unit,25668.799381666355
+r08c35,eHt,Early Hesperian transition unit,28054.34210297085
+r08c35,lAv,Late Amazonian volcanic unit,4847.059719942892
+r09c00,AHi,Amazonian and Hesperian impact unit,12605.323301083505
+r09c00,AHtu,Amazonian and Hesperian transition undivided unit,12019.172127650028
+r09c00,HNt,Hesperian and Noachian transition unit,226231.6300289646
+r09c00,Htu,Hesperian transition undivided unit,20945.90655932935
+r09c00,eHt,Early Hesperian transition unit,23804.742597367385
+r09c00,lAv,Late Amazonian volcanic unit,15965.853834334854
+r09c00,lHt,Late Hesperian transition unit,37991.75356338681
+r09c01,AHi,Amazonian and Hesperian impact unit,17410.211673584487
+r09c01,AHtu,Amazonian and Hesperian transition undivided unit,87171.88054674823
+r09c01,HNt,Hesperian and Noachian transition unit,82174.7963317436
+r09c01,eHt,Early Hesperian transition unit,119255.42538659886
+r09c01,lHt,Late Hesperian transition unit,43555.59395229224
+r09c02,AHtu,Amazonian and Hesperian transition undivided unit,200708.61623205387
+r09c02,AHv,Amazonian and Hesperian volcanic,25626.700649999002
+r09c02,lAv,Late Amazonian volcanic unit,4590.452022606406
+r09c02,lHt,Late Hesperian transition unit,118642.13898630721
+r09c03,AHtu,Amazonian and Hesperian transition undivided unit,292506.52475531976
+r09c03,AHv,Amazonian and Hesperian volcanic,31894.696983544476
+r09c03,Aa,Amazonian apron unit,21683.590226137687
+r09c03,lAv,Late Amazonian volcanic unit,263.4668800665893
+r09c03,lHt,Late Hesperian transition unit,3219.62904589924
+r09c04,AHtu,Amazonian and Hesperian transition undivided unit,271707.2457216311
+r09c04,AHv,Amazonian and Hesperian volcanic,3971.3606990157255
+r09c04,Aa,Amazonian apron unit,57970.1676126269
+r09c04,lAv,Late Amazonian volcanic unit,15919.133857692634
+r09c05,AHtu,Amazonian and Hesperian transition undivided unit,97993.9018484007
+r09c05,AHv,Amazonian and Hesperian volcanic,121365.38580437603
+r09c05,Aa,Amazonian apron unit,33946.528401399
+r09c05,Hve,Hesperian volcanic edifice unit,25464.58592187609
+r09c05,eHv,Early Hesperian volcanic unit,63052.01158502627
+r09c05,lHv,Late Hesperian volcanic unit,7745.494329889578
+r09c06,AHi,Amazonian and Hesperian impact unit,26947.66663509269
+r09c06,AHv,Amazonian and Hesperian volcanic,168902.9172177034
+r09c06,Ave,Amazonian volcanic edifice,68100.19562221876
+r09c06,eHv,Early Hesperian volcanic unit,10848.63175274223
+r09c06,lAa,Late Amazonian apron unit,74288.55535029626
+r09c06,lHv,Late Hesperian volcanic unit,479.9413129139092
+r09c07,AHv,Amazonian and Hesperian volcanic,304408.73055465845
+r09c07,Ave,Amazonian volcanic edifice,27521.824523526317
+r09c07,lAa,Late Amazonian apron unit,175.33939793243343
+r09c07,lAvf,Late Amazonian volcanic field unit,16666.225541186013
+r09c07,lHv,Late Hesperian volcanic unit,795.7878736638744
+r09c08,AHv,Amazonian and Hesperian volcanic,290637.58581295575
+r09c08,lHv,Late Hesperian volcanic unit,58930.32207801158
+r09c09,AHv,Amazonian and Hesperian volcanic,315649.3041275447
+r09c09,lHt,Late Hesperian transition unit,28494.155254781257
+r09c09,lHv,Late Hesperian volcanic unit,5424.448508640971
+r09c10,AHi,Amazonian and Hesperian impact unit,5482.913384747529
+r09c10,AHv,Amazonian and Hesperian volcanic,58904.001340782386
+r09c10,Ht,Hesperian transition unit,26241.19805380669
+r09c10,Nhu,Noachian highland undivided unit,28021.372085734387
+r09c10,eHh,Early Hesperian highland unit,152896.0391816417
+r09c10,eHv,Early Hesperian volcanic unit,71439.86985282018
+r09c10,lHt,Late Hesperian transition unit,6582.513991434222
+r09c11,AHi,Amazonian and Hesperian impact unit,26513.89727750247
+r09c11,Hto,Hesperian transition outflow unit,34280.57756448873
+r09c11,eHh,Early Hesperian highland unit,127698.01536772893
+r09c11,eHv,Early Hesperian volcanic unit,127811.94904929538
+r09c11,mNh,Middle Noachian highland unit,33263.46863195149
+r09c12,AHi,Amazonian and Hesperian impact unit,32490.690313845917
+r09c12,Hto,Hesperian transition outflow unit,16018.404459862315
+r09c12,eHh,Early Hesperian highland unit,10087.212242750475
+r09c12,eNh,Early Noachian highland unit,101037.26295913882
+r09c12,mNh,Middle Noachian highland unit,189934.33791536972
+r09c13,AHi,Amazonian and Hesperian impact unit,31232.60219058577
+r09c13,Ht,Hesperian transition unit,5032.760990053265
+r09c13,eNh,Early Noachian highland unit,7317.086364192352
+r09c13,mNh,Middle Noachian highland unit,305985.458346136
+r09c14,AHi,Amazonian and Hesperian impact unit,24466.683400696358
+r09c14,Ht,Hesperian transition unit,78211.76379010154
+r09c14,Hto,Hesperian transition outflow unit,72309.18540600732
+r09c14,eNh,Early Noachian highland unit,18643.660422312823
+r09c14,mNh,Middle Noachian highland unit,155936.61487184901
+r09c15,Ht,Hesperian transition unit,70274.34275234502
+r09c15,Hto,Hesperian transition outflow unit,50.29557215824414
+r09c15,Htu,Hesperian transition undivided unit,15800.257677809182
+r09c15,Nhu,Noachian highland undivided unit,61593.37082076019
+r09c15,eNh,Early Noachian highland unit,12256.77621059389
+r09c15,lHt,Late Hesperian transition unit,8929.42233342259
+r09c15,mNh,Middle Noachian highland unit,180663.44252387792
+r09c16,AHi,Amazonian and Hesperian impact unit,9897.651695396467
+r09c16,Ht,Hesperian transition unit,13273.239271033259
+r09c16,Htu,Hesperian transition undivided unit,695.448752654859
+r09c16,Nhu,Noachian highland undivided unit,75584.63865037248
+r09c16,mNh,Middle Noachian highland unit,250116.92952151012
+r09c17,HNhu,Hesperian and Noachian highland undivided unit,163500.76972827953
+r09c17,mNh,Middle Noachian highland unit,186067.13816268768
+r09c18,AHi,Amazonian and Hesperian impact unit,27025.37024720862
+r09c18,HNhu,Hesperian and Noachian highland undivided unit,179345.8048299508
+r09c18,mNh,Middle Noachian highland unit,143196.7328138079
+r09c19,AHi,Amazonian and Hesperian impact unit,8450.804207362675
+r09c19,HNhu,Hesperian and Noachian highland undivided unit,76689.67010093032
+r09c19,eHh,Early Hesperian highland unit,5923.228812312402
+r09c19,eNh,Early Noachian highland unit,19996.690029487338
+r09c19,lNh,Late Noachian highland unit,20112.318638340475
+r09c19,mNh,Middle Noachian highland unit,218395.1961025344
+r09c20,AHi,Amazonian and Hesperian impact unit,108397.19106366308
+r09c20,HNhu,Hesperian and Noachian highland undivided unit,199.6908307487051
+r09c20,eNh,Early Noachian highland unit,10020.358707935795
+r09c20,mNh,Middle Noachian highland unit,230950.6672886193
+r09c21,AHi,Amazonian and Hesperian impact unit,26624.435187670795
+r09c21,eNh,Early Noachian highland unit,12834.648746457753
+r09c21,lNh,Late Noachian highland unit,31140.342334164987
+r09c21,mNh,Middle Noachian highland unit,278968.4816226736
+r09c22,AHi,Amazonian and Hesperian impact unit,17028.681527087574
+r09c22,eNh,Early Noachian highland unit,118123.34171181521
+r09c22,lNh,Late Noachian highland unit,36843.88422895328
+r09c22,mNh,Middle Noachian highland unit,177572.0004231108
+r09c23,AHi,Amazonian and Hesperian impact unit,68166.23744975307
+r09c23,eHv,Early Hesperian volcanic unit,79878.92827361982
+r09c23,eNh,Early Noachian highland unit,34283.68517904618
+r09c23,lNh,Late Noachian highland unit,8893.079150614192
+r09c23,mNh,Middle Noachian highland unit,158345.97783793396
+r09c24,AHi,Amazonian and Hesperian impact unit,16024.988523374466
+r09c24,eHv,Early Hesperian volcanic unit,312917.2672313776
+r09c24,eNh,Early Noachian highland unit,17898.49058374807
+r09c24,lNh,Late Noachian highland unit,2727.161552466051
+r09c25,AHi,Amazonian and Hesperian impact unit,15461.841741217362
+r09c25,eHv,Early Hesperian volcanic unit,322392.6727837164
+r09c25,eNh,Early Noachian highland unit,925.2325293110108
+r09c25,mNhm,Middle Noachian highland massif unit,10788.160836722158
+r09c26,AHi,Amazonian and Hesperian impact unit,22091.76610284607
+r09c26,eHv,Early Hesperian volcanic unit,16661.793810970008
+r09c26,lHl,Late Hesperian lowland unit,174824.97944520513
+r09c26,mNh,Middle Noachian highland unit,41049.51335234873
+r09c26,mNhm,Middle Noachian highland massif unit,94939.85517959722
+r09c27,AHi,Amazonian and Hesperian impact unit,36249.07959008467
+r09c27,HNt,Hesperian and Noachian transition unit,15438.28702185924
+r09c27,eHt,Early Hesperian transition unit,32131.5965649656
+r09c27,lHl,Late Hesperian lowland unit,72745.2486138832
+r09c27,mNh,Middle Noachian highland unit,111775.22322863973
+r09c27,mNhm,Middle Noachian highland massif unit,81228.47287153474
+r09c28,AHi,Amazonian and Hesperian impact unit,2942.057011040019
+r09c28,HNt,Hesperian and Noachian transition unit,23950.709990520445
+r09c28,eHt,Early Hesperian transition unit,6765.14689592876
+r09c28,eHv,Early Hesperian volcanic unit,116787.17193868181
+r09c28,eNh,Early Noachian highland unit,44791.658126253555
+r09c28,mNh,Middle Noachian highland unit,88710.71629647017
+r09c28,mNhm,Middle Noachian highland massif unit,65620.44763207213
+r09c29,AHi,Amazonian and Hesperian impact unit,22857.53266399668
+r09c29,HNt,Hesperian and Noachian transition unit,41012.3586736928
+r09c29,eHv,Early Hesperian volcanic unit,7251.390826739657
+r09c29,eNh,Early Noachian highland unit,107025.22221413448
+r09c29,mNh,Middle Noachian highland unit,168184.41916270214
+r09c29,mNhm,Middle Noachian highland massif unit,3236.9843497015167
+r09c30,AHi,Amazonian and Hesperian impact unit,28559.905596769437
+r09c30,HNt,Hesperian and Noachian transition unit,204290.78479735908
+r09c30,eHt,Early Hesperian transition unit,66704.38242093108
+r09c30,lHt,Late Hesperian transition unit,1443.1450645582677
+r09c30,mNh,Middle Noachian highland unit,48569.69001134947
+r09c31,AHi,Amazonian and Hesperian impact unit,44902.5001842329
+r09c31,AHtu,Amazonian and Hesperian transition undivided unit,797.5518520757124
+r09c31,AHv,Amazonian and Hesperian volcanic,61676.87189606554
+r09c31,HNt,Hesperian and Noachian transition unit,60801.2472861222
+r09c31,eHt,Early Hesperian transition unit,124180.73430721642
+r09c31,lAv,Late Amazonian volcanic unit,10574.30438866786
+r09c31,lHt,Late Hesperian transition unit,46634.697976585834
+r09c32,AHi,Amazonian and Hesperian impact unit,17366.00361455521
+r09c32,AHtu,Amazonian and Hesperian transition undivided unit,34695.29659938691
+r09c32,AHv,Amazonian and Hesperian volcanic,139862.68149922494
+r09c32,Htu,Hesperian transition undivided unit,43789.62438510362
+r09c32,eHt,Early Hesperian transition unit,5644.797311213522
+r09c32,lAv,Late Amazonian volcanic unit,108209.50448148306
+r09c33,AHtu,Amazonian and Hesperian transition undivided unit,53524.712893256765
+r09c33,AHv,Amazonian and Hesperian volcanic,28058.07519238195
+r09c33,HNt,Hesperian and Noachian transition unit,10222.607116550234
+r09c33,Htu,Hesperian transition undivided unit,11420.116963111033
+r09c33,lAv,Late Amazonian volcanic unit,207339.3784249867
+r09c33,lAvf,Late Amazonian volcanic field unit,16772.253569492914
+r09c33,lHt,Late Hesperian transition unit,22230.76373118758
+r09c34,HNt,Hesperian and Noachian transition unit,26238.362473334128
+r09c34,lAv,Late Amazonian volcanic unit,220768.23745033788
+r09c34,lAvf,Late Amazonian volcanic field unit,102561.30796729593
+r09c35,AHtu,Amazonian and Hesperian transition undivided unit,18479.847686400448
+r09c35,HNt,Hesperian and Noachian transition unit,3615.5107630920047
+r09c35,Htu,Hesperian transition undivided unit,38774.07947208027
+r09c35,lAv,Late Amazonian volcanic unit,288440.45967065275
+r09c35,lAvf,Late Amazonian volcanic field unit,253.8951463049441
+r09c35,lNh,Late Noachian highland unit,0.5893645878458206
+r10c00,AHi,Amazonian and Hesperian impact unit,85385.32365321448
+r10c00,HNt,Hesperian and Noachian transition unit,27983.482347771278
+r10c00,eHt,Early Hesperian transition unit,43800.78548587295
+r10c00,lAv,Late Amazonian volcanic unit,95876.87691311144
+r10c00,lHt,Late Hesperian transition unit,76535.21496352846
+r10c00,lNh,Late Noachian highland unit,9361.289107573555
+r10c01,AHi,Amazonian and Hesperian impact unit,7356.388213823914
+r10c01,AHtu,Amazonian and Hesperian transition undivided unit,12561.350228432562
+r10c01,AHv,Amazonian and Hesperian volcanic,49352.627981524915
+r10c01,HNt,Hesperian and Noachian transition unit,26238.66454169006
+r10c01,eHt,Early Hesperian transition unit,149070.05155386304
+r10c01,lHt,Late Hesperian transition unit,94367.38138026276
+r10c02,AHtu,Amazonian and Hesperian transition undivided unit,17751.05402207389
+r10c02,AHv,Amazonian and Hesperian volcanic,106816.8457179306
+r10c02,Aa,Amazonian apron unit,62.13670143698394
+r10c02,lAv,Late Amazonian volcanic unit,197883.73317390992
+r10c02,lHt,Late Hesperian transition unit,16432.6942842445
+r10c03,AHtu,Amazonian and Hesperian transition undivided unit,115805.85582123938
+r10c03,Aa,Amazonian apron unit,166539.18160241042
+r10c03,Ave,Amazonian volcanic edifice,15659.550184771286
+r10c03,lAa,Late Amazonian apron unit,1325.9337062393483
+r10c03,lAv,Late Amazonian volcanic unit,39615.94258493653
+r10c04,AHtu,Amazonian and Hesperian transition undivided unit,5790.090091810281
+r10c04,Aa,Amazonian apron unit,2376.6610419806084
+r10c04,Ave,Amazonian volcanic edifice,215706.65315632787
+r10c04,lAa,Late Amazonian apron unit,12106.955483972004
+r10c04,lAv,Late Amazonian volcanic unit,102966.10412550526
+r10c05,AHv,Amazonian and Hesperian volcanic,41115.48628967285
+r10c05,Aa,Amazonian apron unit,47541.16996866037
+r10c05,Ave,Amazonian volcanic edifice,23027.105807976604
+r10c05,eHv,Early Hesperian volcanic unit,11813.221213039691
+r10c05,lAv,Late Amazonian volcanic unit,101073.09821931935
+r10c05,lAvf,Late Amazonian volcanic field unit,38687.502021141074
+r10c05,lHv,Late Hesperian volcanic unit,75688.88037978683
+r10c06,AHi,Amazonian and Hesperian impact unit,1971.9446473490561
+r10c06,AHv,Amazonian and Hesperian volcanic,289211.41518893634
+r10c06,eHv,Early Hesperian volcanic unit,5880.714082322111
+r10c06,lHv,Late Hesperian volcanic unit,1258.8241780051628
+r10c06,lHvf,Late Hesperian volcanic field unit,40623.56580298393
+r10c07,AHv,Amazonian and Hesperian volcanic,216015.70201480135
+r10c07,Ave,Amazonian volcanic edifice,106090.71194824766
+r10c07,eHv,Early Hesperian volcanic unit,5072.605688301867
+r10c07,lAa,Late Amazonian apron unit,11767.444248245583
+r10c08,AHv,Amazonian and Hesperian volcanic,326684.9089451366
+r10c08,Hve,Hesperian volcanic edifice unit,12261.55495445997
+r10c09,AHtu,Amazonian and Hesperian transition undivided unit,10347.145029720241
+r10c09,AHv,Amazonian and Hesperian volcanic,327130.13039664907
+r10c09,Hve,Hesperian volcanic edifice unit,1469.1884732271676
+r10c10,AHv,Amazonian and Hesperian volcanic,97451.90209579666
+r10c10,Ht,Hesperian transition unit,26299.711625640095
+r10c10,Nhu,Noachian highland undivided unit,99860.21583156753
+r10c10,eHh,Early Hesperian highland unit,115334.6343465919
+r10c11,AHi,Amazonian and Hesperian impact unit,19251.2753238959
+r10c11,Hto,Hesperian transition outflow unit,55164.69489330517
+r10c11,eHh,Early Hesperian highland unit,264530.49368239543
+r10c12,AHi,Amazonian and Hesperian impact unit,12825.678120248107
+r10c12,Hto,Hesperian transition outflow unit,125801.48215974565
+r10c12,eHh,Early Hesperian highland unit,199.40130140130574
+r10c12,eHt,Early Hesperian transition unit,26868.59003937263
+r10c12,eNh,Early Noachian highland unit,103102.71600447517
+r10c12,mNh,Middle Noachian highland unit,70148.59627435372
+r10c13,AHi,Amazonian and Hesperian impact unit,8428.866134012627
+r10c13,Ht,Hesperian transition unit,20819.75628737662
+r10c13,Hto,Hesperian transition outflow unit,57821.206640591474
+r10c13,eHt,Early Hesperian transition unit,161787.30018088443
+r10c13,lNh,Late Noachian highland unit,22798.256825509823
+r10c13,mNh,Middle Noachian highland unit,67291.07783122156
+r10c14,Ht,Hesperian transition unit,43965.73664783475
+r10c14,Hto,Hesperian transition outflow unit,155295.80183775682
+r10c14,Nhu,Noachian highland undivided unit,48967.497817102616
+r10c14,eHt,Early Hesperian transition unit,451.7634141446255
+r10c14,lNh,Late Noachian highland unit,26230.326250471884
+r10c14,mNh,Middle Noachian highland unit,64035.337932285875
+r10c15,AHi,Amazonian and Hesperian impact unit,2705.9076572067193
+r10c15,HNt,Hesperian and Noachian transition unit,14425.373790289479
+r10c15,Hto,Hesperian transition outflow unit,2676.730931384756
+r10c15,Nhu,Noachian highland undivided unit,43319.93388286523
+r10c15,eHt,Early Hesperian transition unit,9181.66375201735
+r10c15,eNh,Early Noachian highland unit,100525.61859902293
+r10c15,lNh,Late Noachian highland unit,36520.58237450623
+r10c15,mNh,Middle Noachian highland unit,129590.65291230421
+r10c16,eNh,Early Noachian highland unit,175730.90391950638
+r10c16,lNh,Late Noachian highland unit,16095.134822244076
+r10c16,mNh,Middle Noachian highland unit,147120.42515784586
+r10c17,AHi,Amazonian and Hesperian impact unit,73216.6326139211
+r10c17,eNh,Early Noachian highland unit,9546.787362723973
+r10c17,mNh,Middle Noachian highland unit,256183.0439229514
+r10c18,AHi,Amazonian and Hesperian impact unit,30754.28961865881
+r10c18,HNhu,Hesperian and Noachian highland undivided unit,9163.421759643756
+r10c18,eNh,Early Noachian highland unit,85223.03048376099
+r10c18,lNh,Late Noachian highland unit,46038.72411903843
+r10c18,mNh,Middle Noachian highland unit,167766.99791849434
+r10c19,AHi,Amazonian and Hesperian impact unit,45833.26855919555
+r10c19,HNhu,Hesperian and Noachian highland undivided unit,44639.575688123914
+r10c19,lNh,Late Noachian highland unit,37935.90381280445
+r10c19,mNh,Middle Noachian highland unit,210537.71583947234
+r10c20,AHi,Amazonian and Hesperian impact unit,819.808092720616
+r10c20,HNhu,Hesperian and Noachian highland undivided unit,9189.81223483708
+r10c20,eNh,Early Noachian highland unit,46307.693299717685
+r10c20,lNh,Late Noachian highland unit,64092.102965216276
+r10c20,mNh,Middle Noachian highland unit,218537.04730710492
+r10c21,AHi,Amazonian and Hesperian impact unit,11225.47918809009
+r10c21,eNh,Early Noachian highland unit,158130.12600149226
+r10c21,lNh,Late Noachian highland unit,14204.70011549725
+r10c21,mNh,Middle Noachian highland unit,155386.15859451712
+r10c22,eNh,Early Noachian highland unit,1658.8066130102966
+r10c22,lNh,Late Noachian highland unit,17542.055290823097
+r10c22,mNh,Middle Noachian highland unit,319745.6019957631
+r10c23,AHi,Amazonian and Hesperian impact unit,917.7072571885565
+r10c23,eHv,Early Hesperian volcanic unit,10866.356250136538
+r10c23,eNh,Early Noachian highland unit,101273.91494199072
+r10c23,lNh,Late Noachian highland unit,58361.524057323
+r10c23,mNh,Middle Noachian highland unit,167526.96139295763
+r10c24,AHi,Amazonian and Hesperian impact unit,16462.28850217563
+r10c24,eHv,Early Hesperian volcanic unit,277135.36602277536
+r10c24,eNh,Early Noachian highland unit,19564.479703903315
+r10c24,lNh,Late Noachian highland unit,1381.5802321903577
+r10c24,mNh,Middle Noachian highland unit,24402.749438551466
+r10c25,AHi,Amazonian and Hesperian impact unit,15138.327635770962
+r10c25,HNt,Hesperian and Noachian transition unit,16576.86082088161
+r10c25,eHv,Early Hesperian volcanic unit,242732.72317873093
+r10c25,eNh,Early Noachian highland unit,2737.406211705226
+r10c25,lHt,Late Hesperian transition unit,20269.117179129385
+r10c25,mNh,Middle Noachian highland unit,12603.854665314295
+r10c25,mNhm,Middle Noachian highland massif unit,28888.17420806374
+r10c26,HNt,Hesperian and Noachian transition unit,5057.476173176423
+r10c26,eHv,Early Hesperian volcanic unit,10993.035086158363
+r10c26,lHl,Late Hesperian lowland unit,272107.6322424373
+r10c26,lHt,Late Hesperian transition unit,50788.320397824435
+r10c27,AHi,Amazonian and Hesperian impact unit,26888.98638679705
+r10c27,eHt,Early Hesperian transition unit,97627.24505370184
+r10c27,lHl,Late Hesperian lowland unit,187539.62835924327
+r10c27,lHt,Late Hesperian transition unit,24041.580743953167
+r10c27,mNhm,Middle Noachian highland massif unit,2849.0233559015987
+r10c28,AHi,Amazonian and Hesperian impact unit,32428.627726258394
+r10c28,HNt,Hesperian and Noachian transition unit,40165.52808123188
+r10c28,eHt,Early Hesperian transition unit,170730.7927017405
+r10c28,lHt,Late Hesperian transition unit,63085.43678434653
+r10c28,mNh,Middle Noachian highland unit,10694.522932463871
+r10c28,mNhm,Middle Noachian highland massif unit,21841.555673555253
+r10c29,HNt,Hesperian and Noachian transition unit,47456.6077939193
+r10c29,eHt,Early Hesperian transition unit,195284.16198204778
+r10c29,lHl,Late Hesperian lowland unit,11781.254815303582
+r10c29,lHt,Late Hesperian transition unit,83058.03009295414
+r10c29,mNh,Middle Noachian highland unit,1366.4092153713882
+r10c30,HNt,Hesperian and Noachian transition unit,1364.7346166929337
+r10c30,eHt,Early Hesperian transition unit,175960.82160092721
+r10c30,lHl,Late Hesperian lowland unit,21826.1636532925
+r10c30,lHt,Late Hesperian transition unit,139794.74402868428
+r10c31,AHv,Amazonian and Hesperian volcanic,247636.23596810817
+r10c31,eHt,Early Hesperian transition unit,19224.42021646088
+r10c31,lHt,Late Hesperian transition unit,72085.80771502685
+r10c32,AHi,Amazonian and Hesperian impact unit,25816.141653906685
+r10c32,AHv,Amazonian and Hesperian volcanic,302799.8157317659
+r10c32,Hve,Hesperian volcanic edifice unit,5475.678779410914
+r10c32,lHvf,Late Hesperian volcanic field unit,4854.827734513479
+r10c33,AHv,Amazonian and Hesperian volcanic,316826.90258492995
+r10c33,HNt,Hesperian and Noachian transition unit,5511.777428318893
+r10c33,Hve,Hesperian volcanic edifice unit,14702.500167082955
+r10c33,lAv,Late Amazonian volcanic unit,1905.2837192640472
+r10c34,AHi,Amazonian and Hesperian impact unit,7703.25503557192
+r10c34,AHv,Amazonian and Hesperian volcanic,94485.16780177194
+r10c34,HNt,Hesperian and Noachian transition unit,112110.35552827033
+r10c34,lAv,Late Amazonian volcanic unit,124647.68552390726
+r10c34,lAvf,Late Amazonian volcanic field unit,1.0075428015272512e-05
+r10c35,AHi,Amazonian and Hesperian impact unit,6966.940491530178
+r10c35,HNt,Hesperian and Noachian transition unit,125083.15069998286
+r10c35,eHt,Early Hesperian transition unit,53991.54117969456
+r10c35,lAv,Late Amazonian volcanic unit,74534.1720649155
+r10c35,lHv,Late Hesperian volcanic unit,16112.496863285625
+r10c35,lHvf,Late Hesperian volcanic field unit,11891.75519339612
+r10c35,lNh,Late Noachian highland unit,50362.9160848895
+r11c00,HNt,Hesperian and Noachian transition unit,48356.51775920487
+r11c00,eHt,Early Hesperian transition unit,147478.52248104542
+r11c00,lAv,Late Amazonian volcanic unit,113714.89773819315
+r11c00,lHt,Late Hesperian transition unit,8472.3459621263
+r11c01,AHv,Amazonian and Hesperian volcanic,27288.98502403718
+r11c01,eHt,Early Hesperian transition unit,50584.54249164461
+r11c01,lAv,Late Amazonian volcanic unit,234858.5117970779
+r11c01,lHt,Late Hesperian transition unit,5294.26380506381
+r11c02,AHi,Amazonian and Hesperian impact unit,9859.012199849665
+r11c02,AHv,Amazonian and Hesperian volcanic,21184.427703758996
+r11c02,Aa,Amazonian apron unit,9067.196324006332
+r11c02,lAv,Late Amazonian volcanic unit,277915.6668902076
+r11c03,AHtu,Amazonian and Hesperian transition undivided unit,43712.7395396519
+r11c03,Aa,Amazonian apron unit,254340.5407488143
+r11c03,Ave,Amazonian volcanic edifice,2341.794643703518
+r11c03,lAa,Late Amazonian apron unit,229.7881869553045
+r11c03,lAv,Late Amazonian volcanic unit,17401.439998698665
+r11c04,AHtu,Amazonian and Hesperian transition undivided unit,9654.071569077434
+r11c04,AHv,Amazonian and Hesperian volcanic,1157.7380066722153
+r11c04,Aa,Amazonian apron unit,156075.84655955157
+r11c04,Ave,Amazonian volcanic edifice,104248.02953678535
+r11c04,lAa,Late Amazonian apron unit,9365.399495147056
+r11c04,lAv,Late Amazonian volcanic unit,37525.21795058905
+r11c05,AHv,Amazonian and Hesperian volcanic,160024.69151685864
+r11c05,Aa,Amazonian apron unit,35564.14641967671
+r11c05,Ave,Amazonian volcanic edifice,21035.971540255305
+r11c05,eHv,Early Hesperian volcanic unit,25998.424976194794
+r11c05,lAv,Late Amazonian volcanic unit,75403.06866483834
+r11c06,AHv,Amazonian and Hesperian volcanic,253837.83618490066
+r11c06,eHv,Early Hesperian volcanic unit,42007.2362367953
+r11c06,lAvf,Late Amazonian volcanic field unit,20957.340785428452
+r11c06,lHvf,Late Hesperian volcanic field unit,1223.8899106987358
+r11c07,AHv,Amazonian and Hesperian volcanic,94200.26388563852
+r11c07,eHv,Early Hesperian volcanic unit,95845.87733214373
+r11c07,lAv,Late Amazonian volcanic unit,34095.79211214924
+r11c07,lAvf,Late Amazonian volcanic field unit,16854.159537371434
+r11c07,lHv,Late Hesperian volcanic unit,77030.21025052018
+r11c08,AHi,Amazonian and Hesperian impact unit,14737.433714263685
+r11c08,AHv,Amazonian and Hesperian volcanic,223839.0100086449
+r11c08,Hve,Hesperian volcanic edifice unit,60081.32074715111
+r11c08,eHh,Early Hesperian highland unit,13071.482010933592
+r11c08,lHv,Late Hesperian volcanic unit,6297.056636829568
+r11c09,AHi,Amazonian and Hesperian impact unit,30395.81036704815
+r11c09,AHv,Amazonian and Hesperian volcanic,230888.9684471588
+r11c09,Hve,Hesperian volcanic edifice unit,4.876924708711505
+r11c09,eHh,Early Hesperian highland unit,50445.507642781
+r11c09,lHv,Late Hesperian volcanic unit,6291.139736126672
+r11c10,AHv,Amazonian and Hesperian volcanic,82153.15798765817
+r11c10,Nhu,Noachian highland undivided unit,123543.65435971711
+r11c10,eHh,Early Hesperian highland unit,112329.49077044774
+r11c11,AHi,Amazonian and Hesperian impact unit,2175.8498734309587
+r11c11,AHv,Amazonian and Hesperian volcanic,14768.730137772254
+r11c11,HNt,Hesperian and Noachian transition unit,11152.332909296472
+r11c11,Nhu,Noachian highland undivided unit,141634.28531547665
+r11c11,eHh,Early Hesperian highland unit,148193.64284990073
+r11c11,mNh,Middle Noachian highland unit,101.46203194585658
+r11c12,AHi,Amazonian and Hesperian impact unit,51760.64750454252
+r11c12,AHv,Amazonian and Hesperian volcanic,4603.668152998013
+r11c12,Hto,Hesperian transition outflow unit,48901.932774542
+r11c12,Nhu,Noachian highland undivided unit,109899.6804965745
+r11c12,eHh,Early Hesperian highland unit,13255.460473301806
+r11c12,eHt,Early Hesperian transition unit,21749.100931167624
+r11c12,lNh,Late Noachian highland unit,7259.197581480042
+r11c12,mNh,Middle Noachian highland unit,60596.6152032168
+r11c13,Hto,Hesperian transition outflow unit,277896.9541723822
+r11c13,Nhu,Noachian highland undivided unit,12325.358697869808
+r11c13,eHt,Early Hesperian transition unit,16454.842735593837
+r11c13,lHl,Late Hesperian lowland unit,11091.912547884243
+r11c13,lNh,Late Noachian highland unit,257.23496409312463
+r11c14,AHi,Amazonian and Hesperian impact unit,19129.859260343525
+r11c14,Hto,Hesperian transition outflow unit,117120.95777622602
+r11c14,Nhu,Noachian highland undivided unit,4996.799869367957
+r11c14,eHt,Early Hesperian transition unit,8725.120767999024
+r11c14,lHl,Late Hesperian lowland unit,102094.62888357956
+r11c14,lHt,Late Hesperian transition unit,65958.93656030705
+r11c15,AHi,Amazonian and Hesperian impact unit,10806.279182689359
+r11c15,HNt,Hesperian and Noachian transition unit,30404.24174978161
+r11c15,Hto,Hesperian transition outflow unit,2161.074985090963
+r11c15,eHt,Early Hesperian transition unit,40694.4183854089
+r11c15,eNh,Early Noachian highland unit,37400.09147020388
+r11c15,lHl,Late Hesperian lowland unit,30491.314035708154
+r11c15,lHt,Late Hesperian transition unit,154318.01824271827
+r11c15,lNh,Late Noachian highland unit,222.18639333172774
+r11c15,mNh,Middle Noachian highland unit,11528.678672890266
+r11c16,AHi,Amazonian and Hesperian impact unit,62714.1443799518
+r11c16,HNt,Hesperian and Noachian transition unit,8400.064351428522
+r11c16,eNh,Early Noachian highland unit,90829.94463503698
+r11c16,lHl,Late Hesperian lowland unit,1685.9874397202143
+r11c16,lHt,Late Hesperian transition unit,289.16217396310356
+r11c16,mNh,Middle Noachian highland unit,154107.00013772232
+r11c17,AHi,Amazonian and Hesperian impact unit,94850.4781792353
+r11c17,eNh,Early Noachian highland unit,21428.75941864863
+r11c17,lNh,Late Noachian highland unit,40897.19859273717
+r11c17,mNh,Middle Noachian highland unit,160849.86692720198
+r11c18,AHi,Amazonian and Hesperian impact unit,201.69222932172806
+r11c18,eNh,Early Noachian highland unit,46381.56913865868
+r11c18,lNh,Late Noachian highland unit,22201.859252331673
+r11c18,mNh,Middle Noachian highland unit,249241.1824975107
+r11c19,AHi,Amazonian and Hesperian impact unit,31450.93628062431
+r11c19,eNh,Early Noachian highland unit,18650.088911698396
+r11c19,lNh,Late Noachian highland unit,141973.690019965
+r11c19,mNh,Middle Noachian highland unit,125951.58790553565
+r11c20,AHi,Amazonian and Hesperian impact unit,1515.1351037223724
+r11c20,eNh,Early Noachian highland unit,28143.133463279777
+r11c20,lNh,Late Noachian highland unit,24653.784222044393
+r11c20,mNh,Middle Noachian highland unit,263714.25032877637
+r11c21,eNh,Early Noachian highland unit,97523.28525949083
+r11c21,mNh,Middle Noachian highland unit,220503.0178583327
+r11c22,AHi,Amazonian and Hesperian impact unit,5276.596854258026
+r11c22,eNh,Early Noachian highland unit,38193.284578871666
+r11c22,mNh,Middle Noachian highland unit,274556.4216846933
+r11c23,AHi,Amazonian and Hesperian impact unit,25589.541930635136
+r11c23,eHv,Early Hesperian volcanic unit,10094.10219122624
+r11c23,eNh,Early Noachian highland unit,93178.46300810551
+r11c23,mNh,Middle Noachian highland unit,189164.19598785613
+r11c24,AHi,Amazonian and Hesperian impact unit,23002.57788886067
+r11c24,eHv,Early Hesperian volcanic unit,41348.54165579526
+r11c24,eNh,Early Noachian highland unit,124984.24622192157
+r11c24,mNh,Middle Noachian highland unit,128690.9373512457
+r11c25,AHi,Amazonian and Hesperian impact unit,13782.402279935754
+r11c25,HNt,Hesperian and Noachian transition unit,55709.44193893483
+r11c25,eHt,Early Hesperian transition unit,1564.2940074918847
+r11c25,eHv,Early Hesperian volcanic unit,2347.2875348203765
+r11c25,eNh,Early Noachian highland unit,101347.50417248688
+r11c25,mNh,Middle Noachian highland unit,124695.71593050614
+r11c25,mNhm,Middle Noachian highland massif unit,18579.657253647238
+r11c26,AHi,Amazonian and Hesperian impact unit,60522.88681633988
+r11c26,HNt,Hesperian and Noachian transition unit,37275.46994430725
+r11c26,eHt,Early Hesperian transition unit,104349.9697746958
+r11c26,eNh,Early Noachian highland unit,330.3118145161278
+r11c26,lHl,Late Hesperian lowland unit,12627.812243768032
+r11c26,lHt,Late Hesperian transition unit,87642.27226848676
+r11c26,mNh,Middle Noachian highland unit,3112.911565492729
+r11c26,mNhm,Middle Noachian highland massif unit,12164.668690216535
+r11c27,eHt,Early Hesperian transition unit,2360.59987323109
+r11c27,lHl,Late Hesperian lowland unit,208504.82532060306
+r11c27,lHt,Late Hesperian transition unit,107160.87792398901
+r11c28,lHl,Late Hesperian lowland unit,299664.23548344715
+r11c28,lHt,Late Hesperian transition unit,18362.067634376057
+r11c29,AHv,Amazonian and Hesperian volcanic,6069.314805528687
+r11c29,lHl,Late Hesperian lowland unit,310222.34355598065
+r11c29,lHt,Late Hesperian transition unit,1734.6447563139366
+r11c30,AHv,Amazonian and Hesperian volcanic,113006.39932699762
+r11c30,Av,Amazonian volcanic unit,22364.992287693134
+r11c30,lHl,Late Hesperian lowland unit,174005.53515371104
+r11c30,lHt,Late Hesperian transition unit,8649.376349421873
+r11c31,AHv,Amazonian and Hesperian volcanic,203382.0502531032
+r11c31,Av,Amazonian volcanic unit,76218.2904875022
+r11c31,lHt,Late Hesperian transition unit,38425.96237721723
+r11c32,AHv,Amazonian and Hesperian volcanic,101517.63336500742
+r11c32,Hve,Hesperian volcanic edifice unit,111483.3246479343
+r11c32,lHvf,Late Hesperian volcanic field unit,105025.34510488139
+r11c33,AHi,Amazonian and Hesperian impact unit,12777.898737399166
+r11c33,AHv,Amazonian and Hesperian volcanic,296283.6284848437
+r11c33,HNt,Hesperian and Noachian transition unit,273.132992908463
+r11c33,Hve,Hesperian volcanic edifice unit,8691.642902671314
+r11c34,AHi,Amazonian and Hesperian impact unit,22777.577580137055
+r11c34,AHv,Amazonian and Hesperian volcanic,258662.90512961932
+r11c34,HNt,Hesperian and Noachian transition unit,11142.327005575613
+r11c34,lAv,Late Amazonian volcanic unit,25339.70596347227
+r11c34,lHt,Late Hesperian transition unit,103.787439019415
+r11c35,AHi,Amazonian and Hesperian impact unit,1986.8923737798314
+r11c35,AHv,Amazonian and Hesperian volcanic,22730.052242312533
+r11c35,HNt,Hesperian and Noachian transition unit,52254.91727059122
+r11c35,eHt,Early Hesperian transition unit,117497.31245088589
+r11c35,lAv,Late Amazonian volcanic unit,122158.21445969361
+r11c35,lHt,Late Hesperian transition unit,1394.8950562775753
+r12c00,Av,Amazonian volcanic unit,1061.2608353308437
+r12c00,HNt,Hesperian and Noachian transition unit,51835.190266799545
+r12c00,eHt,Early Hesperian transition unit,45676.42183001179
+r12c00,lAv,Late Amazonian volcanic unit,188866.45319509335
+r12c01,Av,Amazonian volcanic unit,47049.35706658229
+r12c01,HNt,Hesperian and Noachian transition unit,6922.1233351044975
+r12c01,lAv,Late Amazonian volcanic unit,233471.59364320268
+r12c02,Av,Amazonian volcanic unit,160892.39658473842
+r12c02,lAv,Late Amazonian volcanic unit,126550.67746015021
+r12c03,AHv,Amazonian and Hesperian volcanic,7.752142664726103
+r12c03,Aa,Amazonian apron unit,68966.16363619898
+r12c03,Av,Amazonian volcanic unit,97521.57353935755
+r12c03,eHh,Early Hesperian highland unit,6234.846203404749
+r12c03,lAv,Late Amazonian volcanic unit,54482.56741924006
+r12c03,lHl,Late Hesperian lowland unit,25521.749168154187
+r12c03,lNh,Late Noachian highland unit,34708.42193586933
+r12c04,AHv,Amazonian and Hesperian volcanic,17976.28788023283
+r12c04,Aa,Amazonian apron unit,91762.05031674905
+r12c04,eHh,Early Hesperian highland unit,60680.367865691434
+r12c04,lAv,Late Amazonian volcanic unit,16257.575216748499
+r12c04,lHl,Late Hesperian lowland unit,394.794110201322
+r12c04,lNh,Late Noachian highland unit,100371.99865526547
+r12c05,AHv,Amazonian and Hesperian volcanic,276336.2377838077
+r12c05,lNh,Late Noachian highland unit,11106.836261081908
+r12c06,AHv,Amazonian and Hesperian volcanic,253575.23184229014
+r12c06,Ave,Amazonian volcanic edifice,29828.973317449592
+r12c06,eHv,Early Hesperian volcanic unit,4038.86888514948
+r12c07,AHv,Amazonian and Hesperian volcanic,253699.74830753644
+r12c07,Ave,Amazonian volcanic edifice,25128.75884557289
+r12c07,eHv,Early Hesperian volcanic unit,2336.775130127808
+r12c07,lAv,Late Amazonian volcanic unit,6277.791761651926
+r12c08,AHv,Amazonian and Hesperian volcanic,215719.69192649613
+r12c08,ANa,Amazonian and Noachian apron unit,4237.816296707399
+r12c08,lHvf,Late Hesperian volcanic field unit,54853.5183725264
+r12c08,lNh,Late Noachian highland unit,12632.047449159181
+r12c09,AHi,Amazonian and Hesperian impact unit,3194.5391089829163
+r12c09,AHv,Amazonian and Hesperian volcanic,19152.417051229742
+r12c09,ANa,Amazonian and Noachian apron unit,330.07623107307364
+r12c09,eHh,Early Hesperian highland unit,26335.48798672957
+r12c09,eHv,Early Hesperian volcanic unit,22139.818381013185
+r12c09,lHvf,Late Hesperian volcanic field unit,84164.63351983628
+r12c09,lNh,Late Noachian highland unit,113465.8752336751
+r12c09,mNh,Middle Noachian highland unit,18660.226532349152
+r12c10,AHi,Amazonian and Hesperian impact unit,6856.151060592006
+r12c10,AHv,Amazonian and Hesperian volcanic,1828.7323730653068
+r12c10,eHh,Early Hesperian highland unit,106233.20321419806
+r12c10,eHv,Early Hesperian volcanic unit,172524.98739703358
+r12c11,AHi,Amazonian and Hesperian impact unit,17488.852735126602
+r12c11,AHv,Amazonian and Hesperian volcanic,17286.58840040953
+r12c11,HNt,Hesperian and Noachian transition unit,14701.042988249665
+r12c11,Nhu,Noachian highland undivided unit,495.53523843757625
+r12c11,eHh,Early Hesperian highland unit,167687.75604033907
+r12c11,eHv,Early Hesperian volcanic unit,51984.349514008536
+r12c11,mNh,Middle Noachian highland unit,17798.949128318258
+r12c12,AHi,Amazonian and Hesperian impact unit,12525.068888143627
+r12c12,AHv,Amazonian and Hesperian volcanic,23208.683993751558
+r12c12,Hto,Hesperian transition outflow unit,15000.106322064192
+r12c12,Nhu,Noachian highland undivided unit,44914.01168996767
+r12c12,eHh,Early Hesperian highland unit,34818.8440276464
+r12c12,lNh,Late Noachian highland unit,44456.17623884028
+r12c12,mNh,Middle Noachian highland unit,112520.18288447543
+r12c13,AHi,Amazonian and Hesperian impact unit,22164.04898450258
+r12c13,AHv,Amazonian and Hesperian volcanic,7567.13160375554
+r12c13,Hto,Hesperian transition outflow unit,195634.11500404886
+r12c13,Nhu,Noachian highland undivided unit,2276.9224292438794
+r12c13,lHl,Late Hesperian lowland unit,20444.592961353042
+r12c13,lNh,Late Noachian highland unit,39356.26306198495
+r12c14,AHi,Amazonian and Hesperian impact unit,4848.998864819589
+r12c14,Hto,Hesperian transition outflow unit,3955.9697338222504
+r12c14,lHl,Late Hesperian lowland unit,278638.1054462473
+r12c15,lHl,Late Hesperian lowland unit,273529.4482233117
+r12c15,lHt,Late Hesperian transition unit,13913.625821577478
+r12c16,AHi,Amazonian and Hesperian impact unit,10469.164381516814
+r12c16,HNt,Hesperian and Noachian transition unit,39719.16873469611
+r12c16,eHt,Early Hesperian transition unit,6311.271730436745
+r12c16,lHl,Late Hesperian lowland unit,149937.8332804441
+r12c16,mNh,Middle Noachian highland unit,81005.63591779536
+r12c17,AHi,Amazonian and Hesperian impact unit,45543.076570718265
+r12c17,HNt,Hesperian and Noachian transition unit,5249.578388276714
+r12c17,eHt,Early Hesperian transition unit,41629.923883245814
+r12c17,lHl,Late Hesperian lowland unit,6642.479649159635
+r12c17,lNh,Late Noachian highland unit,655.7112156005065
+r12c17,mAl,Middle Amazonian lowland unit,2416.437191980616
+r12c17,mNh,Middle Noachian highland unit,185305.86714590815
+r12c18,AHi,Amazonian and Hesperian impact unit,8288.824112039163
+r12c18,eHt,Early Hesperian transition unit,761.3828782797082
+r12c18,eNh,Early Noachian highland unit,16454.24958099383
+r12c18,lNh,Late Noachian highland unit,44759.35978171931
+r12c18,mNh,Middle Noachian highland unit,217179.2576918565
+r12c19,AHi,Amazonian and Hesperian impact unit,1064.959531613834
+r12c19,ANa,Amazonian and Noachian apron unit,23220.41213281671
+r12c19,eNh,Early Noachian highland unit,4279.089857144154
+r12c19,lNh,Late Noachian highland unit,49374.24189123845
+r12c19,mNh,Middle Noachian highland unit,209504.370632076
+r12c20,AHi,Amazonian and Hesperian impact unit,66779.09008578294
+r12c20,ANa,Amazonian and Noachian apron unit,26762.639295194072
+r12c20,mNh,Middle Noachian highland unit,193901.34466391228
+r12c21,AHi,Amazonian and Hesperian impact unit,13073.195538791031
+r12c21,ANa,Amazonian and Noachian apron unit,1694.8331253760448
+r12c21,eHt,Early Hesperian transition unit,2052.454252309474
+r12c21,eNh,Early Noachian highland unit,13232.437133720065
+r12c21,mNh,Middle Noachian highland unit,257390.1539946924
+r12c22,AHi,Amazonian and Hesperian impact unit,21559.136801852903
+r12c22,eNh,Early Noachian highland unit,29396.879543980118
+r12c22,mNh,Middle Noachian highland unit,236487.05769905623
+r12c23,AHi,Amazonian and Hesperian impact unit,5578.206922981764
+r12c23,HNt,Hesperian and Noachian transition unit,50622.320291480886
+r12c23,eHt,Early Hesperian transition unit,79.39402341010914
+r12c23,lHt,Late Hesperian transition unit,4582.98577673456
+r12c23,mNh,Middle Noachian highland unit,226580.16703028177
+r12c24,HNt,Hesperian and Noachian transition unit,123318.87131194635
+r12c24,eHt,Early Hesperian transition unit,43538.73945547529
+r12c24,eNh,Early Noachian highland unit,37436.67262509976
+r12c24,lHt,Late Hesperian transition unit,7783.294925814514
+r12c24,mNh,Middle Noachian highland unit,75365.49572655375
+r12c25,HNt,Hesperian and Noachian transition unit,97115.40480177285
+r12c25,eHt,Early Hesperian transition unit,137204.13097750477
+r12c25,eNh,Early Noachian highland unit,7040.956661275964
+r12c25,lHl,Late Hesperian lowland unit,38.54533809082468
+r12c25,lHt,Late Hesperian transition unit,22858.69827330761
+r12c25,mNh,Middle Noachian highland unit,23185.33799293718
+r12c26,eHt,Early Hesperian transition unit,33082.952856744305
+r12c26,lHl,Late Hesperian lowland unit,103546.62118477761
+r12c26,lHt,Late Hesperian transition unit,82545.79101117046
+r12c26,mAl,Middle Amazonian lowland unit,61850.16765496145
+r12c26,mNh,Middle Noachian highland unit,6417.541337235239
+r12c27,lHl,Late Hesperian lowland unit,235060.07973090463
+r12c27,mAl,Middle Amazonian lowland unit,52382.99431398448
+r12c28,AHv,Amazonian and Hesperian volcanic,6072.677583549181
+r12c28,Av,Amazonian volcanic unit,11.187199856250778
+r12c28,eAb,Early Amazonian basin unit,56461.838523385544
+r12c28,lHl,Late Hesperian lowland unit,224897.37073809817
+r12c29,AHi,Amazonian and Hesperian impact unit,17703.743954870675
+r12c29,AHv,Amazonian and Hesperian volcanic,128614.21543149963
+r12c29,Av,Amazonian volcanic unit,69121.24911060599
+r12c29,eAb,Early Amazonian basin unit,54411.71753903897
+r12c29,lHl,Late Hesperian lowland unit,17592.148008873726
+r12c30,AHi,Amazonian and Hesperian impact unit,23559.826586432937
+r12c30,AHv,Amazonian and Hesperian volcanic,34072.63537655362
+r12c30,Av,Amazonian volcanic unit,229810.61208190315
+r12c31,AHv,Amazonian and Hesperian volcanic,9313.480589506149
+r12c31,Av,Amazonian volcanic unit,273482.43897980335
+r12c31,lHl,Late Hesperian lowland unit,3501.462543303827
+r12c31,mAl,Middle Amazonian lowland unit,1145.6919322753743
+r12c32,AHv,Amazonian and Hesperian volcanic,90315.17835409634
+r12c32,Av,Amazonian volcanic unit,53223.609219469414
+r12c32,Hve,Hesperian volcanic edifice unit,10525.286633121768
+r12c32,lHl,Late Hesperian lowland unit,64105.36421391305
+r12c32,mAl,Middle Amazonian lowland unit,69273.63562428916
+r12c33,AHv,Amazonian and Hesperian volcanic,166847.05174299987
+r12c33,HNt,Hesperian and Noachian transition unit,22.15421306725517
+r12c33,Hve,Hesperian volcanic edifice unit,15710.859549430588
+r12c33,eHt,Early Hesperian transition unit,2471.6604134975855
+r12c33,lHl,Late Hesperian lowland unit,1379.429228316649
+r12c33,lHt,Late Hesperian transition unit,34625.549039160695
+r12c33,mAl,Middle Amazonian lowland unit,66386.36985841628
+r12c34,AHv,Amazonian and Hesperian volcanic,62599.66021034232
+r12c34,HNt,Hesperian and Noachian transition unit,59072.90992467155
+r12c34,eHt,Early Hesperian transition unit,52957.98326636413
+r12c34,lHt,Late Hesperian transition unit,112812.52064351176
+r12c35,AHv,Amazonian and Hesperian volcanic,5969.4748770728365
+r12c35,HNt,Hesperian and Noachian transition unit,14664.550646041378
+r12c35,eHt,Early Hesperian transition unit,210713.23130395013
+r12c35,lAv,Late Amazonian volcanic unit,34901.636703283286
+r12c35,lHl,Late Hesperian lowland unit,11713.93290322957
+r12c35,lHt,Late Hesperian transition unit,9476.50235162842
+r13c00,Av,Amazonian volcanic unit,179358.97059938224
+r13c00,HNt,Hesperian and Noachian transition unit,3089.225370958177
+r13c00,lAv,Late Amazonian volcanic unit,61476.993356563726
+r13c00,lHl,Late Hesperian lowland unit,2607.848386483896
+r13c00,mAl,Middle Amazonian lowland unit,1588.269216472048
+r13c01,Av,Amazonian volcanic unit,206764.23458033468
+r13c01,HNt,Hesperian and Noachian transition unit,5639.404147030273
+r13c01,lHl,Late Hesperian lowland unit,35722.39389295001
+r13c02,AHi,Amazonian and Hesperian impact unit,6706.892497368542
+r13c02,Av,Amazonian volcanic unit,188382.88561488228
+r13c02,lHl,Late Hesperian lowland unit,53036.25450806383
+r13c03,AHi,Amazonian and Hesperian impact unit,4472.87396649539
+r13c03,AHv,Amazonian and Hesperian volcanic,13385.260845551076
+r13c03,Av,Amazonian volcanic unit,11495.909011606847
+r13c03,lHl,Late Hesperian lowland unit,218771.98879666193
+r13c04,AHi,Amazonian and Hesperian impact unit,5182.92847722673
+r13c04,AHv,Amazonian and Hesperian volcanic,233979.81508443368
+r13c04,lHl,Late Hesperian lowland unit,8654.859075490562
+r13c04,lNh,Late Noachian highland unit,308.4299831634835
+r13c05,AHv,Amazonian and Hesperian volcanic,248126.0326203154
+r13c06,AHv,Amazonian and Hesperian volcanic,211481.5244094424
+r13c06,Ave,Amazonian volcanic edifice,36644.50821087256
+r13c07,AHv,Amazonian and Hesperian volcanic,216185.84527795957
+r13c07,Ave,Amazonian volcanic edifice,31940.187342355424
+r13c08,AHv,Amazonian and Hesperian volcanic,209338.16784299884
+r13c08,ANa,Amazonian and Noachian apron unit,1216.131129708677
+r13c08,HNt,Hesperian and Noachian transition unit,3108.718291491949
+r13c08,eHh,Early Hesperian highland unit,7456.038766139239
+r13c08,lHv,Late Hesperian volcanic unit,1250.3424756756965
+r13c08,lHvf,Late Hesperian volcanic field unit,1943.2840430651984
+r13c08,mNh,Middle Noachian highland unit,23813.350071235414
+r13c09,AHv,Amazonian and Hesperian volcanic,1468.7381108451668
+r13c09,ANa,Amazonian and Noachian apron unit,19899.74280540697
+r13c09,HNt,Hesperian and Noachian transition unit,8160.073675047148
+r13c09,eHh,Early Hesperian highland unit,4312.879560381826
+r13c09,eHv,Early Hesperian volcanic unit,41183.15806431934
+r13c09,lHv,Late Hesperian volcanic unit,52655.8911779367
+r13c09,lHvf,Late Hesperian volcanic field unit,19959.841953992687
+r13c09,mNh,Middle Noachian highland unit,100485.70727238507
+r13c10,AHv,Amazonian and Hesperian volcanic,155.8496304581064
+r13c10,ANa,Amazonian and Noachian apron unit,19014.370708163115
+r13c10,eHv,Early Hesperian volcanic unit,89903.69232878176
+r13c10,eNh,Early Noachian highland unit,5514.9530382646535
+r13c10,lHt,Late Hesperian transition unit,7513.511373729123
+r13c10,mNh,Middle Noachian highland unit,126023.65554091828
+r13c11,AHi,Amazonian and Hesperian impact unit,2141.553804059532
+r13c11,eHv,Early Hesperian volcanic unit,30304.37603930232
+r13c11,eNh,Early Noachian highland unit,9515.205423509455
+r13c11,mNh,Middle Noachian highland unit,206164.89735344367
+r13c12,eHh,Early Hesperian highland unit,5231.643136185967
+r13c12,lNh,Late Noachian highland unit,10319.445175882716
+r13c12,mNh,Middle Noachian highland unit,232574.9443082463
+r13c13,AHi,Amazonian and Hesperian impact unit,11793.683958704467
+r13c13,lHl,Late Hesperian lowland unit,151660.88620302398
+r13c13,lNh,Late Noachian highland unit,79083.515784441
+r13c13,mAl,Middle Amazonian lowland unit,2267.1992214495076
+r13c13,mNh,Middle Noachian highland unit,3320.7474526960345
+r13c14,AHi,Amazonian and Hesperian impact unit,15445.572182562193
+r13c14,lHl,Late Hesperian lowland unit,216138.93675446682
+r13c14,lHt,Late Hesperian transition unit,16541.523683286043
+r13c15,AHi,Amazonian and Hesperian impact unit,5527.062664987429
+r13c15,HNt,Hesperian and Noachian transition unit,15045.367207476971
+r13c15,eHt,Early Hesperian transition unit,30700.134961941178
+r13c15,lHl,Late Hesperian lowland unit,167944.33799111366
+r13c15,lHt,Late Hesperian transition unit,28909.12979479593
+r13c16,AHi,Amazonian and Hesperian impact unit,10373.663988056463
+r13c16,HNt,Hesperian and Noachian transition unit,4513.879922360223
+r13c16,lHl,Late Hesperian lowland unit,223769.43389523996
+r13c16,mAl,Middle Amazonian lowland unit,9469.054814658406
+r13c17,AHi,Amazonian and Hesperian impact unit,24691.803078458914
+r13c17,HNt,Hesperian and Noachian transition unit,3272.586086519043
+r13c17,eHt,Early Hesperian transition unit,34372.458357991774
+r13c17,lHl,Late Hesperian lowland unit,135372.5487335247
+r13c17,mAl,Middle Amazonian lowland unit,50317.351388446536
+r13c17,mNh,Middle Noachian highland unit,99.28497537414911
+r13c18,AHi,Amazonian and Hesperian impact unit,14698.024774072921
+r13c18,eHt,Early Hesperian transition unit,90170.80003397868
+r13c18,lHl,Late Hesperian lowland unit,76582.24516572591
+r13c18,lNh,Late Noachian highland unit,27993.770355419274
+r13c18,mAl,Middle Amazonian lowland unit,28361.181323072342
+r13c18,mNh,Middle Noachian highland unit,10320.010968045768
+r13c19,AHi,Amazonian and Hesperian impact unit,5017.245702324321
+r13c19,ANa,Amazonian and Noachian apron unit,25443.322469216248
+r13c19,eHt,Early Hesperian transition unit,86213.03377099163
+r13c19,lHl,Late Hesperian lowland unit,46798.396073208045
+r13c19,lNh,Late Noachian highland unit,66973.165313751
+r13c19,mNh,Middle Noachian highland unit,17680.869290823757
+r13c20,AHi,Amazonian and Hesperian impact unit,62567.89523890884
+r13c20,ANa,Amazonian and Noachian apron unit,108932.62961523338
+r13c20,eHt,Early Hesperian transition unit,66805.41807531833
+r13c20,lHl,Late Hesperian lowland unit,830.386725563611
+r13c20,mNh,Middle Noachian highland unit,8989.702965290817
+r13c21,AHi,Amazonian and Hesperian impact unit,91955.76326560628
+r13c21,ANa,Amazonian and Noachian apron unit,35982.74078017296
+r13c21,HNt,Hesperian and Noachian transition unit,7748.594816843455
+r13c21,eHt,Early Hesperian transition unit,66417.3928717109
+r13c21,mNh,Middle Noachian highland unit,46021.54088598132
+r13c22,AHi,Amazonian and Hesperian impact unit,51050.425252546855
+r13c22,ANa,Amazonian and Noachian apron unit,28898.759610386827
+r13c22,HNt,Hesperian and Noachian transition unit,62904.88935213591
+r13c22,eHt,Early Hesperian transition unit,80784.82066370828
+r13c22,mNh,Middle Noachian highland unit,24487.137741537215
+r13c23,ANa,Amazonian and Noachian apron unit,34036.194976494735
+r13c23,HNt,Hesperian and Noachian transition unit,149809.91630338648
+r13c23,eHt,Early Hesperian transition unit,49970.52515802729
+r13c23,mNh,Middle Noachian highland unit,14309.396182406379
+r13c24,AHi,Amazonian and Hesperian impact unit,50893.948975799874
+r13c24,HNt,Hesperian and Noachian transition unit,15119.301462464446
+r13c24,eHt,Early Hesperian transition unit,103462.69600759161
+r13c24,lHl,Late Hesperian lowland unit,1188.5831193468912
+r13c24,lHt,Late Hesperian transition unit,29314.57568037224
+r13c24,mAl,Middle Amazonian lowland unit,48146.92737473987
+r13c25,eHt,Early Hesperian transition unit,56462.3693967648
+r13c25,lHl,Late Hesperian lowland unit,46106.24286575661
+r13c25,lHt,Late Hesperian transition unit,52313.417436048025
+r13c25,mAl,Middle Amazonian lowland unit,93244.00292174585
+r13c26,lHl,Late Hesperian lowland unit,41688.62764417329
+r13c26,lHt,Late Hesperian transition unit,705.4822156705978
+r13c26,mAl,Middle Amazonian lowland unit,205731.9227604709
+r13c27,lHl,Late Hesperian lowland unit,148885.05779624643
+r13c27,mAl,Middle Amazonian lowland unit,99240.97482406851
+r13c28,Av,Amazonian volcanic unit,3095.1125503703297
+r13c28,eAb,Early Amazonian basin unit,166867.8366109187
+r13c28,lHl,Late Hesperian lowland unit,78163.0834590262
+r13c29,AHi,Amazonian and Hesperian impact unit,8160.662664568674
+r13c29,Av,Amazonian volcanic unit,91273.93554890086
+r13c29,eAb,Early Amazonian basin unit,148647.42560147814
+r13c29,mAl,Middle Amazonian lowland unit,44.00880536721919
+r13c30,AHi,Amazonian and Hesperian impact unit,12086.49536935038
+r13c30,Av,Amazonian volcanic unit,117542.14343644545
+r13c30,eAb,Early Amazonian basin unit,62349.795106825666
+r13c30,lHl,Late Hesperian lowland unit,36405.9856322649
+r13c30,mAl,Middle Amazonian lowland unit,19741.61307542913
+r13c31,AHi,Amazonian and Hesperian impact unit,62686.93942754482
+r13c31,Av,Amazonian volcanic unit,51122.5586013352
+r13c31,lHl,Late Hesperian lowland unit,114560.29036440369
+r13c31,mAl,Middle Amazonian lowland unit,19756.24422703111
+r13c32,AHi,Amazonian and Hesperian impact unit,47887.1528839998
+r13c32,Av,Amazonian volcanic unit,55828.2184165648
+r13c32,lHl,Late Hesperian lowland unit,144410.6613197507
+r13c33,AHi,Amazonian and Hesperian impact unit,667.6850346785428
+r13c33,Av,Amazonian volcanic unit,23622.72200145703
+r13c33,eHt,Early Hesperian transition unit,13296.345586699299
+r13c33,lHl,Late Hesperian lowland unit,160893.2157052296
+r13c33,lHt,Late Hesperian transition unit,723.6397689209094
+r13c33,mAl,Middle Amazonian lowland unit,48922.424523329275
+r13c34,HNt,Hesperian and Noachian transition unit,22260.435937115624
+r13c34,eHt,Early Hesperian transition unit,143987.5744593485
+r13c34,lHl,Late Hesperian lowland unit,14898.296947763645
+r13c34,lHt,Late Hesperian transition unit,46144.523708278124
+r13c34,mAl,Middle Amazonian lowland unit,20835.20156780891
+r13c35,Av,Amazonian volcanic unit,15955.355055789345
+r13c35,eHt,Early Hesperian transition unit,26061.60831110592
+r13c35,lAv,Late Amazonian volcanic unit,7480.476672070433
+r13c35,lHl,Late Hesperian lowland unit,185165.76165734153
+r13c35,lHt,Late Hesperian transition unit,13458.095567455048
+r14c00,Av,Amazonian volcanic unit,104238.43662840471
+r14c00,lHl,Late Hesperian lowland unit,97026.76670207853
+r14c01,Av,Amazonian volcanic unit,4131.345423109675
+r14c01,lHl,Late Hesperian lowland unit,197138.4618292939
+r14c02,AHi,Amazonian and Hesperian impact unit,5516.865400068604
+r14c02,Av,Amazonian volcanic unit,9873.231193439875
+r14c02,lHl,Late Hesperian lowland unit,185879.71065889442
+r14c03,AHi,Amazonian and Hesperian impact unit,87480.17674702655
+r14c03,lHl,Late Hesperian lowland unit,113789.63050537705
+r14c04,AHv,Amazonian and Hesperian volcanic,40660.481893945296
+r14c04,lHl,Late Hesperian lowland unit,160609.32535845757
+r14c05,AHv,Amazonian and Hesperian volcanic,172854.16898704486
+r14c05,lHl,Late Hesperian lowland unit,28415.638265358706
+r14c06,AHv,Amazonian and Hesperian volcanic,197917.37336465728
+r14c06,lHl,Late Hesperian lowland unit,3352.4338877459777
+r14c07,AHv,Amazonian and Hesperian volcanic,200599.0666399658
+r14c07,lHl,Late Hesperian lowland unit,670.7406124374096
+r14c08,AHv,Amazonian and Hesperian volcanic,187879.2440574451
+r14c08,lHt,Late Hesperian transition unit,161.1250786182865
+r14c08,mNh,Middle Noachian highland unit,13229.438116339852
+r14c09,AHi,Amazonian and Hesperian impact unit,5001.978435846527
+r14c09,AHv,Amazonian and Hesperian volcanic,108939.69047226764
+r14c09,ANa,Amazonian and Noachian apron unit,2235.1897140500223
+r14c09,HNt,Hesperian and Noachian transition unit,3875.632767765016
+r14c09,lHl,Late Hesperian lowland unit,10946.336203049708
+r14c09,lHt,Late Hesperian transition unit,43146.848576064105
+r14c09,mNh,Middle Noachian highland unit,27124.131083359993
+r14c10,AHi,Amazonian and Hesperian impact unit,39641.701607460076
+r14c10,AHv,Amazonian and Hesperian volcanic,21752.320298521336
+r14c10,ANa,Amazonian and Noachian apron unit,3660.9178189526565
+r14c10,lHl,Late Hesperian lowland unit,88949.73293444583
+r14c10,lHt,Late Hesperian transition unit,45940.300660267436
+r14c10,mNh,Middle Noachian highland unit,1324.8339327557521
+r14c11,AHi,Amazonian and Hesperian impact unit,25610.20716671344
+r14c11,lHl,Late Hesperian lowland unit,107929.8417759893
+r14c11,lHt,Late Hesperian transition unit,9954.16860975387
+r14c11,mAl,Middle Amazonian lowland unit,9734.981616636116
+r14c11,mNh,Middle Noachian highland unit,48040.608083310355
+r14c12,lHl,Late Hesperian lowland unit,95302.59376704921
+r14c12,lNh,Late Noachian highland unit,6897.086651534197
+r14c12,mAl,Middle Amazonian lowland unit,61924.902793290035
+r14c12,mNh,Middle Noachian highland unit,37145.224040529814
+r14c13,AHi,Amazonian and Hesperian impact unit,456.52187822949537
+r14c13,lHl,Late Hesperian lowland unit,157436.79811524373
+r14c13,lNh,Late Noachian highland unit,573.523809903307
+r14c13,mAl,Middle Amazonian lowland unit,42802.963449026756
+r14c14,lHl,Late Hesperian lowland unit,201269.80725240323
+r14c15,HNt,Hesperian and Noachian transition unit,24853.47733344757
+r14c15,lHl,Late Hesperian lowland unit,176404.30187870612
+r14c15,lHt,Late Hesperian transition unit,12.02804024951098
+r14c16,AHi,Amazonian and Hesperian impact unit,33521.83735020965
+r14c16,HNt,Hesperian and Noachian transition unit,1357.6968178142279
+r14c16,lHl,Late Hesperian lowland unit,166390.27308437933
+r14c17,AHi,Amazonian and Hesperian impact unit,45496.2872012165
+r14c17,lHl,Late Hesperian lowland unit,148827.11964223182
+r14c17,mAl,Middle Amazonian lowland unit,6946.400408954921
+r14c18,lHl,Late Hesperian lowland unit,183013.18360045386
+r14c18,mAl,Middle Amazonian lowland unit,18256.623651949434
+r14c19,AHi,Amazonian and Hesperian impact unit,42272.253831877264
+r14c19,lHl,Late Hesperian lowland unit,158997.55342052598
+r14c20,AHi,Amazonian and Hesperian impact unit,137048.41764075807
+r14c20,lHl,Late Hesperian lowland unit,64221.389611645245
+r14c21,AHi,Amazonian and Hesperian impact unit,146139.81611971324
+r14c21,HNt,Hesperian and Noachian transition unit,1194.3918336358076
+r14c21,eHt,Early Hesperian transition unit,281.8279083001107
+r14c21,lHl,Late Hesperian lowland unit,43768.84306120685
+r14c21,lHt,Late Hesperian transition unit,894.3154619335074
+r14c21,mAl,Middle Amazonian lowland unit,8990.612867613783
+r14c22,AHi,Amazonian and Hesperian impact unit,7182.849619710396
+r14c22,eHt,Early Hesperian transition unit,27317.01564972506
+r14c22,lHl,Late Hesperian lowland unit,64693.46584018913
+r14c22,lHt,Late Hesperian transition unit,28408.926827606054
+r14c22,mAl,Middle Amazonian lowland unit,73667.54931517263
+r14c23,AHi,Amazonian and Hesperian impact unit,39321.87596193988
+r14c23,eHt,Early Hesperian transition unit,23850.981514523137
+r14c23,lHl,Late Hesperian lowland unit,84687.80027724303
+r14c23,lHt,Late Hesperian transition unit,9084.749087643391
+r14c23,mAl,Middle Amazonian lowland unit,44324.400411053684
+r14c24,AHi,Amazonian and Hesperian impact unit,18568.67023794151
+r14c24,eHt,Early Hesperian transition unit,531.7455148578342
+r14c24,lHl,Late Hesperian lowland unit,49184.65885437465
+r14c24,mAl,Middle Amazonian lowland unit,132984.73264522917
+r14c25,lHl,Late Hesperian lowland unit,76941.04010385003
+r14c25,mAl,Middle Amazonian lowland unit,124328.76714855315
+r14c26,lHl,Late Hesperian lowland unit,174594.20923568812
+r14c26,mAl,Middle Amazonian lowland unit,26675.598016715125
+r14c27,lHl,Late Hesperian lowland unit,191463.77751255932
+r14c27,mAl,Middle Amazonian lowland unit,9806.02973984355
+r14c28,eAb,Early Amazonian basin unit,13318.194332083787
+r14c28,lHl,Late Hesperian lowland unit,187951.61292031943
+r14c29,eAb,Early Amazonian basin unit,23505.398463599162
+r14c29,lHl,Late Hesperian lowland unit,149998.44648710603
+r14c29,mAl,Middle Amazonian lowland unit,27765.96230169805
+r14c30,eAb,Early Amazonian basin unit,677.4195447431341
+r14c30,lHl,Late Hesperian lowland unit,141505.79490751296
+r14c30,mAl,Middle Amazonian lowland unit,59086.59280014754
+r14c31,AHi,Amazonian and Hesperian impact unit,34682.3934987013
+r14c31,lHl,Late Hesperian lowland unit,166587.41375370155
+r14c32,AHi,Amazonian and Hesperian impact unit,20731.407219002744
+r14c32,lHl,Late Hesperian lowland unit,180538.4000334009
+r14c33,AHi,Amazonian and Hesperian impact unit,22053.045759715314
+r14c33,lHl,Late Hesperian lowland unit,179216.7614926875
+r14c34,AHi,Amazonian and Hesperian impact unit,11578.199878392252
+r14c34,eHt,Early Hesperian transition unit,4557.709727607616
+r14c34,lHl,Late Hesperian lowland unit,108892.18829173857
+r14c34,lHt,Late Hesperian transition unit,2699.2790241250514
+r14c34,mAl,Middle Amazonian lowland unit,73542.43033054008
+r14c35,AHi,Amazonian and Hesperian impact unit,30030.857040664923
+r14c35,Av,Amazonian volcanic unit,9052.14482260767
+r14c35,lHl,Late Hesperian lowland unit,157838.48287954048
+r14c35,mAl,Middle Amazonian lowland unit,4343.70489531042
+r15c00,AHi,Amazonian and Hesperian impact unit,36017.152630581564
+r15c00,lHl,Late Hesperian lowland unit,80178.30293485172
+r15c00,mAl,Middle Amazonian lowland unit,32099.243515397673
+r15c01,AHi,Amazonian and Hesperian impact unit,1912.0978845851052
+r15c01,lHl,Late Hesperian lowland unit,96657.45220131452
+r15c01,mAl,Middle Amazonian lowland unit,49728.55055266429
+r15c02,lHl,Late Hesperian lowland unit,110269.03078852329
+r15c02,mAl,Middle Amazonian lowland unit,38029.069850040294
+r15c03,lHl,Late Hesperian lowland unit,67887.1208446043
+r15c03,mAl,Middle Amazonian lowland unit,80410.97979395957
+r15c04,lHl,Late Hesperian lowland unit,78237.3807994492
+r15c04,mAl,Middle Amazonian lowland unit,70060.71983911424
+r15c05,AHi,Amazonian and Hesperian impact unit,14556.5654988543
+r15c05,lHl,Late Hesperian lowland unit,99914.81911596147
+r15c05,mAl,Middle Amazonian lowland unit,33826.71602374799
+r15c06,AHi,Amazonian and Hesperian impact unit,9266.160980715338
+r15c06,AHv,Amazonian and Hesperian volcanic,1254.5178470395247
+r15c06,lHl,Late Hesperian lowland unit,101749.11081746407
+r15c06,lHt,Late Hesperian transition unit,15814.887998639308
+r15c06,mAl,Middle Amazonian lowland unit,20213.42299470531
+r15c07,AHi,Amazonian and Hesperian impact unit,3396.865728109474
+r15c07,AHv,Amazonian and Hesperian volcanic,16319.017376317383
+r15c07,lHl,Late Hesperian lowland unit,52797.217618430615
+r15c07,lHt,Late Hesperian transition unit,43279.45732252687
+r15c07,mAl,Middle Amazonian lowland unit,32505.542593179354
+r15c08,AHi,Amazonian and Hesperian impact unit,2184.854926137991
+r15c08,AHv,Amazonian and Hesperian volcanic,10776.978327834682
+r15c08,lHl,Late Hesperian lowland unit,32961.64509252108
+r15c08,lHt,Late Hesperian transition unit,40208.88291242164
+r15c08,mAl,Middle Amazonian lowland unit,62165.73937964822
+r15c09,AHi,Amazonian and Hesperian impact unit,6447.829899866649
+r15c09,lHl,Late Hesperian lowland unit,74228.3256387893
+r15c09,lHt,Late Hesperian transition unit,10100.959224057833
+r15c09,mAl,Middle Amazonian lowland unit,57520.985875849925
+r15c10,AHi,Amazonian and Hesperian impact unit,7751.49076881116
+r15c10,lHl,Late Hesperian lowland unit,128284.82194987744
+r15c10,mAl,Middle Amazonian lowland unit,12261.78791987511
+r15c11,lHl,Late Hesperian lowland unit,135965.81993256547
+r15c11,mAl,Middle Amazonian lowland unit,12332.280705998259
+r15c12,AHi,Amazonian and Hesperian impact unit,1758.1503643434862
+r15c12,lHl,Late Hesperian lowland unit,138176.99825414852
+r15c12,mAl,Middle Amazonian lowland unit,8362.952020071596
+r15c13,AHi,Amazonian and Hesperian impact unit,12629.832392376395
+r15c13,lHl,Late Hesperian lowland unit,135668.26824618725
+r15c14,lHl,Late Hesperian lowland unit,148298.1006385637
+r15c15,lHl,Late Hesperian lowland unit,148298.1006385637
+r15c16,AHi,Amazonian and Hesperian impact unit,34563.92421380673
+r15c16,lHl,Late Hesperian lowland unit,113734.17642475682
+r15c17,AHi,Amazonian and Hesperian impact unit,69837.90806118696
+r15c17,lHl,Late Hesperian lowland unit,74463.49574895577
+r15c17,mAl,Middle Amazonian lowland unit,3996.6968284207887
+r15c18,AHi,Amazonian and Hesperian impact unit,26002.0081595999
+r15c18,lHl,Late Hesperian lowland unit,115658.76206109776
+r15c18,mAl,Middle Amazonian lowland unit,6637.33041786598
+r15c19,AHi,Amazonian and Hesperian impact unit,26854.08776528576
+r15c19,lHl,Late Hesperian lowland unit,120796.60827304258
+r15c19,mAl,Middle Amazonian lowland unit,647.4046002351513
+r15c20,lHl,Late Hesperian lowland unit,115184.03262956961
+r15c20,mAl,Middle Amazonian lowland unit,33114.068008994036
+r15c21,AHi,Amazonian and Hesperian impact unit,9904.790916589904
+r15c21,lHl,Late Hesperian lowland unit,123088.58722860103
+r15c21,mAl,Middle Amazonian lowland unit,15304.722493372927
+r15c22,AHi,Amazonian and Hesperian impact unit,7887.65132913722
+r15c22,lHl,Late Hesperian lowland unit,140410.44930942633
+r15c23,AHi,Amazonian and Hesperian impact unit,5240.057120572648
+r15c23,lHl,Late Hesperian lowland unit,143058.04351799103
+r15c24,AHi,Amazonian and Hesperian impact unit,1015.2188928117429
+r15c24,lHl,Late Hesperian lowland unit,135683.67762984504
+r15c24,mAl,Middle Amazonian lowland unit,11599.204115906901
+r15c25,lHl,Late Hesperian lowland unit,118758.21193681215
+r15c25,mAl,Middle Amazonian lowland unit,29539.88870175153
+r15c26,AHi,Amazonian and Hesperian impact unit,192.5991382571912
+r15c26,lHl,Late Hesperian lowland unit,122966.3087333916
+r15c26,mAl,Middle Amazonian lowland unit,25139.192766914937
+r15c27,AHi,Amazonian and Hesperian impact unit,18435.256936309586
+r15c27,lHl,Late Hesperian lowland unit,129862.84370225399
+r15c28,AHi,Amazonian and Hesperian impact unit,8757.094118470237
+r15c28,lHl,Late Hesperian lowland unit,105003.63653220827
+r15c28,mAl,Middle Amazonian lowland unit,34537.3699878852
+r15c29,lHl,Late Hesperian lowland unit,85201.29164429057
+r15c29,mAl,Middle Amazonian lowland unit,63096.80899427307
+r15c30,lHl,Late Hesperian lowland unit,133788.68558006233
+r15c30,mAl,Middle Amazonian lowland unit,14509.41505850161
+r15c31,AHi,Amazonian and Hesperian impact unit,4819.399525621622
+r15c31,lHl,Late Hesperian lowland unit,143478.70111294184
+r15c32,lHl,Late Hesperian lowland unit,148298.1006385639
+r15c33,lHl,Late Hesperian lowland unit,134806.1123414835
+r15c33,mAl,Middle Amazonian lowland unit,13491.988297079972
+r15c34,AHi,Amazonian and Hesperian impact unit,2220.301321948625
+r15c34,lHl,Late Hesperian lowland unit,145793.12171750047
+r15c34,mAl,Middle Amazonian lowland unit,284.67759911481835
+r15c35,AHi,Amazonian and Hesperian impact unit,26903.27456330764
+r15c35,lHl,Late Hesperian lowland unit,95314.0977362799
+r15c35,mAl,Middle Amazonian lowland unit,26077.32684918956
+r16c00,AHi,Amazonian and Hesperian impact unit,1834.5973491592042
+r16c00,Hpe,Hesperian polar edifice unit,11957.494930836137
+r16c00,lApd,Late Amazonian polar dunes unit,7605.5311287415125
+r16c00,lHl,Late Hesperian lowland unit,11043.32707892345
+r16c00,mAl,Middle Amazonian lowland unit,58375.316388778425
+r16c01,AHi,Amazonian and Hesperian impact unit,19420.538875050268
+r16c01,Hpe,Hesperian polar edifice unit,18417.458398800944
+r16c01,lApd,Late Amazonian polar dunes unit,6479.011598908438
+r16c01,mAl,Middle Amazonian lowland unit,46503.42240652207
+r16c02,AHi,Amazonian and Hesperian impact unit,156.37125497504005
+r16c02,Hpe,Hesperian polar edifice unit,32784.92455058995
+r16c02,lApd,Late Amazonian polar dunes unit,6055.985155168248
+r16c02,mAl,Middle Amazonian lowland unit,51823.15031854828
+r16c03,AHi,Amazonian and Hesperian impact unit,12703.406906394537
+r16c03,Hpe,Hesperian polar edifice unit,25324.11808756703
+r16c03,lApd,Late Amazonian polar dunes unit,6235.207496350181
+r16c03,mAl,Middle Amazonian lowland unit,46557.69878897003
+r16c04,Hpe,Hesperian polar edifice unit,47535.555230328515
+r16c04,lApd,Late Amazonian polar dunes unit,5727.684347915238
+r16c04,mAl,Middle Amazonian lowland unit,37557.19170103779
+r16c05,Hpe,Hesperian polar edifice unit,44175.89014554865
+r16c05,lApd,Late Amazonian polar dunes unit,3455.146467726759
+r16c05,lHl,Late Hesperian lowland unit,1433.4641794347854
+r16c05,mAl,Middle Amazonian lowland unit,41755.93048657166
+r16c06,Apu,Amazonian polar undivided unit,359.2141650038276
+r16c06,Hpe,Hesperian polar edifice unit,172.54144385947114
+r16c06,lApd,Late Amazonian polar dunes unit,3722.5434587131595
+r16c06,lHl,Late Hesperian lowland unit,3771.0039806357213
+r16c06,mAl,Middle Amazonian lowland unit,82795.1282310694
+r16c07,Apu,Amazonian polar undivided unit,312.4719901984508
+r16c07,lHl,Late Hesperian lowland unit,22718.202820555864
+r16c07,mAl,Middle Amazonian lowland unit,67789.75646852734
+r16c08,AHi,Amazonian and Hesperian impact unit,6082.374542793275
+r16c08,lApd,Late Amazonian polar dunes unit,3557.8698010412713
+r16c08,lHl,Late Hesperian lowland unit,73070.31756582031
+r16c08,mAl,Middle Amazonian lowland unit,8109.869369626749
+r16c09,Apu,Amazonian polar undivided unit,587.071786183958
+r16c09,lApd,Late Amazonian polar dunes unit,9141.445835513316
+r16c09,lHl,Late Hesperian lowland unit,81091.91365758436
+r16c10,Apu,Amazonian polar undivided unit,4559.102558903857
+r16c10,lApd,Late Amazonian polar dunes unit,26037.140118320087
+r16c10,lHl,Late Hesperian lowland unit,60224.18860205775
+r16c11,Apu,Amazonian polar undivided unit,779.0729286651479
+r16c11,Hpu,Hesperian polar undivided unit,192.20815711471877
+r16c11,lApd,Late Amazonian polar dunes unit,16422.826743902457
+r16c11,lHl,Late Hesperian lowland unit,73426.32344959924
+r16c12,Hpu,Hesperian polar undivided unit,3921.900765592646
+r16c12,lApd,Late Amazonian polar dunes unit,35781.83180929965
+r16c12,lHl,Late Hesperian lowland unit,51116.69870438938
+r16c13,Apu,Amazonian polar undivided unit,7185.92510497243
+r16c13,Hpu,Hesperian polar undivided unit,61.250129087429144
+r16c13,lApd,Late Amazonian polar dunes unit,9988.816662272371
+r16c13,lHl,Late Hesperian lowland unit,73584.43938294941
+r16c14,Apu,Amazonian polar undivided unit,8053.969044657413
+r16c14,lHl,Late Hesperian lowland unit,82766.46223462424
+r16c15,Apu,Amazonian polar undivided unit,9872.113984373931
+r16c15,lApc,Late Amazonian polar cap unit,848.2550457825315
+r16c15,lHl,Late Hesperian lowland unit,80100.06224912517
+r16c16,AHi,Amazonian and Hesperian impact unit,1530.8815162873648
+r16c16,Apu,Amazonian polar undivided unit,6052.950808198871
+r16c16,lApc,Late Amazonian polar cap unit,3648.2618921709286
+r16c16,lHl,Late Hesperian lowland unit,79588.33706262455
+r16c17,AHi,Amazonian and Hesperian impact unit,8583.113934660747
+r16c17,Apu,Amazonian polar undivided unit,4999.973746274882
+r16c17,lApc,Late Amazonian polar cap unit,6616.390817246261
+r16c17,lHl,Late Hesperian lowland unit,70620.95278109983
+r16c18,Apu,Amazonian polar undivided unit,9524.626125876375
+r16c18,lApc,Late Amazonian polar cap unit,6386.312078895735
+r16c18,lHl,Late Hesperian lowland unit,74909.49307450953
+r16c19,Apu,Amazonian polar undivided unit,13327.40951799668
+r16c19,lApc,Late Amazonian polar cap unit,1904.51967749996
+r16c19,lHl,Late Hesperian lowland unit,75588.502083785
+r16c20,Apu,Amazonian polar undivided unit,9559.25093212632
+r16c20,lHl,Late Hesperian lowland unit,81261.18034715533
+r16c21,Apu,Amazonian polar undivided unit,6955.858001251923
+r16c21,lHl,Late Hesperian lowland unit,83864.57327802971
+r16c22,Apu,Amazonian polar undivided unit,4638.792432685258
+r16c22,lHl,Late Hesperian lowland unit,86181.63884659637
+r16c23,Apu,Amazonian polar undivided unit,3877.523348850784
+r16c23,lHl,Late Hesperian lowland unit,86942.90793043088
+r16c24,Apu,Amazonian polar undivided unit,7649.710716641729
+r16c24,lHl,Late Hesperian lowland unit,60144.76750075616
+r16c24,mAl,Middle Amazonian lowland unit,23025.95306188377
+r16c25,Apu,Amazonian polar undivided unit,7066.2503874823005
+r16c25,lHl,Late Hesperian lowland unit,83210.08412238004
+r16c25,mAl,Middle Amazonian lowland unit,544.0967694192954
+r16c26,Apu,Amazonian polar undivided unit,4913.702128072584
+r16c26,lHl,Late Hesperian lowland unit,85906.72915120905
+r16c27,AHi,Amazonian and Hesperian impact unit,1671.2852838670506
+r16c27,Apu,Amazonian polar undivided unit,692.6965455852592
+r16c27,lHl,Late Hesperian lowland unit,88456.44944982929
+r16c28,AHi,Amazonian and Hesperian impact unit,13243.650898440235
+r16c28,Apu,Amazonian polar undivided unit,297.6058505454221
+r16c28,lHl,Late Hesperian lowland unit,57173.08565867906
+r16c28,mAl,Middle Amazonian lowland unit,20106.088871616907
+r16c29,Apu,Amazonian polar undivided unit,17630.00211885182
+r16c29,lApd,Late Amazonian polar dunes unit,21.931410897858193
+r16c29,lHl,Late Hesperian lowland unit,38209.33280403972
+r16c29,mAl,Middle Amazonian lowland unit,34959.16494549225
+r16c30,Apu,Amazonian polar undivided unit,18284.357401546
+r16c30,lApd,Late Amazonian polar dunes unit,94.78585327381337
+r16c30,lHl,Late Hesperian lowland unit,52059.55769974507
+r16c30,mAl,Middle Amazonian lowland unit,20381.730324716962
+r16c31,Apu,Amazonian polar undivided unit,12937.064541398657
+r16c31,lHl,Late Hesperian lowland unit,77883.36673788284
+r16c32,Apu,Amazonian polar undivided unit,9012.006428590554
+r16c32,lHl,Late Hesperian lowland unit,81808.42485069123
+r16c33,AHi,Amazonian and Hesperian impact unit,14494.681368444715
+r16c33,Apu,Amazonian polar undivided unit,4447.599968026678
+r16c33,lApd,Late Amazonian polar dunes unit,502.51246832797216
+r16c33,lHl,Late Hesperian lowland unit,71375.63747448221
+r16c34,AHi,Amazonian and Hesperian impact unit,53679.691914077484
+r16c34,lApd,Late Amazonian polar dunes unit,2423.6677495433814
+r16c34,lHl,Late Hesperian lowland unit,34717.071615660934
+r16c35,AHi,Amazonian and Hesperian impact unit,15742.704816984813
+r16c35,Hpe,Hesperian polar edifice unit,3476.3345052253494
+r16c35,lApd,Late Amazonian polar dunes unit,5590.524932452468
+r16c35,lHl,Late Hesperian lowland unit,32538.418311262023
+r16c35,mAl,Middle Amazonian lowland unit,33468.28442792744
+r17c00,Apu,Amazonian polar undivided unit,10233.529890458396
+r17c00,lApc,Late Amazonian polar cap unit,6536.536457478454
+r17c00,lApd,Late Amazonian polar dunes unit,13810.913344159946
+r17c01,Apu,Amazonian polar undivided unit,10200.10973112938
+r17c01,lApc,Late Amazonian polar cap unit,7392.101971162285
+r17c01,lApd,Late Amazonian polar dunes unit,12991.017370346064
+r17c02,Apu,Amazonian polar undivided unit,9199.309280823933
+r17c02,lApc,Late Amazonian polar cap unit,8859.188294815505
+r17c02,lApd,Late Amazonian polar dunes unit,12524.731496998198
+r17c03,Apu,Amazonian polar undivided unit,7600.723532844133
+r17c03,lApc,Late Amazonian polar cap unit,9399.0449567293
+r17c03,lApd,Late Amazonian polar dunes unit,13583.460583064301
+r17c04,Apu,Amazonian polar undivided unit,7648.849231357946
+r17c04,lApc,Late Amazonian polar cap unit,9958.344660366602
+r17c04,lApd,Late Amazonian polar dunes unit,12976.03518091308
+r17c05,Apu,Amazonian polar undivided unit,11118.03962241713
+r17c05,lApc,Late Amazonian polar cap unit,12840.373537881833
+r17c05,lApd,Late Amazonian polar dunes unit,6624.815912338764
+r17c06,Apu,Amazonian polar undivided unit,9469.350808328216
+r17c06,lApc,Late Amazonian polar cap unit,19698.5549356337
+r17c06,lApd,Late Amazonian polar dunes unit,1415.3233286757652
+r17c07,Apu,Amazonian polar undivided unit,8416.887430822399
+r17c07,lApc,Late Amazonian polar cap unit,20955.76967960521
+r17c07,mAl,Middle Amazonian lowland unit,1210.5719622100669
+r17c08,Apu,Amazonian polar undivided unit,8827.318568694354
+r17c08,lApc,Late Amazonian polar cap unit,14625.493186862634
+r17c08,lApd,Late Amazonian polar dunes unit,885.5348582796828
+r17c08,mAl,Middle Amazonian lowland unit,6244.882458801011
+r17c09,Apu,Amazonian polar undivided unit,13278.177270228276
+r17c09,lApc,Late Amazonian polar cap unit,11834.451329998361
+r17c09,lApd,Late Amazonian polar dunes unit,3336.5793429464366
+r17c09,lHl,Late Hesperian lowland unit,265.52320141611636
+r17c09,mAl,Middle Amazonian lowland unit,1868.4979280484897
+r17c10,Apu,Amazonian polar undivided unit,17707.261548081027
+r17c10,Hpu,Hesperian polar undivided unit,1818.6285113897752
+r17c10,lApc,Late Amazonian polar cap unit,11057.339013166877
+r17c11,Apu,Amazonian polar undivided unit,9836.764247235227
+r17c11,Hpu,Hesperian polar undivided unit,9502.89398811658
+r17c11,lApc,Late Amazonian polar cap unit,9565.337406520535
+r17c11,lHl,Late Hesperian lowland unit,1678.2334307653339
+r17c12,Apu,Amazonian polar undivided unit,6432.555263443472
+r17c12,Hpu,Hesperian polar undivided unit,8932.614289622092
+r17c12,lApc,Late Amazonian polar cap unit,15218.059519572114
+r17c13,Apu,Amazonian polar undivided unit,14560.199107030736
+r17c13,Hpu,Hesperian polar undivided unit,5332.850675466178
+r17c13,lApc,Late Amazonian polar cap unit,10690.179290140764
+r17c14,Apu,Amazonian polar undivided unit,14566.028948994652
+r17c14,Hpu,Hesperian polar undivided unit,2344.2786531300158
+r17c14,lApc,Late Amazonian polar cap unit,13672.921470513013
+r17c15,Apu,Amazonian polar undivided unit,5103.3718940259305
+r17c15,Hpu,Hesperian polar undivided unit,2269.1212082172983
+r17c15,lApc,Late Amazonian polar cap unit,23210.73597039445
+r17c16,Apu,Amazonian polar undivided unit,1887.9634921327
+r17c16,Hpu,Hesperian polar undivided unit,134.13442764005015
+r17c16,lApc,Late Amazonian polar cap unit,28561.13115286493
+r17c17,lApc,Late Amazonian polar cap unit,30583.22907263768
+r17c18,lApc,Late Amazonian polar cap unit,30583.22907263768
+r17c19,Apu,Amazonian polar undivided unit,306.1949937072799
+r17c19,lApc,Late Amazonian polar cap unit,30277.034078930395
+r17c20,Apu,Amazonian polar undivided unit,7673.919260756655
+r17c20,lApc,Late Amazonian polar cap unit,22909.309811881023
+r17c21,Apu,Amazonian polar undivided unit,9297.331620906456
+r17c21,lApc,Late Amazonian polar cap unit,21285.897451731224
+r17c22,Apu,Amazonian polar undivided unit,10205.33167470314
+r17c22,lApc,Late Amazonian polar cap unit,20377.89739793454
+r17c23,Apu,Amazonian polar undivided unit,8634.982256520303
+r17c23,lApc,Late Amazonian polar cap unit,21948.246816117375
+r17c24,Apu,Amazonian polar undivided unit,7532.067053692394
+r17c24,lApc,Late Amazonian polar cap unit,23051.16201894528
+r17c25,Apu,Amazonian polar undivided unit,9166.863573711567
+r17c25,lApc,Late Amazonian polar cap unit,21416.365498926112
+r17c26,Apu,Amazonian polar undivided unit,10115.657717763188
+r17c26,lApc,Late Amazonian polar cap unit,20467.571354874497
+r17c27,Apu,Amazonian polar undivided unit,11013.578024062945
+r17c27,lApc,Late Amazonian polar cap unit,18538.740993490977
+r17c27,lHl,Late Hesperian lowland unit,1030.91005508375
+r17c28,Apu,Amazonian polar undivided unit,14837.130212913426
+r17c28,lApc,Late Amazonian polar cap unit,15095.844535360791
+r17c28,lHl,Late Hesperian lowland unit,650.2543243634656
+r17c29,Apu,Amazonian polar undivided unit,15558.599820053845
+r17c29,lApc,Late Amazonian polar cap unit,11529.725299231133
+r17c29,lApd,Late Amazonian polar dunes unit,858.5097624467586
+r17c29,lHl,Late Hesperian lowland unit,2636.39419090594
+r17c30,Apu,Amazonian polar undivided unit,11504.196501045242
+r17c30,lApc,Late Amazonian polar cap unit,10434.856878060204
+r17c30,lApd,Late Amazonian polar dunes unit,8644.175693532268
+r17c31,Apu,Amazonian polar undivided unit,8755.830536194742
+r17c31,lApc,Late Amazonian polar cap unit,10121.966664744734
+r17c31,lApd,Late Amazonian polar dunes unit,11705.431871698149
+r17c32,Apu,Amazonian polar undivided unit,8612.10727453776
+r17c32,lApc,Late Amazonian polar cap unit,11925.545284807617
+r17c32,lApd,Late Amazonian polar dunes unit,10045.576513292346
+r17c33,Apu,Amazonian polar undivided unit,8901.321376108328
+r17c33,lApc,Late Amazonian polar cap unit,9274.755618409237
+r17c33,lApd,Late Amazonian polar dunes unit,12407.152078120067
+r17c34,Apu,Amazonian polar undivided unit,8328.33111838287
+r17c34,lApc,Late Amazonian polar cap unit,6940.17953468251
+r17c34,lApd,Late Amazonian polar dunes unit,15314.718419572344
+r17c35,Apu,Amazonian polar undivided unit,8719.418647266182
+r17c35,lApc,Late Amazonian polar cap unit,6782.36381073974
+r17c35,lApd,Late Amazonian polar dunes unit,15079.197230089783

@@ -1,230 +1,961 @@
-# Planet Explorer
+# Nazeer — Geological Data Pipeline
 
-A small full-stack app for exploring NASA imagery of the Moon and Mars. Pick a body, click a map tile or enter a coordinate, and get a real matching Earth geology tile from a supplied 10° dataset.
+## 1. Overview
 
-The app is intentionally simple: no database, no auth, no API keys, and no tile proxy. Map imagery is loaded directly from NASA.
+This directory contains the geological data-processing pipeline used by the Planetary Analogue Finder project.
 
-## Features
+The objective of this pipeline is to prepare comparable geological datasets for three planetary bodies:
 
-- **Moon and Mars basemaps** from NASA Trek, on the same 2:1 equirectangular tile grid.
-- **Two ways to choose a target**:
-  - click a map tile for an area-weighted match; or
-  - enter decimal-degree latitude/longitude for the 10° cell containing the point.
-- **Real geology data** from the supplied `tiles_wide.csv`: Moon/Mars surface classes, mapped fraction, and age bins.
-- **Earth analog matching** against Earth land tiles, with a confidence score, top three candidates, and an explicit “no reliable analog” state.
-- **NASA GIBS preview** for each Earth candidate, with the matched 10° cell outlined.
-- Zoom limits are enforced per body: Moon z0–8, Mars z0–7. Geology matching requires z2 or deeper.
-- Responsive layout for desktop and mobile.
+- **Earth:** Global Lithological Map (GLiM).
+- **Moon:** USGS Unified Geologic Map of the Moon, GIS Version 2.
+- **Mars:** USGS Geologic Map of Mars, Scientific Investigations Map 3292 (SIM 3292).
 
-## Stack
+The original datasets were produced independently, use different geological classification systems, and have different spatial scales and attribute structures. They cannot be compared directly.
 
-| Layer    | Technology |
-| -------- | ---------- |
-| Frontend | React 19, TypeScript, Vite, Leaflet / react-leaflet, plain CSS |
-| Backend  | Python 3.12+, FastAPI, Pydantic |
-| Tooling  | `uv` (Python), `pnpm` (Node), pytest, Vitest |
+The pipeline processes these datasets into a common spatial grid, calculates the area occupied by each geological unit within each grid cell, assigns simplified geological classifications, and produces datasets suitable for further analysis and cross-planetary comparison.
 
-## Quick start
+The resulting data is intended for **regional geological analogue identification**. It is not a detailed geological survey, a mineralogical analysis, or a landing-site safety assessment.
 
-### 1. Backend
+## 2. Data Sources
 
-```bash
-cd backend
-uv sync
-uv run uvicorn app.main:app --reload --port 8000
-```
+### 2.1 Earth — Global Lithological Map (GLiM)
 
-The API is available at <http://127.0.0.1:8000>, with interactive docs at <http://127.0.0.1:8000/docs>.
+**Source:** University of Hamburg  
+**Dataset:** Global Lithological Map Database (GLiM)  
+**Version:** GLiM v1.0
 
-### 2. Frontend (development)
+- [Official GLiM project page](https://www.geo.uni-hamburg.de/en/geologie/forschung/aquatische-geochemie/glim.html)
+- [GLiM research publication](https://doi.org/10.1029/2012GC004370)
+- [GLiM gridded dataset — PANGAEA](https://doi.org/10.1594/PANGAEA.788537)
 
-In a second terminal:
+GLiM is a global lithological database assembled from existing regional geological maps and supporting geological literature.
 
-```bash
-cd frontend
-pnpm install
-pnpm dev
-```
+The original database contains approximately 1.2 million polygons representing lithological units at Earth's surface. Its classification system has three levels:
 
-Open <http://localhost:5173>. Vite proxies `/api` requests to the backend on port 8000.
+- Level 1: 16 general lithological classes.
+- Level 2: 12 subclasses providing additional lithological information.
+- Level 3: 14 subclasses describing further characteristics.
 
-### 3. Production-style build
+The database was designed to represent the distribution of rock types globally. It is not a single geological survey conducted at a uniform scale: it combines information from different regional maps and sources.
 
-Build the frontend, then start the backend. FastAPI serves the generated `frontend/dist` directory at the root URL.
+The average mapping scale reported by the project is approximately 1:3,750,000.
 
-```bash
-cd frontend
-pnpm build
+**Why it is used**
 
-cd ../backend
-uv run uvicorn app.main:app --port 8000
-```
+GLiM provides a global representation of Earth's surface lithology. It allows geological units on Earth to be grouped into broad categories and compared with geological units identified on the Moon and Mars.
 
-Open <http://127.0.0.1:8000>.
+**Important source limitation**
 
-## Using the app
+GLiM's source maps were not fully harmonized at their original geological boundaries. Its authors also explain that the mapping of unconsolidated sediments varies between source maps. Therefore, the presence or absence of a sediment class should not automatically be interpreted as proof of the exact material exposed at the surface.
 
-1. Choose **Moon** or **Mars** in the header.
-2. Either click a tile on the map, or type a latitude and longitude in the bar above the map and press **Go**.
-   - Coordinates are decimal degrees.
-   - Longitude is east-positive: `-180..180`.
-   - Latitude is `-90..90`.
-   - The map centers on the point at zoom 4 and shows the 10° geology cell.
-3. The panel at the top shows the Earth match: confidence, shared-class mass, analog similarity, Earth tile coverage, and the comparable compositions.
-4. The tile section below shows the selected map tile and the raw Moon/Mars geology classes and age bins.
+The original database and the gridded 0.5° product are different representations of the same dataset. The processing pipeline uses the GIS data available in the project rather than assuming that it uses the PANGAEA raster product.
 
-Clicking a map tile fills the coordinate bar with the clicked point. Pressing **Go** then refines the match to that single 10° cell.
+### 2.2 Moon — Unified Geologic Map of the Moon
 
-## API
+**Source:** USGS Astrogeology Science Center  
+**Dataset:** Unified Geologic Map of the Moon, 1:5M, GIS Version 2  
+**Publication date:** 2020
 
-| Method | Endpoint | Description |
-| ------ | -------- | ----------- |
-| GET | `/api/health` | Health check |
-| GET | `/api/bodies` | Moon and Mars layer configuration |
-| GET | `/api/tiles/{body}/{z}/{x}/{y}` | Tile metadata, bounds, approximate size, and aggregated geology |
-| GET | `/api/matches/{body}/{z}/{x}/{y}` | Earth match for a map tile (z2 or deeper) |
-| GET | `/api/matches/{body}/point?lat=...&lon=...` | Earth match for the 10° cell containing a coordinate |
+- [Official USGS dataset page](https://astrogeology.usgs.gov/search/map/Moon/Geology/Unified_Geologic_Map_of_the_Moon_GIS_v2)
+- [Lunar and Planetary Institute repository](https://repository.hou.usra.edu/handle/20.500.11753/1598)
 
-Examples:
+The Unified Geologic Map of the Moon is a globally consistent geological map at a scale of 1:5,000,000.
 
-```bash
-curl http://127.0.0.1:8000/api/tiles/moon/4/3/2
-curl http://127.0.0.1:8000/api/matches/moon/4/3/2
-curl "http://127.0.0.1:8000/api/matches/moon/point?lat=0&lon=0"
-curl "http://127.0.0.1:8000/api/matches/mars/point?lat=-85&lon=-175"
-```
+It was produced by combining six digitally renovated lunar geological maps into a unified product. The dataset contains geological unit polygons, unit contacts, linear features, and geological nomenclature annotations.
 
-Unknown bodies return `404`; invalid zoom levels, tile indexes, or coordinates return `422`. Tile matches below zoom 2 return `422` with a “too coarse” message.
+The map uses geological interpretations informed by lunar remote-sensing and topographic datasets, including:
 
-## Matching method
+- SELENE/Kaguya terrain-camera stereo data.
+- Lunar Reconnaissance Orbiter Lunar Orbiter Laser Altimeter (LOLA) data.
 
-The matcher is deliberately transparent and heuristic. It is a composition comparison, not a geologic provenance model.
+The GIS Version 2 release also corrected polygon alignment issues and improved the representation of individual crater units.
 
-### Data grid
+**Why it is used**
 
-The supplied table has 648 cells on an 18 × 36 grid. Each cell is 10° × 10°. Dataset rows run **south-to-north** (`r00` is the south pole), while NASA Trek map tile rows run north-to-south; the backend keeps those conventions separate.
+The dataset provides the geological unit distribution needed to characterize lunar regions, including impact-related materials, volcanic terrains, plains, and highland units.
 
-A clicked map tile is matched by area-weighting every 10° cell that overlaps it. A coordinate is matched against its single containing 10° cell.
+**Important source limitation**
 
-### Class crosswalk
+This is a geological interpretation based on remote sensing, not direct sampling of every mapped unit. Geological unit boundaries and descriptions represent interpretations at the map's scale.
 
-Direct classes:
+The dataset also contains geological periods and unit descriptions that must be interpreted separately. In the source attributes used by this pipeline, the Moon's geological period and geological unit description required correction before classification.
 
-- volcanic → volcanic
-- ice → ice
-- Mars surficial_unconsolidated → Earth surficial_unconsolidated
+The pipeline standardizes these fields internally:
 
-Heuristic classes:
+- `name`: geological unit description.
+- `age`: geological period.
 
-- Moon highlands → Earth plutonic + metamorphic (“crystalline”)
-- Moon plains → Earth sedimentary
+The original unit identifier is retained.
 
-No Earth equivalent:
+### 2.3 Mars — Geologic Map of Mars (SIM 3292)
 
-- impact
-- Mars undivided_terrain
+**Source:** U.S. Geological Survey  
+**Dataset:** Geologic Map of Mars  
+**Publication:** Scientific Investigations Map 3292  
+**Authors:** Tanaka et al.  
+**Publication year:** 2014  
+**Map scale:** 1:20,000,000
 
-Unmatched classes are not forced onto an Earth class. They reduce the shared-area mass and therefore the confidence score.
+- [USGS publication page](https://pubs.usgs.gov/publication/sim3292)
+- [USGS map and associated materials](https://pubs.usgs.gov/sim/3292/)
 
-### Earth candidates
+SIM 3292 is a global geological map of Mars. It represents the distribution of geological units and landforms across the Martian surface and their development through geological time.
 
-Only Earth land tiles with at least 50% mapped coverage are considered. Ocean, blank, and no-data tiles are excluded. The Earth match vector is normalized over comparable classes, so water/no-data do not dominate the composition score.
+The map was compiled using observations from multiple remote-sensing sources acquired since the Viking missions, including morphological, topographic, spectral, thermophysical, and radar observations.
 
-Candidates are ranked with the **Bhattacharyya coefficient**, a bounded composition overlap. Unlike a dot product, it rewards a candidate whose whole class mix resembles the target instead of always choosing the purest global end-member. This is what keeps different Moon and Mars locations from collapsing onto the same one or two Earth tiles.
+The publication provides:
 
-The candidate list is then thinned geographically: up to five candidates must be at least 20° apart on the Earth grid, so the alternatives are different regions rather than adjacent copies of the same cell. The API returns up to three distinct candidates.
+- A global geological map.
+- A description of geological units.
+- Geological mapping documentation.
+- A GIS database and associated metadata.
 
-### Featured analog
+**Why it is used**
 
-The first candidate is the **featured analog**. When several Earth tiles have comparable composition, the app prefers a candidate in the same broad class family (for example, volcanic for a volcanic target) and then the one geographically nearest the target center. A candidate must be at least 65% as similar as the best composition score to be eligible for this tie-break. This is a presentation choice, not a geologic claim: it keeps the visual comparison varied and relevant. The highest-scoring composition tile is always kept in the returned list and is marked in the UI when it differs from the featured tile.
+SIM 3292 provides the geological unit distribution for Mars. Its unit descriptions and geological attributes are used to identify broad geological characteristics and assign simplified classes.
 
-### Confidence
+**Important source limitation**
 
-The confidence score combines:
+SIM 3292 is a global geological synthesis at 1:20,000,000 scale. It is much more generalized than a local geological map. Some geological units combine or represent extensive terrains, so their classifications should not be treated as detailed descriptions of every location within the mapped polygon.
 
-- Bhattacharyya similarity between the target and candidate comparable compositions;
-- the share of the target area that has a comparable Earth class;
-- the candidate’s mapped coverage;
-- the similarity margin over the next returned candidate.
+---
 
-Scores map to high / medium / low / insufficient confidence. High or medium confidence produces a `match`; low confidence produces a `weak` match; everything else is `insufficient` and is labeled **No reliable analog**. Candidates are still returned for weak or insufficient matches when they exist, but they are clearly marked as reference-only.
+## 3. Processing Architecture
 
-## Data sources
-
-- **Moon imagery**: [LRO WAC Global Mosaic](https://trek.nasa.gov/moon/) (`LRO_WAC_Mosaic_Global_303ppd_v02`) from NASA Trek.
-- **Mars imagery**: [Viking Global Color Mosaic](https://trek.nasa.gov/mars/) (`Mars_Viking_MDIM21_ClrMosaic_global_232m`) from NASA Trek.
-- **Earth preview**: [NASA GIBS Blue Marble Shaded Relief + Bathymetry](https://gibs.earthdata.nasa.gov/), requested as a WMS image around each candidate.
-- **Geology table**: `backend/data/geology/tiles_wide.csv`, generated by the project owner for this app. The source rasters/vectors used to derive it are not included. See [`backend/data/geology/README.md`](backend/data/geology/README.md) for provenance, columns, and limitations.
-
-Imagery is © NASA/JPL/USGS and is loaded directly in the browser from NASA servers. Attribution is displayed on the map.
-
-## Known limitations
-
-- **Earth coverage is land-only.** 238 of 648 cells have zero mapped area; 201 have at least 50% coverage and 156 have at least 80%. Ocean matches are impossible by design.
-- **Taxonomy mismatch.** Earth has no impact, highlands, plains, or undivided-terrain classes in this table, and no Earth age data. Large parts of Mars are mapped as undivided terrain, so many Mars targets legitimately return “no reliable analog.”
-- **Coarse cells.** 10° cells are much larger than NASA Trek imagery tiles. At the equator an Earth cell is about 13.4× the area of a Moon cell and 3.5× a Mars cell. A map tile can overlap several dataset cells.
-- **Heuristic crosswalk.** Highlands → crystalline and plains → sedimentary are reasonable but simplified assumptions.
-- **Mixed Earth tiles.** The source `earth_dominant_class` label can differ from the comparable class mix after the crosswalk (for example, a coarse cell labeled volcanic may have more mapped sedimentary area). The UI shows both when they differ, such as “Volcanic / Sedimentary”.
-- **No Earth age comparison.** Age bins are shown for Moon/Mars context only.
-- **Not a science product.** Similarity is a transparent composition heuristic, not a trained terrain or spectral embedding model.
-
-## Tile grid notes
-
-NASA Trek uses a 2:1 equirectangular grid, matching Leaflet's `L.CRS.EPSG4326`:
-
-- `cols = 2^(z + 1)`, `rows = 2^z`
-- Tile URL order is `{z}/{y}/{x}` (row before column)
-- `west = -180 + (x / cols) * 360`, `north = 90 - (y / rows) * 180`
-
-Trek does not expose a per-tile metadata endpoint, so bounds, center, and approximate size are computed by the backend from the tile index.
-
-## Tests
-
-```bash
-# From the project root
-
-# Backend
-(cd backend && uv run pytest)
-
-# Frontend unit tests
-(cd frontend && pnpm test)
-
-# Type-check + production build
-(cd frontend && pnpm build)
-
-# Lint
-(cd frontend && pnpm lint)
-```
-
-## Project layout
+The geological processing pipeline is divided into four main stages.
 
 ```text
-planet-explorer/
-├── backend/
-│   ├── app/
-│   │   ├── main.py          # FastAPI app and routes
-│   │   ├── config.py        # Moon/Mars layer configuration
-│   │   ├── tiles.py         # tile math and response building
-│   │   ├── geology.py       # CSV loading, aggregation, matching
-│   │   └── models.py        # Pydantic response models
-│   ├── data/geology/        # supplied 10° table + data notes
-│   └── tests/
-├── frontend/
-│   ├── src/
-│   │   ├── App.tsx
-│   │   ├── components/      # map, coordinate bar, match card, panel
-│   │   ├── lib/             # tile math, coordinates, geology helpers
-│   │   └── api/client.ts
-│   └── vite.config.ts       # /api dev proxy
-└── README.md
+                ORIGINAL GEOLOGICAL DATA
+                         |
+          +--------------+--------------+
+          |              |              |
+        Earth           Moon           Mars
+        GLiM          USGS UGM         SIM 3292
+          |              |              |
+          +--------------+--------------+
+                         |
+                         v
+                 01_inspect.py
+             Inspect source GIS data
+             and available attributes
+                         |
+                         v
+                02_tile_overlay.py
+             Spatial intersection with
+             the common planetary grid
+                         |
+                         v
+                 Tile-unit area CSVs
+                         |
+                         v
+                 03_assemble.py
+             Geological unit mapping
+             and feature aggregation
+                         |
+                         v
+                tiles_long.csv
+                tiles_wide.csv
+                tiles.gpkg
+                         |
+                         v
+                  04_validate.py
+               Data consistency checks
 ```
 
-## Possible next steps
+The stages are intentionally separated.
 
-- Replace the heuristic crosswalk with a trained terrain or spectral embedding model.
-- Add more NASA layers (e.g., Mars MOLA/HRSC shaded relief, lunar mineralogy).
-- Serve a dynamic WMTS capabilities document instead of hardcoded layer templates.
-- Add shareable URLs for selected body/tile/point and Earth result.
-- Add a small cache for precomputed tile geology summaries.
+The spatial overlay is the computationally expensive operation. Once its output has been generated, classification and aggregation can be changed without repeating the polygon intersections.
 
-Not affiliated with NASA.
+### 3.1 Repository structure
+
+The relevant data branch is organized around the following files:
+
+```text
+data/
+│
+├── config.py
+│
+├── 01_inspect.py
+├── 02_tile_overlay.py
+├── 03_assemble.py
+├── 04_validate.py
+│
+├── mappings/
+│   ├── earth_units.csv
+│   ├── moon_units.csv
+│   └── mars_units.csv
+│
+└── out/
+    ├── earth_tile_unit_area.csv
+    ├── moon_tile_unit_area.csv
+    ├── mars_tile_unit_area.csv
+    │
+    ├── earth_tiles.csv
+    ├── moon_tiles.csv
+    ├── mars_tiles.csv
+    │
+    ├── tiles_long.csv
+    ├── tiles_wide.csv
+    └── tiles.gpkg
+```
+
+The original source datasets and other large intermediate files may be stored separately and excluded from version control.
+
+The exact directory names depend on the local configuration. `config.py` is the central place to inspect the configured input paths, output paths, grid parameters, and body-specific settings.
+
+---
+
+## 4. Common Spatial Grid
+
+All three geological datasets are summarized using a shared global grid.
+
+### 4.1 Grid definition
+
+The current implementation uses a regular 10° latitude-by-longitude grid.
+
+The grid contains:
+
+- 18 latitude bands.
+- 36 longitude columns per band.
+- 648 tiles in total.
+
+Each tile is identified by a unique `tile_id`.
+
+The grid is shared across Earth, Moon, and Mars so that the resulting datasets have corresponding spatial indices.
+
+### 4.2 Why use a common grid?
+
+The source datasets have different polygon boundaries, mapping scales, and geological unit definitions.
+
+Directly comparing individual source polygons would be difficult because:
+
+- A geological unit on one body may cover an area much larger than a unit on another.
+- The boundaries do not correspond between bodies.
+- The number of polygons differs significantly.
+- The source maps use different classification systems.
+
+The common grid solves the spatial correspondence problem by summarizing each body's geology within the same set of tile identifiers.
+
+Instead of comparing individual polygons, the pipeline compares the distribution of geological units within each tile.
+
+### 4.3 Tile dimensions and area
+
+Although the grid uses the same angular dimensions on all three bodies, its tiles do not represent equal physical areas.
+
+A 10° by 10° tile has a different physical size depending on:
+
+- The planetary body's radius.
+- Its latitude.
+- The longitude width of the tile.
+
+Longitude distances become smaller toward the poles.
+
+Consequently, a 10° tile should not be interpreted as a fixed-size physical region or as an equivalent rover-scale site.
+
+The current grid is intended for broad regional comparisons.
+
+### 4.4 Area calculations and projection
+
+The overlay stage uses a body-specific spherical radius and a Cylindrical Equal Area (CEA) projection for area calculations.
+
+The general processing sequence is:
+
+1. Read source geological features.
+2. Convert source geometries into the coordinate representation used by the overlay.
+3. Transform geometries into the body-specific equal-area coordinate system.
+4. Intersect geological polygons with the grid tiles.
+5. Calculate the intersection area.
+6. Aggregate the area by tile and geological unit.
+
+The area is recorded in square kilometres.
+
+Using a body-specific radius is important because Earth, Moon, and Mars do not have the same dimensions.
+
+The equal-area projection is used to make the area calculations more appropriate for comparing polygon coverage. It does not make the underlying geological maps equally accurate or equally detailed.
+
+---
+
+## 5. Script Documentation
+
+### 5.1 `config.py`
+
+This file centralizes the configuration used by the processing scripts.
+
+It is responsible for the shared settings required by the pipeline, such as:
+
+- Input dataset locations.
+- Output directory locations.
+- Mapping file locations.
+- Planetary body configuration.
+- Grid parameters.
+- Body-specific spatial parameters, including radii.
+- Source-specific field configuration where defined.
+
+Keeping these settings in one place avoids duplicating paths and spatial parameters across scripts.
+
+If a source dataset is moved, its configured path should be updated here rather than manually changing every processing script.
+
+### 5.2 `01_inspect.py` — Source inspection
+
+The first stage inspects the source GIS datasets before spatial processing.
+
+Its purpose is to understand the structure of each input dataset and identify the attributes required by the following stages.
+
+Typical inspection targets include:
+
+- Available GIS layers.
+- Feature counts.
+- Coordinate reference systems.
+- Geometry types.
+- Attribute names.
+- Sample geological unit identifiers.
+- Geological descriptions.
+- Geological age or period fields.
+- Missing or empty attribute values.
+
+This stage is important because the three datasets do not use a common schema.
+
+For example, the Moon dataset contains unit identifiers, descriptions, and geological periods. Mars has its own geological unit attributes, while GLiM uses lithological classification codes.
+
+The inspection stage helps identify which fields should be retained and how each source should be interpreted.
+
+**Output:** Inspection information used to configure and understand the input datasets.
+
+This script does not perform the final geological classification or generate the final comparison dataset.
+
+### 5.3 `02_tile_overlay.py` — Spatial overlay and area calculation
+
+This is the main spatial-processing stage.
+
+It reads the source geological polygons and calculates how much of each grid tile is occupied by each geological unit.
+
+Because the source datasets can contain large numbers of features, the script processes the data in chunks rather than requiring every feature to be loaded and intersected at once.
+
+The general procedure is:
+
+1. Load the common grid.
+2. Load the geological source data for a body.
+3. Convert the source geometries into the coordinate system required for area calculations.
+4. Process source features in manageable chunks.
+5. Intersect the features with the grid tiles.
+6. Calculate the intersection area in square kilometres.
+7. Aggregate areas by `tile_id` and source geological unit.
+8. Write the aggregated results to CSV.
+
+The resulting files are:
+
+```text
+out/
+├── earth_tile_unit_area.csv
+├── moon_tile_unit_area.csv
+└── mars_tile_unit_area.csv
+```
+
+The script also produces tile-level intermediate summaries:
+
+```text
+out/
+├── earth_tiles.csv
+├── moon_tiles.csv
+└── mars_tiles.csv
+```
+
+These are intermediate products used by the assembly stage.
+
+#### Why the overlay is performed separately from classification
+
+Spatial intersection is relatively expensive.
+
+The overlay results contain the measured areas of the original geological units. These measurements do not depend on how a unit is later classified.
+
+This separation allows the classification rules to be modified without repeating the spatial overlay.
+
+For example, changing a Moon unit from `plains` to `impact` only requires regenerating the mapping and assembled outputs. It does not require recalculating the polygon intersections.
+
+**Important:** Changes to the grid definition, source geometries, spatial transformations, or area calculation method require rerunning this stage.
+
+### 5.4 `03_assemble.py` — Classification and dataset assembly
+
+This stage converts the spatial overlay outputs into the final geological feature datasets.
+
+It performs three main operations:
+
+1. Creates or loads geological unit mappings.
+2. Joins those mappings to the tile-unit area measurements.
+3. Aggregates the results into tile-level geological features.
+
+#### A. Geological unit mappings
+
+The overlay stage identifies source geological units but does not decide what each unit means for cross-planetary comparison.
+
+That interpretation is handled by mapping files.
+
+```text
+mappings/
+├── earth_units.csv
+├── moon_units.csv
+└── mars_units.csv
+```
+
+Each mapping file associates an original source unit with a simplified geological classification.
+
+The mapping process retains the original source identifiers and descriptions so that the simplified classification can be traced back to the source data.
+
+The current mapping structure includes fields such as:
+
+| Field | Description |
+|---|---|
+| `unit` | Original geological unit identifier |
+| `name` | Geological unit description |
+| `age` | Geological age or period information from the source |
+| `process_class` | Simplified geological process classification |
+| `terrain_group` | Broader terrain grouping |
+| `age_label` | Categorical geological age label, when available |
+| `age_max_Ga` | Upper numerical age bound in billions of years, when available |
+| `age_min_Ga` | Lower numerical age bound in billions of years, when available |
+| `needs_review` | Indicates that the unit mapping needs further inspection |
+
+Not every source provides all types of age information. Missing numerical values are therefore expected.
+
+The mapping files are particularly important because they contain the interpretive decisions that connect three different geological classification systems.
+
+#### B. Earth classification
+
+Earth uses GLiM's lithological classes.
+
+The original GLiM classification distinguishes lithologies such as:
+
+- Unconsolidated sediments.
+- Siliciclastic sedimentary rocks.
+- Carbonate sedimentary rocks.
+- Mixed sedimentary rocks.
+- Evaporites.
+- Pyroclastics.
+- Acid, intermediate, and basic volcanic rocks.
+- Acid, intermediate, and basic plutonic rocks.
+- Metamorphic rocks.
+- Ice and glaciers.
+- Water bodies.
+- No data.
+
+The pipeline groups these source lithologies into broader classes for the project.
+
+The resulting Earth process classes include:
+
+- `sedimentary`
+- `volcanic`
+- `plutonic`
+- `metamorphic`
+- `ice`
+- `water`
+- `no_data`
+
+These are simplified categories, not replacements for the original GLiM classification.
+
+The original source unit information is retained in the mapping table.
+
+#### C. Moon classification
+
+The Moon mapping uses the original unit identifiers and geological descriptions from the Unified Geologic Map.
+
+The current simplified classification includes:
+
+- `impact`
+- `volcanic`
+- `plains`
+- `highlands`
+- `unclassified`
+
+These categories are assigned using the unit descriptions and geological context.
+
+The Moon dataset also contains geological period labels, including:
+
+- Copernican.
+- Eratosthenian.
+- Imbrian.
+- Nectarian.
+- Pre-Nectarian.
+
+These labels are retained as categorical age information.
+
+They should not be confused with numerical age measurements. A period label does not provide a precise numerical formation age for an individual geological unit.
+
+#### D. Mars classification
+
+Mars unit descriptions and identifiers are interpreted using the geological information provided by SIM 3292.
+
+The pipeline uses a simplified process classification rather than attempting to preserve every distinction in the original Martian geological map as a separate comparison class.
+
+The current mapping includes broad categories such as:
+
+- `impact`
+- `volcanic`
+- `ice`
+- `surficial_unconsolidated`
+- `undivided_terrain`
+
+The exact assignment depends on the original geological unit attributes and the mapping rules in the script.
+
+Some units are inherently difficult to reduce to one broad process category. The mapping therefore retains review flags and the original unit descriptions.
+
+#### E. Area aggregation
+
+Once the mapping is available, the script joins it to the tile-unit area data.
+
+For each tile, the pipeline can calculate:
+
+- Total mapped geological area.
+- Area occupied by each geological unit.
+- Area occupied by each simplified geological class.
+- Fraction of the entire tile occupied by each class.
+- Fraction of the mapped area occupied by each class.
+- Dominant geological unit.
+- Dominant geological class.
+- Available geological age summaries.
+
+Two area fractions are especially important.
+
+**Fraction of tile area**
+
+\[
+f_{\text{tile}} =
+\frac{A_{\text{class}}}{A_{\text{tile}}}
+\]
+
+This expresses the area of a geological class relative to the entire grid tile.
+
+**Fraction of mapped area**
+
+\[
+f_{\text{mapped}} =
+\frac{A_{\text{class}}}{A_{\text{mapped}}}
+\]
+
+This expresses the class area relative to the geological area successfully mapped within that tile.
+
+These two values answer different questions.
+
+The first describes how much of the tile is represented by a particular class. The second describes the composition of the mapped geology, independently of the amount of mapped coverage.
+
+This distinction matters when comparing bodies or tiles with different geological coverage.
+
+#### F. Mapping regeneration
+
+The script supports regenerating mappings when classification rules change.
+
+Mars and Moon mappings are regenerated by the current workflow, while the existing Earth mapping is preserved and missing entries can be added.
+
+This behavior is important when editing the classification logic: an old mapping file should not silently prevent updated classification rules from being applied.
+
+The final outputs are:
+
+```text
+out/
+├── tiles_long.csv
+├── tiles_wide.csv
+└── tiles.gpkg
+```
+
+### 5.5 `04_validate.py` — Data validation
+
+The validation stage checks the consistency of the assembled geological datasets.
+
+It is intended to catch structural and numerical errors before the data is used by the similarity engine.
+
+Validation includes checks such as:
+
+- Mapping coverage.
+- Unclassified or missing geological units.
+- Tile coverage.
+- Class fraction consistency.
+- Mapped-area fraction consistency.
+- Grid consistency between bodies.
+- Unexpected area values.
+
+An important check is whether the geological class fractions sum to the expected value.
+
+For mapped-area fractions:
+
+\[
+\sum_{i=1}^{n} f_{\text{mapped},i} = 1
+\]
+
+This should hold for a tile with mapped geological area, subject to the aggregation and classification rules.
+
+The pipeline also checks the relationship between class area and total tile area.
+
+A successful validation does not prove that the geological interpretations are scientifically correct. It verifies that the calculations and data transformations are internally consistent.
+
+---
+
+## 6. Intermediate Data Formats
+
+### 6.1 `*_tile_unit_area.csv`
+
+These files are the direct output of the spatial overlay stage.
+
+There is one row for each tile and source geological unit combination that has an intersection area.
+
+The important fields are:
+
+| Field | Meaning |
+|---|---|
+| `tile_id` | Grid tile identifier |
+| `unit` | Original source geological unit identifier |
+| `name` | Source geological unit name or description |
+| `age` | Source geological age or period attribute |
+| `area_km2` | Area of the unit inside the tile, in km² |
+
+The exact contents depend on the source dataset and its available attributes.
+
+**Example structure:**
+
+| tile_id | unit | name | age | area_km2 |
+|---|---|---|---|---:|
+| r05c12 | Unit_A | Example unit | Example period | 125000 |
+| r05c12 | Unit_B | Another unit | Example period | 83000 |
+| r05c13 | Unit_A | Example unit | Example period | 91000 |
+
+The values above are illustrative.
+
+This format is useful for tracing the final geological fractions back to individual source units.
+
+### 6.2 Mapping CSV files
+
+The mapping files contain the interpretation of each source geological unit.
+
+They are separate from the spatial overlay results so that classification decisions can be reviewed and modified independently.
+
+A mapping row should retain the original unit identifier and descriptive information alongside its simplified class.
+
+The `needs_review` field allows uncertain or heuristic classifications to be identified without removing them from the working dataset.
+
+### 6.3 `tiles_long.csv`
+
+This is the normalized, long-format dataset.
+
+It retains the relationship between individual tiles and their geological units, together with their area and classification information.
+
+It is useful for:
+
+- Inspecting the composition of individual tiles.
+- Filtering specific geological classes.
+- Tracing a class fraction to its contributing source units.
+- Producing new summaries without repeating the spatial overlay.
+
+The last successful assembly produced 19,198 rows.
+
+### 6.4 `tiles_wide.csv`
+
+This is the main tabular dataset intended for downstream analysis.
+
+It contains one row per grid tile, with separate columns for the geological features of Earth, Moon, and Mars.
+
+The last successful assembly produced:
+
+- 648 rows.
+- 76 columns.
+
+The dataset includes tile identifiers and body-specific geological summaries.
+
+Its columns include features such as:
+
+- Mapped-area coverage.
+- Geological class fractions.
+- Mapped-area-normalized class fractions.
+- Dominant geological units.
+- Dominant geological classes.
+- Available age summaries.
+
+The class fraction columns distinguish between the fraction of the full tile and the fraction of the mapped geological area.
+
+The exact column names are generated by the assembly script and should be inspected from the current output rather than assumed to remain unchanged between versions.
+
+### 6.5 `tiles.gpkg`
+
+This is the spatial output.
+
+It stores the grid geometry together with the assembled tile attributes in a GeoPackage.
+
+It can be opened using GIS software such as QGIS and is useful for:
+
+- Visualizing the grid.
+- Inspecting geological class distributions.
+- Checking tile coverage.
+- Joining the generated features to other spatial datasets.
+- Exporting the data for mapping applications.
+
+The GeoPackage is the spatial counterpart of the wide CSV dataset.
+
+---
+
+## 7. Running the Pipeline
+
+Run the scripts in the following order.
+
+### Step 1 — Inspect the source datasets
+
+```powershell
+python .\01_inspect.py
+```
+
+Review the source layers, coordinate reference systems, attributes, and unit descriptions.
+
+### Step 2 — Perform the spatial overlay
+
+```powershell
+python .\02_tile_overlay.py
+```
+
+This stage generates the per-body tile-unit area files.
+
+It is the most computationally expensive stage.
+
+**It does not need to be rerun when only classification rules or mapping files change.**
+
+Rerun it when the source GIS data, spatial transformation, grid, or area calculation method changes.
+
+### Step 3 — Assemble the geological features
+
+```powershell
+python .\03_assemble.py
+```
+
+This stage generates or updates the mapping files and creates:
+
+```text
+out/tiles_long.csv
+out/tiles_wide.csv
+out/tiles.gpkg
+```
+
+It should be rerun after changes to geological classification rules or mapping files.
+
+### Step 4 — Validate the results
+
+```powershell
+python .\04_validate.py
+```
+
+Review the classification, coverage, and fraction checks.
+
+Do not treat successful numerical validation as proof of geological accuracy.
+
+---
+
+## 8. Scientific Interpretation and Limitations
+
+The output is a simplified representation of geological distributions across three planetary bodies. Several limitations should be considered when using it.
+
+### 8.1 Different source maps and mapping scales
+
+The source maps were created for different scientific purposes and at different scales.
+
+| Body | Source | Map scale |
+|---|---|---:|
+| Earth | GLiM | Approximately 1:3,750,000 average |
+| Moon | Unified Geologic Map of the Moon | 1:5,000,000 |
+| Mars | USGS SIM 3292 | 1:20,000,000 |
+
+The maps therefore do not provide equivalent spatial detail.
+
+A geological unit mapped on Mars may represent a much larger generalized region than a unit mapped on the Moon or Earth.
+
+The grid aggregation makes the data spatially comparable at a broad regional level, but it does not eliminate differences in source-map resolution or geological interpretation.
+
+### 8.2 Geological classifications are not equivalent between bodies
+
+Earth, Moon, and Mars do not share a single geological classification system.
+
+GLiM classifies Earth according to lithological properties. The lunar and Martian maps use planetary geological units, stratigraphic relationships, landforms, and geological interpretations.
+
+Consequently, the simplified classes are a practical harmonization layer.
+
+For example:
+
+- An Earth volcanic unit and a lunar mare basalt unit may share a broad volcanic classification.
+- A lunar crater-related unit and a Martian impact-related unit may share a broad impact classification.
+- A lunar highland unit and an Earth plutonic or metamorphic unit should not be considered geologically identical simply because they are assigned to a broad crystalline or highland-related category.
+
+The simplified categories indicate broad resemblance, not identical mineralogy, composition, origin, or geological history.
+
+The original geological identifiers and descriptions must remain available for interpretation.
+
+### 8.3 Heuristic classification
+
+Some source units cannot be mapped cleanly into a single simplified category.
+
+A unit description may contain several geological processes or represent a complex geological history.
+
+The mapping rules therefore use simplified interpretations based on source descriptions and attributes.
+
+The `needs_review` flag is intended to identify units where the assignment may require further inspection.
+
+These classifications should be treated as a first-pass analytical grouping rather than a definitive geological interpretation.
+
+### 8.4 Geological age is not directly comparable
+
+The source datasets do not provide age information in a consistent format.
+
+The Moon dataset uses geological periods such as Imbrian and Nectarian. Mars provides geological unit and age information in its own stratigraphic framework. GLiM is primarily a lithological dataset rather than a common planetary chronology.
+
+The pipeline retains available age information, but missing numerical ages should not be interpreted as zero or as evidence that a unit has no geological age.
+
+Comparisons between age fields require additional work to establish a consistent chronological interpretation.
+
+### 8.5 Coverage and unmapped areas
+
+A tile's mapped geological area may not equal its total area.
+
+The pipeline therefore retains both tile-relative and mapped-area-relative class fractions.
+
+A low mapped fraction means that only part of the tile is represented by the polygons contributing to the calculation.
+
+It should not automatically be interpreted as a single geological type, a completely unclassified region, or an area with no geology.
+
+Coverage must be considered when comparing two tiles.
+
+### 8.6 Area and geometry limitations
+
+The area calculations use body-specific spherical parameters and an equal-area projection.
+
+This is an approximation of planetary geometry.
+
+Potential sources of error include:
+
+- Source geometry inaccuracies.
+- Differences in coordinate conventions.
+- Polygon boundary generalization.
+- Projection and transformation errors.
+- Overlaps or gaps in the original geometries.
+- Numerical effects during chunked intersections.
+
+Earth's source geometry may also contain overlaps or other inconsistencies that cause summed polygon areas to exceed a tile's nominal area.
+
+The pipeline's normalized mapped-area fractions are useful for comparing class composition, but they do not automatically resolve every source geometry problem.
+
+### 8.7 Grid resolution is regional, not local
+
+The current grid uses 10° by 10° angular tiles.
+
+These represent very large geographical regions.
+
+They are useful for identifying broad geological similarities but are not suitable for evaluating a specific rover traverse, landing ellipse, or local geological exposure.
+
+A future implementation could use smaller, physically defined tiles or local regions after the broad global comparison is working.
+
+### 8.8 Geological similarity is not landing-site suitability
+
+The geological data pipeline does not evaluate all the conditions required to select a landing site or establish a lunar or Martian base.
+
+It does not independently establish:
+
+- Surface slope and local roughness.
+- Boulder density.
+- Regolith thickness.
+- Soil bearing strength.
+- Subsurface structure.
+- Radiation exposure.
+- Thermal conditions.
+- Local illumination and shadowing.
+- Communications availability.
+- Landing hazards.
+
+A geological analogue is not necessarily an operationally suitable location.
+
+The current output should be interpreted as a way to identify regions with potentially comparable geological characteristics, not as a recommendation to land or construct infrastructure there.
+
+---
+
+## 9. Recommended Use of the Outputs
+
+The generated datasets are intended to serve as inputs to the next stage of the Planetary Analogue Finder.
+
+A typical workflow is:
+
+1. Select a Moon or Mars tile.
+2. Retrieve its geological feature distribution.
+3. Compare it with the corresponding feature distributions of Earth tiles.
+4. Rank Earth tiles according to geological similarity.
+5. Display the best candidates and their geological characteristics.
+6. Allow users to inspect the original unit descriptions and mapping assumptions.
+
+The geological class fractions are especially useful because they represent the relative composition of a tile rather than relying only on its dominant geological unit.
+
+A tile containing 60% volcanic terrain and 40% impact-related material should remain distinguishable from a tile containing 100% volcanic terrain, even if both have volcanic as their dominant class.
+
+The distinction between tile coverage and mapped-area composition should also be retained in the similarity calculations.
+
+The scoring method should account for missing coverage rather than treating missing data as a geological class.
+
+---
+
+## 10. Reproducibility and Data Management
+
+The original source datasets, intermediate overlay files, mapping tables, and final outputs should be kept distinguishable.
+
+Recommended data-management practices:
+
+- Preserve original source datasets without modifying them.
+- Keep the mapping CSVs under version control.
+- Document changes to classification rules.
+- Preserve the overlay outputs so that classification changes do not require expensive spatial processing.
+- Regenerate the final assembled datasets after mapping changes.
+- Record the source version and processing date when generating a new release.
+- Validate the generated files before using them in the application.
+
+Large source datasets and intermediate files may be excluded from Git if their size makes repository storage impractical.
+
+The repository should retain enough configuration and documentation for another user to understand where the input datasets belong and how to regenerate the outputs.
+
+---
+
+## 11. Data Sources and References
+
+### Earth
+
+Hartmann, J., and Moosdorf, N. (2012). *The new global lithological map database GLiM: A representation of rock properties at the Earth surface.* Geochemistry, Geophysics, Geosystems, 13, Q12004.
+
+https://doi.org/10.1029/2012GC004370
+
+Hartmann, J., and Moosdorf, N. (2012). *Global Lithological Map Database v1.0 (gridded to 0.5° spatial resolution).* PANGAEA.
+
+https://doi.org/10.1594/PANGAEA.788537
+
+### Moon
+
+Fortezzo, C. M., Spudis, P. D., and Harrel, S. L. (2020). *Unified Geologic Map of the Moon, 1:5M.*
+
+USGS Astrogeology Science Center, GIS Version 2.
+
+https://astrogeology.usgs.gov/search/map/Moon/Geology/Unified_Geologic_Map_of_the_Moon_GIS_v2
+
+### Mars
+
+Tanaka, K. L., Skinner, J. A., Jr., Dohm, J. M., Irwin, R. P., III, Kolb, E. J., Fortezzo, C. M., Platz, T., Michael, G. G., and Hare, T. M. (2014). *Geologic Map of Mars.* U.S. Geological Survey Scientific Investigations Map 3292.
+
+https://doi.org/10.3133/sim3292
+
+---
+
+## 12. Current Pipeline Status
+
+The current implementation has completed the geological overlay, classification, and assembly stages for all three bodies.
+
+The latest successful assembly produced:
+
+| Output | Result |
+|---|---:|
+| Grid tiles | 648 |
+| Long-format rows | 19,198 |
+| Wide-format rows | 648 |
+| Wide-format columns | 76 |
+| Mars unclassified mapped area | 0% |
+| Moon unclassified mapped area | 0% |
+| Earth unclassified mapped area | 0% |
+
+The assembly script also reported zero maximum difference in its class-fraction and mapped-class-fraction consistency checks for all three bodies.
+
+These results confirm that the current classification and aggregation pipeline is operating consistently. They do not establish that every individual geological unit has been interpreted correctly.
+
+The next stage is to use the assembled geological features for cross-planetary analogue comparison.

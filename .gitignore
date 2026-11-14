@@ -51,6 +51,8 @@ dist-ssr/
 # Data files (JSON configs and lockfiles are tracked)
 *.csv
 !backend/data/geology/tiles_wide.csv
+!out/
+!out/**
 *.tsv
 *.parquet
 *.feather

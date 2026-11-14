@@ -1,8 +1,0 @@
-{
-  "rewrites": [
-    {
-      "source": "/api/:path*",
-      "destination": "https://nazeer-h7nr.vercel.app/api/:path*"
-    }
-  ]
-}
