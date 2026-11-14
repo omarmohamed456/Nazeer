@@ -1,7 +1,7 @@
 import { useId } from 'react'
 
 import {
-  earthClassLabel,
+  earthTerrainLabel,
   formatPercent,
   overlayStyle,
 } from '../lib/geology'
@@ -57,12 +57,18 @@ function StatusBadge({ status }: { status: MatchStatus }) {
   )
 }
 
-function CandidatePreview({ candidate }: { candidate: EarthCandidate }) {
+function CandidatePreview({
+  candidate,
+  compact = false,
+}: {
+  candidate: EarthCandidate
+  compact?: boolean
+}) {
   const style = overlayStyle(candidate.bounds, candidate.preview_bounds)
 
   return (
     <a
-      className="earth-preview"
+      className={`earth-preview${compact ? ' earth-preview-compact' : ''}`}
       href={candidate.preview_url}
       target="_blank"
       rel="noreferrer"
@@ -74,7 +80,9 @@ function CandidatePreview({ candidate }: { candidate: EarthCandidate }) {
         loading="lazy"
       />
       <span className="earth-cell-overlay" style={style} aria-hidden="true" />
-      <span className="earth-coords">{candidate.dataset_tile_id}</span>
+      {!compact && (
+        <span className="earth-coords">{candidate.dataset_tile_id}</span>
+      )}
     </a>
   )
 }
@@ -88,6 +96,9 @@ function MatchContent({
 }) {
   const { target, match: result } = match
   const top = result.candidates[0] ?? null
+  const bestSimilarity = result.candidates.length
+    ? Math.max(...result.candidates.map((candidate) => candidate.similarity))
+    : 0
 
   return (
     <>
@@ -109,7 +120,7 @@ function MatchContent({
           <b>{formatPercent(result.shared_mass)}</b>
         </div>
         <div>
-          <span>Top similarity</span>
+          <span>Analog similarity</span>
           <b>{formatPercent(result.similarity)}</b>
         </div>
         <div>
@@ -162,9 +173,17 @@ function MatchContent({
                 <span>composition similarity</span>
               </div>
               <p className="earth-terrain">
-                {earthClassLabel(top.dominant_class)} ·{' '}
+                {earthTerrainLabel(top.dominant_class, top.match_dominant_class)} ·{' '}
                 {formatPercent(top.coverage)} mapped
               </p>
+              {result.geographic_tiebreak && (
+                <span
+                  className="earth-tiebreak"
+                  title="The featured tile is the geographically nearest of the closest composition matches. The highest-scoring tile is listed below."
+                >
+                  Geographic tie-break
+                </span>
+              )}
               <p className="earth-center">
                 {formatLatLon(top.center.lat, top.center.lon, 1)}
               </p>
@@ -174,19 +193,27 @@ function MatchContent({
 
           {result.candidates.length > 1 && (
             <div className="earth-alts">
-              <h4>Other candidates</h4>
+              <h4>Other close analogs</h4>
               {result.candidates.slice(1).map((candidate, index) => (
                 <div className="earth-alt" key={candidate.dataset_tile_id}>
                   <span className="alt-rank">#{index + 2}</span>
+                  <CandidatePreview candidate={candidate} compact />
                   <div className="alt-info">
                     <strong>
                       {candidate.dataset_tile_id} ·{' '}
-                      {earthClassLabel(candidate.dominant_class)}
+                      {earthTerrainLabel(
+                        candidate.dominant_class,
+                        candidate.match_dominant_class,
+                      )}
                     </strong>
                     <span>
                       {formatLatLon(candidate.center.lat, candidate.center.lon, 1)}{' '}
                       · {formatPercent(candidate.coverage)} mapped
                     </span>
+                    {candidate.similarity >= bestSimilarity - 0.0001 &&
+                      candidate.similarity > result.similarity + 0.0001 && (
+                        <em className="alt-best">highest composition score</em>
+                      )}
                   </div>
                   <span className="alt-score">
                     {formatPercent(candidate.similarity)}

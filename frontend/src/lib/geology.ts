@@ -46,6 +46,7 @@ const MARS_CLASS_LABELS: Record<string, string> = {
 
 const EARTH_CLASS_LABELS: Record<string, string> = {
   volcanic: 'Volcanic',
+  crystalline: 'Crystalline',
   metamorphic: 'Metamorphic',
   plutonic: 'Plutonic',
   sedimentary: 'Sedimentary',
@@ -76,6 +77,28 @@ export function bodyClassLabel(body: BodyId, key: string): string {
 
 export function earthClassLabel(key: string): string {
   return EARTH_CLASS_LABELS[key] ?? fallbackLabel(key)
+}
+
+const EARTH_CLASS_FAMILIES: Record<string, string> = {
+  volcanic: 'volcanic',
+  crystalline: 'crystalline',
+  metamorphic: 'crystalline',
+  plutonic: 'crystalline',
+  sedimentary: 'sedimentary',
+  surficial_unconsolidated: 'surficial',
+  ice: 'ice',
+}
+
+export function earthTerrainLabel(
+  dominant: string,
+  matchDominant: string,
+): string {
+  const sourceFamily = EARTH_CLASS_FAMILIES[dominant] ?? dominant
+  const matchFamily = EARTH_CLASS_FAMILIES[matchDominant] ?? matchDominant
+  if (sourceFamily === matchFamily) {
+    return earthClassLabel(dominant)
+  }
+  return `${earthClassLabel(dominant)} / ${earthClassLabel(matchDominant)}`
 }
 
 export function clampFraction(value: number): number {

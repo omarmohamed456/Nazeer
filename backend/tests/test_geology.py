@@ -1,3 +1,5 @@
+import math
+
 import pytest
 from fastapi.testclient import TestClient
 
@@ -16,6 +18,18 @@ from app.main import app
 from app.tiles import tile_bounds
 
 client = TestClient(app)
+
+
+def _center_distance_deg(a: dict[str, float], b: dict[str, float]) -> float:
+    lat1 = math.radians(a["lat"])
+    lat2 = math.radians(b["lat"])
+    delta_lat = lat2 - lat1
+    delta_lon = math.radians(((b["lon"] - a["lon"] + 180) % 360) - 180)
+    haversine = (
+        math.sin(delta_lat / 2) ** 2
+        + math.cos(lat1) * math.cos(lat2) * math.sin(delta_lon / 2) ** 2
+    )
+    return math.degrees(2 * math.asin(min(1.0, math.sqrt(haversine))))
 
 
 def test_dataset_shape_and_ids() -> None:
@@ -102,7 +116,9 @@ def test_moon_point_match() -> None:
     assert 0 <= match["shared_mass"] <= 1
     assert 0 <= match["coverage"] <= 1
     assert len(match["candidates"]) == 3
-    assert match["candidates"][0]["dataset_tile_id"] == "r15c31"
+    assert match["geographic_tiebreak"] is True
+    assert match["candidates"][0]["dataset_tile_id"] == "r13c21"
+    assert len({candidate["dataset_tile_id"] for candidate in match["candidates"]}) == 3
     assert match["candidates"][0]["preview_url"].startswith(
         "https://gibs.earthdata.nasa.gov/wms/epsg4326/best/wms.cgi?"
     )
@@ -117,6 +133,41 @@ def test_moon_point_match_has_crosswalk_and_age() -> None:
     assert "impact" in match_keys
     assert geology["age"]["classes"]
     assert geology["age"]["dominant"] is not None
+
+
+def test_match_candidates_are_geographically_diverse() -> None:
+    data = client.get("/api/matches/mars/point?lat=20&lon=140").json()
+    candidates = data["match"]["candidates"]
+    assert len(candidates) >= 2
+    for index, candidate in enumerate(candidates):
+        for other in candidates[index + 1 :]:
+            assert (
+                _center_distance_deg(candidate["center"], other["center"]) >= 20.0
+            )
+
+
+def test_featured_analog_varies_by_location() -> None:
+    equatorial = build_point_match(BODIES["mars"], 20, 140).match
+    southern = build_point_match(BODIES["mars"], -20, -120).match
+
+    assert equatorial.geographic_tiebreak is True
+    assert southern.geographic_tiebreak is True
+    assert (
+        equatorial.candidates[0].dataset_tile_id
+        != southern.candidates[0].dataset_tile_id
+    )
+    assert {candidate.dominant_class for candidate in equatorial.candidates} == {
+        "volcanic"
+    }
+    assert {candidate.dominant_class for candidate in southern.candidates} == {
+        "volcanic"
+    }
+
+
+def test_geographic_tiebreak_is_explained() -> None:
+    data = client.get("/api/matches/mars/point?lat=20&lon=140").json()
+    assert any("geographically nearest" in note for note in data["notes"])
+    assert "geographically nearest" in data["match"]["reason"]
 
 
 def test_mars_undivided_terrain_is_insufficient() -> None:
@@ -199,6 +250,7 @@ def test_candidates_are_land_tiles_with_contained_previews() -> None:
         match_keys = {share["key"] for share in candidate["match_classes"]}
         assert "impact" not in match_keys
         assert "undivided" not in match_keys
+        assert candidate["match_dominant_class"] == candidate["match_classes"][0]["key"]
 
 
 def test_tile_match_uses_same_geology_as_tile_response() -> None:

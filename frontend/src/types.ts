@@ -86,6 +86,7 @@ export interface EarthCandidate {
   center: TileCenter
   coverage: number
   dominant_class: string
+  match_dominant_class: string
   classes: ClassShare[]
   match_classes: ClassShare[]
   similarity: number
@@ -101,6 +102,7 @@ export interface EarthMatch {
   shared_mass: number
   coverage: number
   reason: string
+  geographic_tiebreak: boolean
   candidates: EarthCandidate[]
 }
 

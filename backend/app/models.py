@@ -87,6 +87,7 @@ class EarthCandidate(BaseModel):
     center: Center
     coverage: float = Field(ge=0, le=1)
     dominant_class: str
+    match_dominant_class: str
     classes: list[ClassShare]
     match_classes: list[ClassShare]
     similarity: float = Field(ge=0, le=1)
@@ -102,6 +103,7 @@ class EarthMatch(BaseModel):
     shared_mass: float = Field(ge=0, le=1)
     coverage: float = Field(ge=0, le=1)
     reason: str
+    geographic_tiebreak: bool = False
     candidates: list[EarthCandidate]
 
 

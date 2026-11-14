@@ -39,6 +39,12 @@ The app uses:
 mapped area. Some `earth_mapped_frac` values exceed 1; the app clamps coverage
 to 1 for scoring and display.
 
+`earth_dominant_class` comes from the original source classification and can
+disagree with the dominant class in `earth_mapped_class_frac_*` after the
+crosswalk. For example, a coarse cell may be labeled volcanic in the source but
+have more mapped sedimentary area. The API exposes both the source label and
+the comparable-mix label; the UI shows both when they differ.
+
 ## Matching crosswalk
 
 Direct classes:
@@ -59,6 +65,15 @@ No Earth equivalent:
 
 The unmatched classes are not forced onto an Earth class. They reduce the
 shared-area mass and therefore the confidence score.
+
+Candidates are ranked by the Bhattacharyya coefficient over the comparable
+class mix. The matcher keeps geographically separated alternatives (at least
+20° apart) so the returned list is not three adjacent copies of the same cell.
+The featured tile is a presentation tie-break: among close composition
+candidates in the target's broad class family, it prefers the one nearest the
+target center. A candidate must be at least 65% as similar as the best score to
+be eligible. The highest-scoring tile is still returned and is marked in the UI
+when it differs.
 
 ## Known limitations
 

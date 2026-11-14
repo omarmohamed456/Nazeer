@@ -34,8 +34,22 @@ MATCH_MIN_ZOOM = 2
 EARTH_MIN_COVERAGE = 0.5
 EARTH_MIN_REPRESENTABLE_MASS = 0.5
 MAX_CANDIDATES = 3
+EARTH_CANDIDATE_POOL = 5
+EARTH_CANDIDATE_MIN_SEPARATION_DEG = 20.0
+EARTH_FEATURED_MIN_RATIO = 0.65
 
 REPRESENTABLE_KEYS = ("volcanic", "crystalline", "sedimentary", "surficial", "ice")
+
+# Earth's dominant-class names are more granular than the comparable match
+# classes. Keep the families explicit so a Moon highlands target is not
+# represented by an unrelated Earth class just to break a tie.
+EARTH_DOMINANT_FAMILIES = {
+    "volcanic": {"volcanic"},
+    "crystalline": {"crystalline", "metamorphic", "plutonic"},
+    "sedimentary": {"sedimentary"},
+    "surficial": {"surficial_unconsolidated"},
+    "ice": {"ice"},
+}
 
 MOON_CLASS_KEYS = ("volcanic", "impact", "highlands", "plains")
 MARS_CLASS_KEYS = (
@@ -513,11 +527,23 @@ def _earth_candidate(
     if representable_mass < EARTH_MIN_REPRESENTABLE_MASS:
         return None
 
+    # The supplied earth_dominant_class is based on the original source units
+    # and can disagree with the comparable class mix after the crosswalk. Use
+    # the comparable mix for labels and tie-break families so the UI and the
+    # matching logic tell the same story.
+    match_dominant_class = max(
+        REPRESENTABLE_KEYS, key=lambda key: match_vector[key]
+    )
+
     candidate_repr = {
         key: match_vector[key] / representable_mass for key in REPRESENTABLE_KEYS
     }
+    # Bhattacharyya coefficient: a bounded composition overlap. Unlike a dot
+    # product, it rewards candidates whose whole class mix resembles the target
+    # rather than always picking the purest global end-member.
     similarity = sum(
-        target_repr[key] * candidate_repr[key] for key in REPRESENTABLE_KEYS
+        math.sqrt(target_repr[key] * candidate_repr[key])
+        for key in REPRESENTABLE_KEYS
     )
 
     center = Center(
@@ -532,6 +558,7 @@ def _earth_candidate(
         center=center,
         coverage=round(_clamp(raw_coverage), 4),
         dominant_class=cell.earth_dominant_class,
+        match_dominant_class=match_dominant_class,
         classes=_shares(cell.earth_classes, EARTH_CLASS_LABELS),
         match_classes=_shares(match_vector, MATCH_CLASS_LABELS),
         similarity=round(_clamp(similarity), 4),
@@ -558,6 +585,47 @@ def _status_for(confidence: ConfidenceLevel) -> MatchStatus:
     if confidence == "low":
         return "weak"
     return "insufficient"
+
+
+def _great_circle_deg(a: Center, b: Center) -> float:
+    """Angular distance between two cell centers, in degrees."""
+    lat1 = math.radians(a.lat)
+    lat2 = math.radians(b.lat)
+    delta_lat = lat2 - lat1
+    delta_lon = math.radians(((b.lon - a.lon + 180.0) % 360.0) - 180.0)
+    haversine = (
+        math.sin(delta_lat / 2.0) ** 2
+        + math.cos(lat1) * math.cos(lat2) * math.sin(delta_lon / 2.0) ** 2
+    )
+    return math.degrees(2.0 * math.asin(min(1.0, math.sqrt(haversine))))
+
+
+def _diverse_candidates(
+    candidates: list[EarthCandidate],
+    limit: int = EARTH_CANDIDATE_POOL,
+    min_separation_deg: float = EARTH_CANDIDATE_MIN_SEPARATION_DEG,
+) -> list[EarthCandidate]:
+    """Keep the best candidates while avoiding adjacent duplicates.
+
+    The 10-degree table contains many near-identical neighbouring cells. A
+    plain top-three list can therefore show the same region three times. Greedy
+    geographic spacing makes the alternative list genuinely useful.
+    """
+    selected: list[EarthCandidate] = []
+    for candidate in candidates:
+        if all(
+            _great_circle_deg(candidate.center, chosen.center) >= min_separation_deg
+            for chosen in selected
+        ):
+            selected.append(candidate)
+        if len(selected) >= limit:
+            break
+
+    return selected
+
+
+def _dominant_comparable_key(target_repr: dict[str, float]) -> str:
+    return max(REPRESENTABLE_KEYS, key=lambda key: target_repr.get(key, 0.0))
 
 
 def _unmatched_mass(geology: GeologySummary) -> float:
@@ -610,10 +678,64 @@ def match_geology(body: BodyId, geology: GeologySummary) -> EarthMatch:
         )
 
     candidates.sort(key=lambda item: (-item.similarity, -item.coverage, item.dataset_tile_id))
-    top = candidates[:MAX_CANDIDATES]
-    similarity = top[0].similarity
-    coverage = top[0].coverage
-    margin = similarity - top[1].similarity if len(top) > 1 else 1.0
+
+    # Prefer Earth tiles in the same broad class family as the target's
+    # dominant comparable class. This keeps the geographic tie-break from
+    # selecting, for example, a sedimentary tile for a volcanic target.
+    dominant_key = _dominant_comparable_key(target_repr)
+    allowed_families = EARTH_DOMINANT_FAMILIES.get(dominant_key, set())
+    preferred = [
+        candidate
+        for candidate in candidates
+        if allowed_families
+        & {candidate.dominant_class, candidate.match_dominant_class}
+    ]
+    if preferred:
+        best_overall = candidates[0]
+        if best_overall not in preferred:
+            preferred = [best_overall, *preferred]
+    else:
+        preferred = candidates
+
+    pool = _diverse_candidates(preferred)
+    best = pool[0]
+    target_center = Center(
+        lat=(geology.cell_bounds.south + geology.cell_bounds.north) / 2.0,
+        lon=(geology.cell_bounds.west + geology.cell_bounds.east) / 2.0,
+    )
+    # Do not stretch a weak analog just to vary the presentation. The
+    # featured tile must stay reasonably close to the best composition score.
+    featured_pool = [
+        candidate
+        for candidate in pool
+        if candidate.similarity >= best.similarity * EARTH_FEATURED_MIN_RATIO
+    ]
+    if not featured_pool:
+        featured_pool = [best]
+    featured = min(
+        featured_pool,
+        key=lambda item: (
+            _great_circle_deg(item.center, target_center),
+            -item.similarity,
+            item.dataset_tile_id,
+        ),
+    )
+    geographic_tiebreak = featured.dataset_tile_id != best.dataset_tile_id
+    top = [featured]
+    top.extend(
+        candidate
+        for candidate in pool
+        if candidate.dataset_tile_id != featured.dataset_tile_id
+    )
+    top = top[:MAX_CANDIDATES]
+
+    similarity = featured.similarity
+    coverage = featured.coverage
+    margin = (
+        max(0.0, featured.similarity - top[1].similarity)
+        if len(top) > 1
+        else 1.0
+    )
     score = 100.0 * min(
         1.0,
         math.sqrt(max(0.0, similarity) * shared_mass * coverage)
@@ -622,7 +744,28 @@ def match_geology(body: BodyId, geology: GeologySummary) -> EarthMatch:
     confidence = _confidence_label(score, shared_mass, similarity)
     status = _status_for(confidence)
 
-    if status == "match":
+    if geographic_tiebreak and status == "match":
+        reason = (
+            f"The featured Earth tile is the geographically nearest of the "
+            f"closest composition matches, sharing comparable classes across "
+            f"{shared_mass * 100:.0f}% of the target area. The highest-scoring "
+            "composition tile is listed as an alternative."
+        )
+    elif geographic_tiebreak and status == "weak":
+        reason = (
+            f"No strong composition match exists. The featured tile is the "
+            f"geographically nearest of the closest available analogs; the "
+            f"highest-scoring tile is listed as an alternative. Only "
+            f"{shared_mass * 100:.0f}% of the target area has a comparable "
+            "Earth class."
+        )
+    elif geographic_tiebreak:
+        reason = (
+            f"Too little of the target area ({shared_mass * 100:.0f}%) has a "
+            "comparable Earth class. The featured tile is a geographic "
+            "tie-break only, not a reliable analog."
+        )
+    elif status == "match":
         reason = (
             f"The best Earth tile shares a comparable composition across "
             f"{shared_mass * 100:.0f}% of the target area, with "
@@ -649,6 +792,7 @@ def match_geology(body: BodyId, geology: GeologySummary) -> EarthMatch:
         shared_mass=round(shared_mass, 4),
         coverage=round(coverage, 4),
         reason=reason,
+        geographic_tiebreak=geographic_tiebreak,
         candidates=top,
     )
 
@@ -692,9 +836,15 @@ def _notes(
             "that material lowers confidence rather than being forced onto an "
             "Earth class."
         )
+    if result.geographic_tiebreak:
+        notes.append(
+            "When several Earth tiles have similar composition, the featured "
+            "tile is chosen from the geographically nearest candidate. This is "
+            "a presentation tie-breaker, not a geologic claim."
+        )
     if result.coverage and result.coverage < 0.8:
         notes.append(
-            f"The best Earth candidate is only {result.coverage * 100:.0f}% mapped, "
+            f"The featured Earth candidate is only {result.coverage * 100:.0f}% mapped, "
             "which also lowers confidence."
         )
     if geology.mapped_fraction < 0.99:

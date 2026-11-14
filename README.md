@@ -70,7 +70,7 @@ Open <http://127.0.0.1:8000>.
    - Longitude is east-positive: `-180..180`.
    - Latitude is `-90..90`.
    - The map centers on the point at zoom 4 and shows the 10° geology cell.
-3. The panel at the top shows the Earth match: confidence, shared-class mass, top similarity, Earth tile coverage, and the comparable compositions.
+3. The panel at the top shows the Earth match: confidence, shared-class mass, analog similarity, Earth tile coverage, and the comparable compositions.
 4. The tile section below shows the selected map tile and the raw Moon/Mars geology classes and age bins.
 
 Clicking a map tile fills the coordinate bar with the clicked point. Pressing **Go** then refines the match to that single 10° cell.
@@ -128,18 +128,26 @@ Unmatched classes are not forced onto an Earth class. They reduce the shared-are
 
 ### Earth candidates
 
-Only Earth land tiles with at least 50% mapped coverage are considered. Ocean, blank, and no-data tiles are excluded. The Earth match vector is normalized over comparable classes, so water/no-data do not dominate the cosine similarity.
+Only Earth land tiles with at least 50% mapped coverage are considered. Ocean, blank, and no-data tiles are excluded. The Earth match vector is normalized over comparable classes, so water/no-data do not dominate the composition score.
+
+Candidates are ranked with the **Bhattacharyya coefficient**, a bounded composition overlap. Unlike a dot product, it rewards a candidate whose whole class mix resembles the target instead of always choosing the purest global end-member. This is what keeps different Moon and Mars locations from collapsing onto the same one or two Earth tiles.
+
+The candidate list is then thinned geographically: up to five candidates must be at least 20° apart on the Earth grid, so the alternatives are different regions rather than adjacent copies of the same cell. The API returns up to three distinct candidates.
+
+### Featured analog
+
+The first candidate is the **featured analog**. When several Earth tiles have comparable composition, the app prefers a candidate in the same broad class family (for example, volcanic for a volcanic target) and then the one geographically nearest the target center. A candidate must be at least 65% as similar as the best composition score to be eligible for this tie-break. This is a presentation choice, not a geologic claim: it keeps the visual comparison varied and relevant. The highest-scoring composition tile is always kept in the returned list and is marked in the UI when it differs from the featured tile.
 
 ### Confidence
 
 The confidence score combines:
 
-- cosine similarity between the target and candidate comparable compositions;
+- Bhattacharyya similarity between the target and candidate comparable compositions;
 - the share of the target area that has a comparable Earth class;
 - the candidate’s mapped coverage;
-- the similarity margin over the second candidate.
+- the similarity margin over the next returned candidate.
 
-Scores map to high / medium / low / insufficient confidence. High or medium confidence produces a `match`; low confidence produces a `weak` match; everything else is `insufficient` and is labeled **No reliable analog**. The top three candidates are still returned for weak or insufficient matches when they exist, but they are clearly marked as reference-only.
+Scores map to high / medium / low / insufficient confidence. High or medium confidence produces a `match`; low confidence produces a `weak` match; everything else is `insufficient` and is labeled **No reliable analog**. Candidates are still returned for weak or insufficient matches when they exist, but they are clearly marked as reference-only.
 
 ## Data sources
 
@@ -156,6 +164,7 @@ Imagery is © NASA/JPL/USGS and is loaded directly in the browser from NASA serv
 - **Taxonomy mismatch.** Earth has no impact, highlands, plains, or undivided-terrain classes in this table, and no Earth age data. Large parts of Mars are mapped as undivided terrain, so many Mars targets legitimately return “no reliable analog.”
 - **Coarse cells.** 10° cells are much larger than NASA Trek imagery tiles. At the equator an Earth cell is about 13.4× the area of a Moon cell and 3.5× a Mars cell. A map tile can overlap several dataset cells.
 - **Heuristic crosswalk.** Highlands → crystalline and plains → sedimentary are reasonable but simplified assumptions.
+- **Mixed Earth tiles.** The source `earth_dominant_class` label can differ from the comparable class mix after the crosswalk (for example, a coarse cell labeled volcanic may have more mapped sedimentary area). The UI shows both when they differ, such as “Volcanic / Sedimentary”.
 - **No Earth age comparison.** Age bins are shown for Moon/Mars context only.
 - **Not a science product.** Similarity is a transparent composition heuristic, not a trained terrain or spectral embedding model.
 
