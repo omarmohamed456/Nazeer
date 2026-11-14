@@ -1,69 +1,27 @@
-# Secrets / env
-.env
-.env.*
-!.env.example
-*.pem
-*.key
-secrets.yml
-*.secret
-.credentials
-
-# Logs / temp
-logs/
-*.log
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-pnpm-debug.log*
-tmp/
-temp/
-*.tmp
-*.bak
-*.orig
-
 # Python
 __pycache__/
 *.py[cod]
-*$py.class
-*.so
-.Python
-backend/.venv/
+.venv/
 venv/
-env/
-.pytest_cache/
-.mypy_cache/
-.ruff_cache/
-.coverage
-.coverage.*
-htmlcov/
-*.egg-info/
-.eggs/
-backend/build/
-backend/dist/
 
-# Node
-frontend/node_modules/
-frontend/dist/
-dist/
-dist-ssr/
-*.local
+# Large geospatial caches and outputs
+*.nc
+*.tif
+*.tiff
+*.gpkg
+*.h5
+*.hdf5
+*.zarr/
 
-# Data files (JSON configs and lockfiles are tracked)
-*.csv
-!backend/data/geology/tiles_wide.csv
-*.tsv
-*.parquet
-*.feather
-*.avro
-*.orc
-*.geojson
-*.ndjson
-*.jsonl
+data/**/regional_cache/
+data/**/source_cache/
+data/**/snapshots/
+data/**/parts/
 
-# Editors / OS
-.idea/
-.vscode/
-*.swp
-*.swo
-*~
+# Keep selected small pilot outputs, but exclude large source subsets
+data/planetary_gmt_pilot/**/source_subset.nc
+
+# OS / editor
 .DS_Store
+Thumbs.db
+.vscode/
