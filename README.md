@@ -8,7 +8,13 @@ Team page: <https://www.spaceappschallenge.org/2026/find-a-team/0xcs/?tab=detail
 
 Pick the Moon or Mars, click a map tile or type a coordinate, and Nazeer shows the geology of that spot and the closest matching places on Earth. Each Earth match comes with a confidence score and a NASA satellite preview. When no reliable Earth match exists, the app says so.
 
-No database, no login, no API keys. Map imagery loads straight from NASA.
+**Live app:** <https://nazeer-uey5.vercel.app/>
+
+## Screenshots
+
+| Moon | Mars |
+|---|---|
+| ![Nazeer on the Moon](images/moon.png) | ![Nazeer on Mars](images/mars.png) |
 
 ## Features
 
@@ -82,14 +88,30 @@ Unknown body → `404`. Bad zoom, tile index or coordinate (or zoom below 2 for 
 
 ## Data
 
-| Data | Source |
-|---|---|
-| Moon imagery | NASA Trek, LRO WAC Global Mosaic |
-| Mars imagery | NASA Trek, Viking Global Color Mosaic |
-| Earth preview | NASA GIBS, Blue Marble Shaded Relief + Bathymetry |
-| Earth geology | GLiM v1.0 (Hartmann & Moosdorf 2012), CC BY 3.0 |
-| Moon geology | USGS Unified Geologic Map of the Moon, 1:5M, GIS v2 |
-| Mars geology | USGS Geologic Map of Mars, SIM 3292 |
+| Data | Source | Link |
+|---|---|---|
+| Moon imagery | NASA Trek, LRO WAC Global Mosaic | https://trek.nasa.gov/moon/ |
+| Mars imagery | NASA Trek, Viking Global Color Mosaic | https://trek.nasa.gov/mars/ |
+| Trek documentation | NASA Solar System Treks | https://trek.nasa.gov/ |
+| Earth preview | NASA GIBS, Blue Marble Shaded Relief + Bathymetry | https://gibs.earthdata.nasa.gov/ |
+
+### Geology datasets
+
+| Body | Dataset | Link |
+|---|---|---|
+| Earth | Global Lithological Map (GLiM) v1.0, Hartmann & Moosdorf (2012), CC BY 3.0 | https://www.dropbox.com/scl/fi/5v00i8op7a9brmn4qeg8b/LiMW_GIS-2015.gdb.zip?rlkey=89q1aj8zfpmiv82y41xe6ttmp&e=1&dl=0 |
+| Moon | USGS Unified Geologic Map of the Moon, 1:5M, GIS v2 | https://astrogeology.usgs.gov/search/map/Moon/Geology/Unified_Geologic_Map_of_the_Moon_GIS_v2/ |
+| Mars | USGS Geologic Map of Mars, SIM 3292 | https://pubs.usgs.gov/publication/sim3292 |
+
+### Elevation datasets
+
+Processed in a separate terrain-shape pipeline that is not part of the final app.
+
+| Body | Dataset | Link |
+|---|---|---|
+| Earth | GMT `earth_relief_01m_p` (SRTM15+) | https://www.generic-mapping-tools.org/remote-datasets/index.html |
+| Moon | USGS LRO LOLA Global DEM 118 m | https://astrogeology.usgs.gov/search/map/moon_lro_lola_dem_118m |
+| Mars | USGS MGS MOLA and Mars Express HRSC Blended DEM 200 m | https://astrogeology.usgs.gov/search/map/mars_mgs_mola_mex_hrsc_blended_dem_global_200m |
 
 Full details: [DOCUMENTATION.md](DOCUMENTATION.md). Imagery © NASA/JPL/USGS, with attribution shown on the map.
 
@@ -124,4 +146,6 @@ Nazeer/
 
 ## Team
 
-Team **0xcs**, NASA Space Apps Challenge 2026. Not affiliated with NASA.
+Team **0xcs**, NASA Space Apps Challenge 2026.
+
+> **Note:** this is a demo only and the data is not accurate.
