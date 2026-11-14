@@ -1,0 +1,17 @@
+{
+  "method_version": "earth-gmt-coarse-demo-v1",
+  "source": "earth_relief_01m_p",
+  "sampling": "spherical_fibonacci",
+  "sampling_area_density_parameter_km": 48.0,
+  "window_size_m": 12000,
+  "grid_spacing_m": 2000,
+  "halo_cells": 2,
+  "land_threshold": 0.98,
+  "elevation_valid_threshold": 0.98,
+  "preliminary_landmask_spacing": "10m",
+  "window_landmask_spacing": "1m",
+  "shoreline_resolution": "low",
+  "latitude_limit_deg": 84,
+  "dateline_center_limit_deg": 179.5,
+  "comparison_group": "coarse_demo_not_crossplanet_validated"
+}

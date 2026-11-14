@@ -1,0 +1,43 @@
+{
+  "body": "mars",
+  "center_lon": 21.143233483199992,
+  "center_lat": -29.4647749579,
+  "radius_m": 3396190.0,
+  "window_size_m": 12000,
+  "grid_spacing_m": 2000,
+  "source": "mars_relief_01m_p",
+  "method_version": "planet-gmt-coarse-window-v1",
+  "source_upstream": "Mars_HRSC_MOLA_BlendDEM_Global_200mp_v2.tif",
+  "documentation": "https://www.generic-mapping-tools.org/remote-datasets/mars-relief.html",
+  "gmt_version": "6.7.0",
+  "source_file_sha256": "02341c21c61c32a3586bd2a83286397438432b6ba54f915c5096e12b6bebba38",
+  "source_request_bounds_deg": [
+    20.849141841115504,
+    21.43732512528451,
+    -29.733481006481156,
+    -29.195929062963206
+  ],
+  "source_geographic_crs": "GEOGCRS[\"unknown\",DATUM[\"unknown\",ELLIPSOID[\"unknown\",3396190,0,LENGTHUNIT[\"metre\",1,ID[\"EPSG\",9001]]]],PRIMEM[\"Reference meridian\",0,ANGLEUNIT[\"degree\",0.0174532925199433,ID[\"EPSG\",9122]]],CS[ellipsoidal,2],AXIS[\"longitude\",east,ORDER[1],ANGLEUNIT[\"degree\",0.0174532925199433,ID[\"EPSG\",9122]]],AXIS[\"latitude\",north,ORDER[2],ANGLEUNIT[\"degree\",0.0174532925199433,ID[\"EPSG\",9122]]]]",
+  "analysis_crs": "PROJCRS[\"unknown\",BASEGEOGCRS[\"unknown\",DATUM[\"unknown\",ELLIPSOID[\"unknown\",3396190,0,LENGTHUNIT[\"metre\",1,ID[\"EPSG\",9001]]]],PRIMEM[\"Reference meridian\",0,ANGLEUNIT[\"degree\",0.0174532925199433,ID[\"EPSG\",9122]]]],CONVERSION[\"unknown\",METHOD[\"Azimuthal Equidistant\",ID[\"EPSG\",1125]],PARAMETER[\"Latitude of natural origin\",-29.4647749579,ANGLEUNIT[\"degree\",0.0174532925199433],ID[\"EPSG\",8801]],PARAMETER[\"Longitude of natural origin\",21.1432334832,ANGLEUNIT[\"degree\",0.0174532925199433],ID[\"EPSG\",8802]],PARAMETER[\"False easting\",0,LENGTHUNIT[\"metre\",1],ID[\"EPSG\",8806]],PARAMETER[\"False northing\",0,LENGTHUNIT[\"metre\",1],ID[\"EPSG\",8807]]],CS[Cartesian,2],AXIS[\"(E)\",east,ORDER[1],LENGTHUNIT[\"metre\",1,ID[\"EPSG\",9001]]],AXIS[\"(N)\",north,ORDER[2],LENGTHUNIT[\"metre\",1,ID[\"EPSG\",9001]]]]",
+  "buffer_transform": [
+    2000.0,
+    0.0,
+    -10000.0,
+    0.0,
+    -2000.0,
+    10000.0
+  ],
+  "resampling": "bilinear",
+  "vertical_operation": "none; source heights retained",
+  "source_vertical_reference_status": "Must be verified in upstream documentation; not inferred from horizontal radius.",
+  "filter_width_full_6sigma_km": 2.8,
+  "method_checks": "shared Earth synthetic tests passed",
+  "limitations": [
+    "Coarse screening-grade measurements.",
+    "Spherical horizontal geometry is an explicit assumption.",
+    "No cross-planet preprocessing harmonization yet.",
+    "Only 36 elevation, 16 slope and 4 local-variation values.",
+    "No date-line or polar-crossing handling.",
+    "Source elevation gaps are rejected, not filled."
+  ]
+}

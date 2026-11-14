@@ -1,0 +1,51 @@
+{
+  "method": "crossbody_matcher_v2_screening_heuristic",
+  "features_requested": [
+    "relief_p98_p02_m",
+    "slope_median_deg",
+    "slope_p90_deg",
+    "local_std_median_m"
+  ],
+  "features_used": [
+    "relief_p98_p02_m",
+    "slope_median_deg",
+    "slope_p90_deg",
+    "local_std_median_m"
+  ],
+  "features_dropped_zero_variance": [],
+  "log1p_columns": [
+    "local_std_median_m",
+    "relief_p98_p02_m",
+    "slope_median_deg",
+    "slope_p90_deg"
+  ],
+  "metric": "mahalanobis",
+  "scaling": "median/MAD fitted on Earth only (std fallback)",
+  "top_n": 10,
+  "earth_catalog": {
+    "rows_in_file": 39489,
+    "rows_usable": 39489,
+    "duplicates_dropped": 0
+  },
+  "query_catalogs": {
+    "mars": {
+      "rows_in_file": 3030,
+      "rows_usable": 3030,
+      "duplicates_dropped": 0
+    },
+    "moon": {
+      "rows_in_file": 901,
+      "rows_usable": 901,
+      "duplicates_dropped": 0
+    }
+  },
+  "earth_null_nn_distance_percentiles": {
+    "50": 0.08151179888925067,
+    "90": 0.186364932302973,
+    "95": 0.23346846429092197,
+    "99": 0.363604597453274
+  },
+  "poor_match_rule": "distance > 95th percentile of Earth->Earth NN distance",
+  "outside_range_rule": "query norm in scaled space >= 99th percentile of Earth norms",
+  "excluded_from_score": "all elevation_* columns; land_fraction"
+}

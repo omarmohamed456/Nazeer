@@ -1,0 +1,12 @@
+{
+  "created_utc": "2026-11-13T18:48:09.333398+00:00",
+  "parquet_parts_read": 412,
+  "processed_rows": 41126,
+  "eligible_rows": 39489,
+  "excluded_rows": 1637,
+  "column_count": 47,
+  "method_version": "earth-gmt-coarse-demo-v1",
+  "all_processed_csv": "earth_all_processed_20261113T184807159276Z.csv",
+  "eligible_csv": "earth_full_features_eligible_20261113T184807159276Z.csv",
+  "remaining_preliminary_center_land_windows": 0
+}
