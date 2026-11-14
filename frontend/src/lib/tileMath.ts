@@ -54,3 +54,31 @@ export function formatLatLon(lat: number, lon: number, digits = 2): string {
 export function isInsideWorld(lat: number, lon: number): boolean {
   return lat >= -90 && lat <= 90 && lon >= -180 && lon <= 180
 }
+
+export interface DatasetCell {
+  row: number
+  col: number
+  tileId: string
+  bounds: TileBounds
+}
+
+/**
+ * The 10-degree geology table stores rows south-to-north: r00 is the south
+ * pole, r17 is the north pole. Map tile rows are north-to-south, so this is
+ * intentionally not the same formula as tileAtLatLng.
+ */
+export function datasetCellAtLatLng(lat: number, lon: number): DatasetCell {
+  const row = Math.min(17, Math.max(0, Math.floor((lat + 90) / 10)))
+  const col = Math.min(35, Math.max(0, Math.floor((lon + 180) / 10)))
+  const west = -180 + col * 10
+  const east = west + 10
+  const south = -90 + row * 10
+  const north = south + 10
+
+  return {
+    row,
+    col,
+    tileId: `r${String(row).padStart(2, '0')}c${String(col).padStart(2, '0')}`,
+    bounds: { west, south, east, north },
+  }
+}

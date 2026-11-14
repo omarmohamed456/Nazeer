@@ -2,6 +2,7 @@ import type { LatLngBoundsExpression } from 'leaflet'
 import { CRS } from 'leaflet'
 import { useEffect, useMemo, useState } from 'react'
 import {
+  CircleMarker,
   MapContainer,
   Rectangle,
   TileLayer,
@@ -10,8 +11,10 @@ import {
   useMapEvents,
 } from 'react-leaflet'
 
+import { COORDINATE_ZOOM } from '../lib/constants'
 import { BODY_ACCENTS } from '../lib/theme'
 import {
+  datasetCellAtLatLng,
   formatLatLon,
   isInsideWorld,
   tileAtLatLng,
@@ -32,9 +35,17 @@ interface HoverInfo {
   y: number
 }
 
+interface MapTarget {
+  lat: number
+  lon: number
+  nonce: number
+}
+
 interface PlanetMapProps {
   body: BodyConfig
   selected: SelectedTile | null
+  point: { lat: number; lon: number } | null
+  mapTarget: MapTarget | null
   showGrid: boolean
   resetToken: number
   onSelect: (tile: SelectedTile) => void
@@ -63,6 +74,22 @@ function BodyZoomLimit({ maxZoom }: { maxZoom: number }) {
       map.setZoom(maxZoom)
     }
   }, [map, maxZoom])
+
+  return null
+}
+
+function FlyToTarget({ target }: { target: MapTarget | null }) {
+  const map = useMap()
+
+  useEffect(() => {
+    if (!target) {
+      return
+    }
+    map.flyTo([target.lat, target.lon], COORDINATE_ZOOM, {
+      animate: true,
+      duration: 0.7,
+    })
+  }, [map, target])
 
   return null
 }
@@ -99,6 +126,9 @@ function MapInteraction({
         z: point.z,
         x: point.x,
         y: point.y,
+        kind: 'tile',
+        lat: event.latlng.lat,
+        lon: event.latlng.lng,
       })
     },
     mousemove(event) {
@@ -115,6 +145,8 @@ function MapInteraction({
 export default function PlanetMap({
   body,
   selected,
+  point,
+  mapTarget,
   showGrid,
   resetToken,
   onSelect,
@@ -131,6 +163,13 @@ export default function PlanetMap({
       [bounds.north, bounds.east],
     ]
   }, [selected])
+
+  const datasetCell = useMemo(() => {
+    if (!selected || selected.kind !== 'point' || !point) {
+      return null
+    }
+    return datasetCellAtLatLng(point.lat, point.lon)
+  }, [selected, point])
 
   const accent = BODY_ACCENTS[body.id]
 
@@ -172,6 +211,50 @@ export default function PlanetMap({
           />
         )}
 
+        {datasetCell && (
+          <Rectangle
+            bounds={[
+              [datasetCell.bounds.south, datasetCell.bounds.west],
+              [datasetCell.bounds.north, datasetCell.bounds.east],
+            ]}
+            pathOptions={{
+              color: '#7ee0a8',
+              weight: 1.5,
+              dashArray: '3 5',
+              fillColor: '#7ee0a8',
+              fillOpacity: 0.05,
+            }}
+            interactive={false}
+          />
+        )}
+
+        {point && (
+          <>
+            <CircleMarker
+              center={[point.lat, point.lon]}
+              radius={12}
+              pathOptions={{
+                color: accent,
+                weight: 1,
+                fillColor: accent,
+                fillOpacity: 0.12,
+              }}
+              interactive={false}
+            />
+            <CircleMarker
+              center={[point.lat, point.lon]}
+              radius={5}
+              pathOptions={{
+                color: '#ffffff',
+                weight: 2,
+                fillColor: accent,
+                fillOpacity: 1,
+              }}
+              interactive={false}
+            />
+          </>
+        )}
+
         <MapInteraction
           bodyId={body.id}
           maxZoom={body.max_zoom}
@@ -180,6 +263,7 @@ export default function PlanetMap({
         />
         <BodyZoomLimit maxZoom={body.max_zoom} />
         <FitWorld resetToken={resetToken} />
+        <FlyToTarget target={mapTarget} />
 
         <ZoomControl position="bottomright" />
       </MapContainer>
@@ -214,7 +298,7 @@ export default function PlanetMap({
       )}
 
       <div className="map-hint">
-        Click any tile to inspect it · drag to pan · scroll to zoom
+        Click a tile or enter coordinates · drag to pan · scroll to zoom
       </div>
     </div>
   )

@@ -1,4 +1,4 @@
-import type { BodiesResponse, EarthAnalog, TileResponse } from '../types'
+import type { BodiesResponse, MatchResponse, TileResponse } from '../types'
 
 async function request<T>(path: string, signal?: AbortSignal): Promise<T> {
   const response = await fetch(path, {
@@ -36,6 +36,31 @@ export function fetchTile(
   return request<TileResponse>(`/api/tiles/${body}/${z}/${x}/${y}`, signal)
 }
 
-export function fetchEarthAnalog(signal?: AbortSignal): Promise<EarthAnalog> {
-  return request<EarthAnalog>('/api/earth/random', signal)
+export function fetchTileMatch(
+  body: string,
+  z: number,
+  x: number,
+  y: number,
+  signal?: AbortSignal,
+): Promise<MatchResponse> {
+  return request<MatchResponse>(
+    `/api/matches/${body}/${z}/${x}/${y}`,
+    signal,
+  )
+}
+
+export function fetchPointMatch(
+  body: string,
+  lat: number,
+  lon: number,
+  signal?: AbortSignal,
+): Promise<MatchResponse> {
+  const params = new URLSearchParams({
+    lat: String(lat),
+    lon: String(lon),
+  })
+  return request<MatchResponse>(
+    `/api/matches/${body}/point?${params.toString()}`,
+    signal,
+  )
 }

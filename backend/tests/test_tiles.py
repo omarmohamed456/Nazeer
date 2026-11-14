@@ -44,9 +44,15 @@ def test_moon_level_zero_tile() -> None:
     }
     assert data["center"] == {"lat": 0.0, "lon": -90.0}
     assert data["image_url"].endswith("/default028mm/0/0/0.jpg")
-    assert data["analysis"]["simulated"] is True
-    assert data["analysis"]["fields"]
-    assert 0 <= data["analysis"]["confidence_pct"] <= 100
+    assert "analysis" not in data
+
+    geology = data["geology"]
+    assert geology["resolution_deg"] == 10.0
+    assert len(geology["dataset_tile_ids"]) == 324
+    assert geology["mapped_fraction"] == pytest.approx(1.0, abs=0.01)
+    assert geology["classes"]
+    assert geology["match_classes"]
+    assert geology["dominant_class"] in {"impact", "highlands", "volcanic", "plains"}
 
 
 def test_mars_bottom_right_max_zoom_tile() -> None:
@@ -79,15 +85,15 @@ def test_invalid_tile_index_returns_422(path: str) -> None:
     assert response.status_code == 422
 
 
-def test_analysis_is_deterministic() -> None:
-    first = client.get("/api/tiles/mars/5/12/9").json()["analysis"]
-    second = client.get("/api/tiles/mars/5/12/9").json()["analysis"]
+def test_geology_is_deterministic() -> None:
+    first = client.get("/api/tiles/mars/5/12/9").json()["geology"]
+    second = client.get("/api/tiles/mars/5/12/9").json()["geology"]
     assert first == second
 
 
-def test_analysis_changes_between_tiles() -> None:
-    first = client.get("/api/tiles/moon/4/3/3").json()["analysis"]
-    second = client.get("/api/tiles/moon/4/3/4").json()["analysis"]
+def test_geology_changes_between_tiles() -> None:
+    first = client.get("/api/tiles/moon/4/3/3").json()["geology"]
+    second = client.get("/api/tiles/moon/4/3/4").json()["geology"]
     assert first != second
 
 

@@ -3,6 +3,9 @@ from typing import Literal
 from pydantic import BaseModel, Field
 
 BodyId = Literal["moon", "mars"]
+MatchKind = Literal["tile", "point"]
+MatchStatus = Literal["match", "weak", "insufficient"]
+ConfidenceLevel = Literal["high", "medium", "low", "insufficient"]
 
 
 class LayerInfo(BaseModel):
@@ -52,17 +55,73 @@ class SizeKm(BaseModel):
     height: float
 
 
-class AnalysisField(BaseModel):
+class ClassShare(BaseModel):
+    key: str
     label: str
-    value: str
-    unit: str | None = None
+    fraction: float = Field(ge=0, le=1)
 
 
-class TileAnalysis(BaseModel):
-    simulated: bool = True
-    summary: str
-    confidence_pct: int = Field(ge=0, le=100)
-    fields: list[AnalysisField]
+class AgeSummary(BaseModel):
+    dominant: ClassShare | None = None
+    classes: list[ClassShare]
+    mean_min_ga: float | None = None
+    mean_max_ga: float | None = None
+    surely_old_fraction: float | None = Field(default=None, ge=0, le=1)
+    surely_young_fraction: float | None = Field(default=None, ge=0, le=1)
+
+
+class GeologySummary(BaseModel):
+    dataset_tile_ids: list[str]
+    resolution_deg: float
+    mapped_fraction: float = Field(ge=0, le=1)
+    dominant_class: str
+    classes: list[ClassShare]
+    match_classes: list[ClassShare]
+    age: AgeSummary | None = None
+    cell_bounds: Bounds
+
+
+class EarthCandidate(BaseModel):
+    dataset_tile_id: str
+    bounds: Bounds
+    center: Center
+    coverage: float = Field(ge=0, le=1)
+    dominant_class: str
+    classes: list[ClassShare]
+    match_classes: list[ClassShare]
+    similarity: float = Field(ge=0, le=1)
+    preview_url: str
+    preview_bounds: Bounds
+
+
+class EarthMatch(BaseModel):
+    status: MatchStatus
+    confidence: ConfidenceLevel
+    confidence_score: float = Field(ge=0, le=100)
+    similarity: float = Field(ge=0, le=1)
+    shared_mass: float = Field(ge=0, le=1)
+    coverage: float = Field(ge=0, le=1)
+    reason: str
+    candidates: list[EarthCandidate]
+
+
+class MatchTarget(BaseModel):
+    kind: MatchKind
+    body: BodyId
+    tile: TileIndex | None = None
+    point: Center | None = None
+    bounds: Bounds
+    geology: GeologySummary
+
+
+class MatchResponse(BaseModel):
+    body: BodyId
+    body_name: str
+    target: MatchTarget
+    match: EarthMatch
+    notes: list[str]
+    preview_attribution: str
+    preview_attribution_url: str
 
 
 class TileResponse(BaseModel):
@@ -74,15 +133,4 @@ class TileResponse(BaseModel):
     bounds: Bounds
     center: Center
     approx_size_km: SizeKm
-    analysis: TileAnalysis
-
-
-class EarthAnalogResponse(BaseModel):
-    simulated: bool = True
-    note: str
-    seed: int
-    tile: TileIndex
-    image_url: str
-    center: Center
-    approx_size_km: SizeKm
-    match_pct: int = Field(ge=0, le=100)
+    geology: GeologySummary

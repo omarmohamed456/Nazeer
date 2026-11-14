@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import math
 
+from .geology import build_tile_geology
 from .models import (
     BodyInfo,
     Bounds,
@@ -10,7 +11,6 @@ from .models import (
     TileIndex,
     TileResponse,
 )
-from .simulated import build_analysis
 
 
 def validate_tile(z: int, x: int, y: int, *, min_zoom: int, max_zoom: int) -> None:
@@ -89,5 +89,5 @@ def build_tile_response(body: BodyInfo, z: int, x: int, y: int) -> TileResponse:
         bounds=bounds,
         center=center,
         approx_size_km=approx_tile_size_km(bounds, body.radius_km),
-        analysis=build_analysis(body.id, z, x, y, center.lat),
+        geology=build_tile_geology(body.id, bounds),
     )

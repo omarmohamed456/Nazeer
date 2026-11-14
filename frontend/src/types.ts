@@ -1,4 +1,7 @@
 export type BodyId = 'moon' | 'mars'
+export type MatchKind = 'tile' | 'point'
+export type MatchStatus = 'match' | 'weak' | 'insufficient'
+export type ConfidenceLevel = 'high' | 'medium' | 'low' | 'insufficient'
 
 export interface LayerInfo {
   label: string
@@ -29,6 +32,9 @@ export interface SelectedTile {
   z: number
   x: number
   y: number
+  kind: MatchKind
+  lat?: number
+  lon?: number
 }
 
 export interface TileBounds {
@@ -48,17 +54,73 @@ export interface SizeKm {
   height: number
 }
 
-export interface AnalysisField {
+export interface ClassShare {
+  key: string
   label: string
-  value: string
-  unit?: string | null
+  fraction: number
 }
 
-export interface TileAnalysis {
-  simulated: boolean
-  summary: string
-  confidence_pct: number
-  fields: AnalysisField[]
+export interface AgeSummary {
+  dominant: ClassShare | null
+  classes: ClassShare[]
+  mean_min_ga: number | null
+  mean_max_ga: number | null
+  surely_old_fraction: number | null
+  surely_young_fraction: number | null
+}
+
+export interface GeologySummary {
+  dataset_tile_ids: string[]
+  resolution_deg: number
+  mapped_fraction: number
+  dominant_class: string
+  classes: ClassShare[]
+  match_classes: ClassShare[]
+  age: AgeSummary | null
+  cell_bounds: TileBounds
+}
+
+export interface EarthCandidate {
+  dataset_tile_id: string
+  bounds: TileBounds
+  center: TileCenter
+  coverage: number
+  dominant_class: string
+  classes: ClassShare[]
+  match_classes: ClassShare[]
+  similarity: number
+  preview_url: string
+  preview_bounds: TileBounds
+}
+
+export interface EarthMatch {
+  status: MatchStatus
+  confidence: ConfidenceLevel
+  confidence_score: number
+  similarity: number
+  shared_mass: number
+  coverage: number
+  reason: string
+  candidates: EarthCandidate[]
+}
+
+export interface MatchTarget {
+  kind: MatchKind
+  body: BodyId
+  tile: { z: number; x: number; y: number } | null
+  point: TileCenter | null
+  bounds: TileBounds
+  geology: GeologySummary
+}
+
+export interface MatchResponse {
+  body: BodyId
+  body_name: string
+  target: MatchTarget
+  match: EarthMatch
+  notes: string[]
+  preview_attribution: string
+  preview_attribution_url: string
 }
 
 export interface TileResponse {
@@ -70,16 +132,5 @@ export interface TileResponse {
   bounds: TileBounds
   center: TileCenter
   approx_size_km: SizeKm
-  analysis: TileAnalysis
-}
-
-export interface EarthAnalog {
-  simulated: boolean
-  note: string
-  seed: number
-  tile: { z: number; x: number; y: number }
-  image_url: string
-  center: TileCenter
-  approx_size_km: SizeKm
-  match_pct: number
+  geology: GeologySummary
 }
