@@ -26,17 +26,27 @@ from .models import (
     TileIndex,
 )
 
-DATASET_PATH = Path(__file__).resolve().parents[1] / "data" / "geology" / "tiles_wide.csv"
+DATASET_PATH = (
+    Path(__file__).resolve().parents[1] / "data" / "geology" / "targets_10deg.csv"
+)
+EARTH_DATASET_PATH = (
+    Path(__file__).resolve().parents[1] / "data" / "geology" / "earth_tiles_5deg.csv"
+)
 DATASET_RESOLUTION_DEG = 10.0
+EARTH_RESOLUTION_DEG = 5.0
 GRID_ROWS = 18
 GRID_COLS = 36
+EARTH_GRID_ROWS = 36
+EARTH_GRID_COLS = 72
 MATCH_MIN_ZOOM = 2
-EARTH_MIN_COVERAGE = 0.5
+EARTH_MIN_COVERAGE = 0.6
 EARTH_MIN_REPRESENTABLE_MASS = 0.5
 MAX_CANDIDATES = 3
 EARTH_CANDIDATE_POOL = 5
 EARTH_CANDIDATE_MIN_SEPARATION_DEG = 20.0
 EARTH_FEATURED_MIN_RATIO = 0.65
+EARTH_SOURCE = "GLiM v1.0 \u2014 Hartmann & Moosdorf (2012), CC BY 3.0"
+EARTH_SOURCE_URL = "https://doi.org/10.1594/PANGAEA.788537"
 
 REPRESENTABLE_KEYS = ("volcanic", "crystalline", "sedimentary", "surficial", "ice")
 
@@ -66,8 +76,6 @@ EARTH_CLASS_KEYS = (
     "sedimentary",
     "surficial_unconsolidated",
     "ice",
-    "water",
-    "no_data",
 )
 
 MOON_AGE_KEYS = (
@@ -169,17 +177,25 @@ class GeologyCell:
     bounds: Bounds
     moon_classes: dict[str, float]
     mars_classes: dict[str, float]
-    earth_classes: dict[str, float]
     moon_mapped_fraction: float
     mars_mapped_fraction: float
-    earth_mapped_fraction: float
-    earth_dominant_class: str
     moon_age: dict[str, float]
     mars_age: dict[str, float]
     mars_mean_age_min_ga: float | None
     mars_mean_age_max_ga: float | None
     mars_surely_old_fraction: float | None
     mars_surely_young_fraction: float | None
+
+
+@dataclass(frozen=True)
+class EarthCell:
+    tile_id: str
+    row: int
+    col: int
+    bounds: Bounds
+    classes: dict[str, float]
+    coverage: float
+    dominant_class: str
 
 
 def _float(row: dict[str, str], key: str) -> float:
@@ -197,7 +213,7 @@ def _clamp(value: float, low: float = 0.0, high: float = 1.0) -> float:
 
 
 def load_cells(path: Path = DATASET_PATH) -> dict[str, GeologyCell]:
-    """Load and validate the 18x36, 10-degree joined geology table."""
+    """Load and validate the 18x36, 10-degree Moon/Mars target table."""
     cells: dict[str, GeologyCell] = {}
 
     with path.open(newline="", encoding="utf-8") as handle:
@@ -224,14 +240,8 @@ def load_cells(path: Path = DATASET_PATH) -> dict[str, GeologyCell]:
                 ),
                 moon_classes={key: _float(row, f"moon_frac_{key}") for key in MOON_CLASS_KEYS},
                 mars_classes={key: _float(row, f"mars_frac_{key}") for key in MARS_CLASS_KEYS},
-                earth_classes={
-                    key: _float(row, f"earth_mapped_class_frac_{key}")
-                    for key in EARTH_CLASS_KEYS
-                },
                 moon_mapped_fraction=_float(row, "moon_mapped_frac"),
                 mars_mapped_fraction=_float(row, "mars_mapped_frac"),
-                earth_mapped_fraction=_float(row, "earth_mapped_frac"),
-                earth_dominant_class=row.get("earth_dominant_class", ""),
                 moon_age={key: _float(row, f"moon_age_frac_{key}") for key in MOON_AGE_KEYS},
                 mars_age={key: _float(row, f"mars_age_frac_{key}") for key in MARS_AGE_KEYS},
                 mars_mean_age_min_ga=_optional_float(row, "mars_mean_age_min_Ga"),
@@ -253,6 +263,67 @@ def load_cells(path: Path = DATASET_PATH) -> dict[str, GeologyCell]:
 @lru_cache(maxsize=1)
 def get_cells() -> dict[str, GeologyCell]:
     return load_cells()
+
+
+def load_earth_cells(path: Path = EARTH_DATASET_PATH) -> dict[str, EarthCell]:
+    """Load and validate the 36x72, 5-degree GLiM-derived Earth table."""
+    cells: dict[str, EarthCell] = {}
+
+    with path.open(newline="", encoding="utf-8") as handle:
+        for row in csv.DictReader(handle):
+            tile_id = row["tile_id"]
+            parsed = re.fullmatch(r"e(\d{2})c(\d{2})", tile_id)
+            if parsed is None:
+                raise ValueError(f"Invalid Earth dataset tile id '{tile_id}'.")
+
+            row_index = int(parsed.group(1))
+            col_index = int(parsed.group(2))
+            if not (
+                0 <= row_index < EARTH_GRID_ROWS
+                and 0 <= col_index < EARTH_GRID_COLS
+            ):
+                raise ValueError(
+                    f"Earth dataset tile id '{tile_id}' is outside the 36x72 grid."
+                )
+
+            coverage = _clamp(_float(row, "earth_mapped_frac"))
+            classes = {
+                key: _float(row, f"earth_mapped_class_frac_{key}")
+                for key in EARTH_CLASS_KEYS
+            }
+            class_total = sum(classes.values())
+            if coverage > 0 and class_total > 0:
+                classes = {key: value / class_total for key, value in classes.items()}
+            dominant_class = row.get("earth_dominant_class", "")
+            if coverage <= 0:
+                dominant_class = "no_data"
+            elif dominant_class in ("", "water", "no_data"):
+                dominant_class = max(EARTH_CLASS_KEYS, key=lambda key: classes[key])
+
+            cells[tile_id] = EarthCell(
+                tile_id=tile_id,
+                row=row_index,
+                col=col_index,
+                bounds=Bounds(
+                    west=_float(row, "lon_min"),
+                    south=_float(row, "lat_min"),
+                    east=_float(row, "lon_max"),
+                    north=_float(row, "lat_max"),
+                ),
+                classes=classes,
+                coverage=coverage,
+                dominant_class=dominant_class,
+            )
+
+    expected = EARTH_GRID_ROWS * EARTH_GRID_COLS
+    if len(cells) != expected:
+        raise ValueError(f"Expected {expected} Earth dataset cells, found {len(cells)}.")
+    return cells
+
+
+@lru_cache(maxsize=1)
+def get_earth_cells() -> dict[str, EarthCell]:
+    return load_earth_cells()
 
 
 def cell_for_point(lat: float, lon: float) -> GeologyCell:
@@ -514,22 +585,22 @@ def _preview_url(bounds: Bounds) -> str:
 
 
 def _earth_candidate(
-    cell: GeologyCell, target_repr: dict[str, float]
+    cell: EarthCell, target_repr: dict[str, float]
 ) -> EarthCandidate | None:
-    raw_coverage = cell.earth_mapped_fraction
+    raw_coverage = cell.coverage
     if raw_coverage < EARTH_MIN_COVERAGE:
         return None
-    if cell.earth_dominant_class in ("", "water", "no_data"):
+    if cell.dominant_class in ("", "water", "no_data"):
         return None
 
-    match_vector = _earth_match_vector(cell.earth_classes)
+    match_vector = _earth_match_vector(cell.classes)
     representable_mass = sum(match_vector[key] for key in REPRESENTABLE_KEYS)
     if representable_mass < EARTH_MIN_REPRESENTABLE_MASS:
         return None
 
-    # The supplied earth_dominant_class is based on the original source units
-    # and can disagree with the comparable class mix after the crosswalk. Use
-    # the comparable mix for labels and tie-break families so the UI and the
+    # The source dominant class is based on GLiM's raw lithology classes and
+    # can disagree with the comparable class mix after the crosswalk. Use the
+    # comparable mix for labels and tie-break families so the UI and the
     # matching logic tell the same story.
     match_dominant_class = max(
         REPRESENTABLE_KEYS, key=lambda key: match_vector[key]
@@ -554,12 +625,13 @@ def _earth_candidate(
 
     return EarthCandidate(
         dataset_tile_id=cell.tile_id,
+        resolution_deg=EARTH_RESOLUTION_DEG,
         bounds=cell.bounds,
         center=center,
         coverage=round(_clamp(raw_coverage), 4),
-        dominant_class=cell.earth_dominant_class,
+        dominant_class=cell.dominant_class,
         match_dominant_class=match_dominant_class,
-        classes=_shares(cell.earth_classes, EARTH_CLASS_LABELS),
+        classes=_shares(cell.classes, EARTH_CLASS_LABELS),
         match_classes=_shares(match_vector, MATCH_CLASS_LABELS),
         similarity=round(_clamp(similarity), 4),
         preview_url=_preview_url(preview_bounds),
@@ -607,7 +679,7 @@ def _diverse_candidates(
 ) -> list[EarthCandidate]:
     """Keep the best candidates while avoiding adjacent duplicates.
 
-    The 10-degree table contains many near-identical neighbouring cells. A
+    The 5-degree Earth grid contains many near-identical neighbouring cells. A
     plain top-three list can therefore show the same region three times. Greedy
     geographic spacing makes the alternative list genuinely useful.
     """
@@ -658,7 +730,7 @@ def match_geology(body: BodyId, geology: GeologySummary) -> EarthMatch:
     }
     candidates = [
         candidate
-        for cell in get_cells().values()
+        for cell in get_earth_cells().values()
         if (candidate := _earth_candidate(cell, target_repr)) is not None
     ]
 

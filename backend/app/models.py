@@ -83,6 +83,7 @@ class GeologySummary(BaseModel):
 
 class EarthCandidate(BaseModel):
     dataset_tile_id: str
+    resolution_deg: float
     bounds: Bounds
     center: Center
     coverage: float = Field(ge=0, le=1)
@@ -122,6 +123,8 @@ class MatchResponse(BaseModel):
     target: MatchTarget
     match: EarthMatch
     notes: list[str]
+    earth_source: str
+    earth_source_url: str
     preview_attribution: str
     preview_attribution_url: str
 
