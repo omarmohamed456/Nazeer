@@ -2,7 +2,7 @@
   "rewrites": [
     {
       "source": "/api/:path*",
-      "destination": "https://YOUR-BACKEND-NAME.vercel.app/api/:path*"
+      "destination": "https://https://nazeer-h7nr.vercel.app/api/:path*"
     }
   ]
 }
